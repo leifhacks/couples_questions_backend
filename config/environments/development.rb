@@ -56,6 +56,8 @@ Rails.application.configure do
   # Highlight code that enqueued background job in logs.
   config.active_job.verbose_enqueue_logs = true
 
+  # Add extra logger for msql statements
+  config.active_record.logger = ActiveSupport::Logger.new("log/#{Rails.env}_mysql.log", 0, 50 * 1024 * 1024)
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
@@ -63,8 +65,22 @@ Rails.application.configure do
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
 
+  # Set log level for mysql logger
+  config.active_record.logger.level = Logger::DEBUG
+
+  # Set log formatter for mysql logger
+  config.active_record.logger.formatter = Logger::Formatter.new
+
+  # Use an evented file watcher to asynchronously detect changes in source code,
+  # routes, locales, etc. This feature depends on the listen gem.
+  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # Use the lowest log level to ensure availability of diagnostic information
+  # when problems arise.
+  config.log_level = :debug
 
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = true

@@ -40,8 +40,22 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
 end
 
-group :development do
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
-end
-
+gem 'rack-attack'
+gem 'minitest'
+gem 'sidekiq'
+gem 'whenever'
+gem 'sysrandom'
+gem 'sd_notify'
+gem 'httparty'
+gem 'jwt'
+gem "ruby-openai"
+gem "searchkick"
+gem "opensearch-ruby"
+gem "redis"
+gem "typhoeus"
+gem "oj"
+gem 'down'
+gem 'mini_magick'
+gem 'nokogiri'
+gem 'openssl'
+gem 'apnotic'

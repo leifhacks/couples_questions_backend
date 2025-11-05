@@ -1,0 +1,17 @@
+#-------------------------------------------------------------------------------
+# This is a service which stores base 64 to a local file
+#-------------------------------------------------------------------------------
+class Base64FileStorageService
+  def call(data, path)
+    if File.exist?(path)
+      File.delete(path)
+      Rails.logger.info("#{self.class}.#{__method__}: Removed existing file #{path}")
+    end
+
+    decoded_data = Base64.decode64(data)
+
+    File.open(path, 'wb') do |f|
+      f.write(decoded_data)
+    end
+  end
+end
