@@ -9,8 +9,15 @@ class User < IdentifiedRecord
 
   has_many :client_devices, dependent: :destroy
   has_many :push_notifications, dependent: :destroy
+  has_many :relationship_memberships, dependent: :destroy
+  has_many :relationships, through: :relationship_memberships
+  has_many :answers, dependent: :destroy
+
+  belongs_to :current_relationship, class_name: 'Relationship', optional: true
+  belongs_to :favorite_category, class_name: 'Category', optional: true
 
   before_save { self.identifier ||= generate_random_uuid(8, :identifier) }
+  before_save { self.uuid ||= generate_random_uuid }
 
   def self.cleanup
     deleted_users =  User.where.missing(:client_devices)

@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 #-------------------------------------------------------------------------------
-# Model for Web Socket Connections containing info about a web socket connection
+# Model for Question Categories
 #-------------------------------------------------------------------------------
-class WebSocketConnection < UuidRecord
-  has_one :client_device
+class Category < UuidRecord
+  has_many :questions
 end
+
+

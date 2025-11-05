@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 #-------------------------------------------------------------------------------
-# Model for Web Socket Connections containing info about a web socket connection
+# Model for Answers submitted by Users for assigned Questions
 #-------------------------------------------------------------------------------
-class WebSocketConnection < UuidRecord
-  has_one :client_device
+class Answer < UuidRecord
+  belongs_to :question_assignment
+  belongs_to :user
 end

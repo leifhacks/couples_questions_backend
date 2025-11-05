@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 #-------------------------------------------------------------------------------
-# Model for Web Socket Connections containing info about a web socket connection
+# Model for User Sessions (refresh tokens)
 #-------------------------------------------------------------------------------
-class WebSocketConnection < UuidRecord
-  has_one :client_device
+class UserSession < ApplicationRecord
+  belongs_to :user
 end
+
+

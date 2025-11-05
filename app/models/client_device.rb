@@ -3,7 +3,7 @@
 #-------------------------------------------------------------------------------
 # Model for Client Devices containing info about the devices a user owns
 #-------------------------------------------------------------------------------
-class ClientDevice < ApplicationRecord
+class ClientDevice < UuidRecord
   ISO_CODE_REGEX = /\A[a-z]{2}_[A-Z]{2}\z/
 
   belongs_to :user

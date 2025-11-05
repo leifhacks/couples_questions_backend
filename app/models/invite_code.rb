@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 #-------------------------------------------------------------------------------
-# Model for Web Socket Connections containing info about a web socket connection
+# Model for Invite Codes used to pair Users into a Relationship
 #-------------------------------------------------------------------------------
-class WebSocketConnection < UuidRecord
-  has_one :client_device
+class InviteCode < ApplicationRecord
+  belongs_to :relationship
+  belongs_to :created_by_user, class_name: 'User'
 end
+
+
