@@ -36,6 +36,21 @@ class TokenService
   def access_token_ttl
     @access_token_ttl
   end
+
+  # Decodes and verifies an access token; returns payload hash or raises JWT errors
+  def decode_access_token(token)
+    JWT.decode(token, @secret, true, algorithm: 'HS256').first
+  end
+
+  # Returns the User for a valid access token, or nil if invalid/expired/not found
+  def user_from_access_token(token)
+    payload = decode_access_token(token)
+    subject_uuid = payload['sub']
+    return nil if subject_uuid.nil? || subject_uuid.empty?
+    User.find_by(uuid: subject_uuid)
+  rescue JWT::ExpiredSignature, JWT::DecodeError
+    nil
+  end
 end
 
 
