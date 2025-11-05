@@ -42,7 +42,7 @@ end
 
 gem 'rack-attack'
 gem 'minitest'
-gem 'sidekiq'
+gem 'sidekiq', "~> 7.2.4"
 gem 'whenever'
 gem 'sysrandom'
 gem 'sd_notify'

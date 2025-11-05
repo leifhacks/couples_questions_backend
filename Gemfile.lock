@@ -270,12 +270,11 @@ GEM
       activemodel (>= 7.1)
       hashie
     securerandom (0.4.1)
-    sidekiq (8.0.9)
-      connection_pool (>= 2.5.0)
-      json (>= 2.9.0)
-      logger (>= 1.6.2)
-      rack (>= 3.1.0)
-      redis-client (>= 0.23.2)
+    sidekiq (7.2.4)
+      concurrent-ruby (< 2)
+      connection_pool (>= 2.3.0)
+      rack (>= 2.2.4)
+      redis-client (>= 0.19.0)
     stringio (3.1.7)
     sysrandom (1.0.5)
     thor (1.4.0)
@@ -326,7 +325,7 @@ DEPENDENCIES
   ruby-openai
   sd_notify
   searchkick
-  sidekiq
+  sidekiq (~> 7.2.4)
   sysrandom
   typhoeus
   tzinfo-data
