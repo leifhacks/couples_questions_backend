@@ -1,0 +1,41 @@
+# frozen_string_literal: true
+
+module Api
+  module V1
+    class DevicesController < GenericController
+      include ::UserAuthentication
+
+      def initialize
+        super(nil, Base64Decoder.new)
+      end
+
+      before_action :authenticate_user!
+      before_action -> { validate_with_validator(Validate::Devices::Update) }, only: [:update]
+
+      # PUT /api/v1/devices/:uuid
+      def update
+        device = ClientDevice.find_by!(uuid: params[:uuid], user: current_user)
+
+        permitted = device_params
+        device.update!(permitted) unless permitted.empty?
+
+        render json: device_payload(device)
+      end
+
+      private
+
+      def device_params
+        params.permit(:device_token, :platform, :iso_code, :timezone)
+      end
+
+      def device_payload(device)
+        {
+          uuid: device.uuid,
+          platform: device.platform,
+          iso_code: device.iso_code,
+          timezone: device.timezone
+        }
+      end
+    end
+  end
+end

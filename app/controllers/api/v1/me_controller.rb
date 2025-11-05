@@ -26,6 +26,10 @@ module Api
             update_attrs[:name] = params[:name]
           end
 
+          if params.key?(:image_path)
+            update_attrs[:image_path] = params[:image_path]
+          end
+
           if params.key?(:favorite_category_uuid)
             if params[:favorite_category_uuid].present?
               category = Category.find_by!(uuid: params[:favorite_category_uuid])

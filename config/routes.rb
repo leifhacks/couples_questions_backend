@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       post 'auth/bootstrap', to: 'auth#bootstrap'
       post 'auth/refresh', to: 'auth#refresh'
       post 'auth/invalidate', to: 'auth#invalidate'
+      put 'devices/:uuid', to: 'devices#update'
       get 'me', to: 'me#show'
       put 'me', to: 'me#update'
       post 'ios_multi_verification/verify', to: 'ios_multi_verification#verify'
