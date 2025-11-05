@@ -9,6 +9,7 @@ module Api
       end
 
       skip_before_action :validate_with_validator
+      skip_before_action :validate_data, :decode_params, only: [:show]
       before_action :authenticate_user!
       before_action -> { validate_with_validator(Validate::Me::Update) }, only: [:update]
 

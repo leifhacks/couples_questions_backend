@@ -7,7 +7,7 @@ module Api
         class Update
           include ActiveModel::Validations
 
-          attr_accessor :device_token, :platform, :iso_code, :timezone
+          attr_accessor :device_token, :platform, :iso_code, :timezone_name, :timezone_offset_seconds
 
           validates :iso_code, format: { with: ClientDevice::ISO_CODE_REGEX }, allow_nil: true, allow_blank: true
 
@@ -16,7 +16,8 @@ module Api
             @device_token = params[:device_token]
             @platform = params[:platform]
             @iso_code = params[:iso_code]
-            @timezone = params[:timezone]
+            @timezone_name = params[:timezone_name]
+            @timezone_offset_seconds = params[:timezone_offset_seconds]
           end
         end
       end

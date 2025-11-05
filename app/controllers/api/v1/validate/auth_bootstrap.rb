@@ -8,7 +8,7 @@ module Api
           include ActiveModel::Validations
 
           attr_accessor :name, :favorite_category_uuid, :distance, :description,
-                        :device_token, :platform, :iso_code, :timezone, :device
+                        :device_token, :platform, :iso_code, :timezone_name, :timezone_offset_seconds, :device
 
           validates :name, presence: true
           validates :device_token, presence: true
@@ -24,7 +24,8 @@ module Api
             @device_token = dev[:device_token] || params[:device_token]
             @platform = dev[:platform] || params[:platform]
             @iso_code = dev[:iso_code] || params[:iso_code]
-            @timezone = dev[:timezone] || params[:timezone]
+            @timezone_name = dev[:timezone_name] || params[:timezone_name]
+            @timezone_offset_seconds = dev[:timezone_offset_seconds] || params[:timezone_offset_seconds]
           end
         end
       end

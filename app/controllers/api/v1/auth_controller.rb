@@ -19,22 +19,20 @@ module Api
           relationship = Relationship.create!(
             distance: bootstrap_params[:distance],
             relationship_type: bootstrap_params[:description],
-            timezone: device_params[:timezone]
+            timezone_name: device_params[:timezone_name],
+            timezone_offset_seconds: device_params[:timezone_offset_seconds]
           )
 
           RelationshipMembership.create!(relationship: relationship, user: user, role: 'OWNER')
 
-          invite_code = InviteCode.create!(
-            relationship: relationship,
-            created_by_user: user,
-            expires_at: 7.days.from_now
-          )
+          invite_code = invite_code_service.issue!(relationship: relationship, created_by_user: user)
 
           device = user.client_devices.create!(
             device_token: device_params[:device_token],
             platform: device_params[:platform],
             iso_code: device_params[:iso_code],
-            timezone: device_params[:timezone]
+            timezone_name: device_params[:timezone_name],
+            timezone_offset_seconds: device_params[:timezone_offset_seconds]
           )
 
           user.update!(current_relationship_id: relationship.id)
@@ -96,6 +94,10 @@ module Api
         @token_service ||= TokenService.new(refresh_token_ttl: 10 * 365 * 24 * 60 * 60) # 10 years
       end
 
+      def invite_code_service
+        @invite_code_service ||= InviteCodeService.new
+      end
+
       def create_user!
         favorite_category = if bootstrap_params[:favorite_category_uuid].present?
                               Category.find_by!(uuid: bootstrap_params[:favorite_category_uuid])
@@ -125,14 +127,16 @@ module Api
             uuid: device.uuid,
             platform: device.platform,
             iso_code: device.iso_code,
-            timezone: device.timezone
+            timezone_name: device.timezone_name,
+            timezone_offset_seconds: device.timezone_offset_seconds
           },
           relationship: {
             uuid: relationship.uuid,
             status: relationship.status,
             distance: relationship.distance,
             relationship_type: relationship.relationship_type,
-            timezone: relationship.timezone,
+            timezone_name: relationship.timezone_name,
+            timezone_offset_seconds: relationship.timezone_offset_seconds,
             invite_code: {
               code: invite_code.code,
               expires_at: invite_code.expires_at
@@ -147,7 +151,7 @@ module Api
           :favorite_category_uuid,
           :distance,
           :description,
-          device: %i[device_token platform iso_code timezone]
+          device: %i[device_token platform iso_code timezone_name timezone_offset_seconds]
         )
       end
 
@@ -158,7 +162,8 @@ module Api
           device_token: dev[:device_token] || params[:device_token],
           platform: dev[:platform] || params[:platform],
           iso_code: dev[:iso_code] || params[:iso_code],
-          timezone: dev[:timezone] || params[:timezone]
+          timezone_name: dev[:timezone_name] || params[:timezone_name],
+          timezone_offset_seconds: dev[:timezone_offset_seconds] || params[:timezone_offset_seconds]
         }.with_indifferent_access
       end
 

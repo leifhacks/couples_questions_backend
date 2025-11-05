@@ -8,6 +8,14 @@ class RelationshipMembership < ApplicationRecord
 
   belongs_to :relationship
   belongs_to :user
+
+  after_commit :recalculate_relationship_timezone
+
+  private
+
+  def recalculate_relationship_timezone
+    relationship&.recalculate_timezone!
+  end
 end
 
 

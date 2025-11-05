@@ -17,7 +17,8 @@ class Initial < ActiveRecord::Migration[6.0]
       t.string 'device_token', null: false
       t.string 'platform'
       t.string 'iso_code', null: false
-      t.string 'timezone'
+      t.string 'timezone_name'
+      t.integer 'timezone_offset_seconds'
       t.text 'last_response'
       t.timestamp 'last_access'
       t.datetime 'created_at', precision: 6, null: false
@@ -52,7 +53,8 @@ class Initial < ActiveRecord::Migration[6.0]
       t.string 'status', default: 'PENDING', null: false
       t.string 'distance'
       t.string 'relationship_type'
-      t.string 'timezone'
+      t.string 'timezone_name'
+      t.integer 'timezone_offset_seconds'
       t.datetime 'created_at', precision: 6, null: false
       t.datetime 'updated_at', precision: 6, null: false
     end
