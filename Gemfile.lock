@@ -78,24 +78,58 @@ GEM
       mutex_m
       securerandom (>= 0.3)
       tzinfo (~> 2.0)
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
+    apnotic (1.7.2)
+      connection_pool (~> 2)
+      net-http2 (>= 0.18.3, < 2)
     base64 (0.3.0)
     benchmark (0.5.0)
     bigdecimal (3.3.1)
     bootsnap (1.18.6)
       msgpack (~> 1.2)
     builder (3.3.0)
+    chronic (0.10.2)
     concurrent-ruby (1.3.5)
     connection_pool (2.5.4)
     crass (1.0.6)
+    csv (3.3.5)
     date (3.4.1)
     debug (1.11.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    down (5.4.2)
+      addressable (~> 2.8)
     drb (2.2.3)
     erb (5.1.1)
     erubi (1.13.1)
+    ethon (0.15.0)
+      ffi (>= 1.15.0)
+    event_stream_parser (1.0.0)
+    faraday (2.14.0)
+      faraday-net_http (>= 2.0, < 3.5)
+      json
+      logger
+    faraday-multipart (1.1.1)
+      multipart-post (~> 2.0)
+    faraday-net_http (3.4.1)
+      net-http (>= 0.5.0)
+    ffi (1.17.2-aarch64-linux-gnu)
+    ffi (1.17.2-aarch64-linux-musl)
+    ffi (1.17.2-arm-linux-gnu)
+    ffi (1.17.2-arm-linux-musl)
+    ffi (1.17.2-arm64-darwin)
+    ffi (1.17.2-x86_64-darwin)
+    ffi (1.17.2-x86_64-linux-gnu)
+    ffi (1.17.2-x86_64-linux-musl)
     globalid (1.3.0)
       activesupport (>= 6.1)
+    hashie (5.0.0)
+    http-2 (1.1.1)
+    httparty (0.23.2)
+      csv
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     io-console (0.8.1)
@@ -103,6 +137,9 @@ GEM
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
+    json (2.15.2)
+    jwt (3.1.2)
+      base64
     logger (1.7.0)
     loofah (2.24.1)
       crass (~> 1.0.2)
@@ -114,12 +151,22 @@ GEM
       net-pop
       net-smtp
     marcel (1.1.0)
+    mini_magick (5.3.1)
+      logger
     mini_mime (1.1.5)
     minitest (5.26.0)
     msgpack (1.8.0)
+    multi_json (1.17.0)
+    multi_xml (0.7.2)
+      bigdecimal (~> 3.1)
+    multipart-post (2.4.1)
     mutex_m (0.3.0)
     mysql2 (0.5.7)
       bigdecimal
+    net-http (0.7.0)
+      uri
+    net-http2 (0.19.0)
+      http-2 (>= 1.0)
     net-imap (0.5.12)
       date
       net-protocol
@@ -146,16 +193,27 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.10-x86_64-linux-musl)
       racc (~> 1.4)
+    oj (3.16.12)
+      bigdecimal (>= 3.0)
+      ostruct (>= 0.2)
+    opensearch-ruby (3.4.0)
+      faraday (>= 1.0, < 3)
+      multi_json (>= 1.0)
+    openssl (3.3.2)
+    ostruct (0.6.3)
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
     psych (5.2.6)
       date
       stringio
+    public_suffix (6.0.2)
     puma (7.1.0)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.3)
+    rack-attack (6.8.0)
+      rack (>= 1.0, < 4)
     rack-session (2.1.1)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
@@ -197,19 +255,43 @@ GEM
       erb
       psych (>= 4.0.0)
       tsort
+    redis (5.4.1)
+      redis-client (>= 0.22.0)
+    redis-client (0.26.1)
+      connection_pool
     reline (0.6.2)
       io-console (~> 0.5)
+    ruby-openai (8.3.0)
+      event_stream_parser (>= 0.3.0, < 2.0.0)
+      faraday (>= 1)
+      faraday-multipart (>= 1)
+    sd_notify (0.1.1)
+    searchkick (5.5.2)
+      activemodel (>= 7.1)
+      hashie
     securerandom (0.4.1)
+    sidekiq (8.0.9)
+      connection_pool (>= 2.5.0)
+      json (>= 2.9.0)
+      logger (>= 1.6.2)
+      rack (>= 3.1.0)
+      redis-client (>= 0.23.2)
     stringio (3.1.7)
+    sysrandom (1.0.5)
     thor (1.4.0)
     timeout (0.4.3)
     tsort (0.2.0)
+    typhoeus (1.5.0)
+      ethon (>= 0.9.0, < 0.16.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    uri (1.1.1)
     websocket-driver (0.8.0)
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    whenever (1.0.0)
+      chronic (>= 0.6.3)
     zeitwerk (2.7.3)
 
 PLATFORMS
@@ -224,12 +306,31 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  apnotic
   bootsnap
   debug
+  down
+  httparty
+  jwt
+  mini_magick
+  minitest
   mysql2 (~> 0.5)
+  nokogiri
+  oj
+  opensearch-ruby
+  openssl
   puma (>= 5.0)
+  rack-attack
   rails (~> 7.1.5, >= 7.1.5.2)
+  redis
+  ruby-openai
+  sd_notify
+  searchkick
+  sidekiq
+  sysrandom
+  typhoeus
   tzinfo-data
+  whenever
 
 RUBY VERSION
    ruby 3.3.0p0
