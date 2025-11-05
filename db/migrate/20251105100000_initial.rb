@@ -129,6 +129,12 @@ class Initial < ActiveRecord::Migration[6.0]
     end
     add_index 'user_sessions', ['refresh_token_hash'], unique: true, name: 'idx_user_sessions_unique_refresh_hash'
 
+    create_table 'web_socket_connections', options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4', force: :cascade do |t|
+      t.string 'uuid', index: { unique: true }, null: false
+      t.datetime 'created_at', precision: 6, null: false
+      t.datetime 'updated_at', precision: 6, null: false
+    end
+
     #--------------------------------------------------------------------------
     # Foreign Keys
     #--------------------------------------------------------------------------
@@ -158,11 +164,5 @@ class Initial < ActiveRecord::Migration[6.0]
     add_foreign_key 'push_notifications', 'users'
 
     add_foreign_key 'user_sessions', 'users'
-
-    create_table 'web_socket_connections', options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4', force: :cascade do |t|
-      t.string 'uuid', index: { unique: true }, null: false
-      t.datetime 'created_at', precision: 6, null: false
-      t.datetime 'updated_at', precision: 6, null: false
-    end
   end
 end
