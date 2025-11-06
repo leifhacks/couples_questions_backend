@@ -10,7 +10,7 @@ module UserAuthentication
   private
 
   def authenticate_user!
-    token = header_access_token || params[:access_token]
+    token = header_access_token
     return render(json: { error: 'unauthorized' }, status: :unauthorized) if token.blank?
     user = token_service.user_from_access_token(token)
     return render(json: { error: 'unauthorized' }, status: :unauthorized) if user.nil?

@@ -14,7 +14,7 @@ class ImageStorageService
   def call(image, file_name)
     local_file_path = get_full_image_path(file_name)
     @get_image_service.call(image, local_file_path)
-    File.chmod(4600, local_file_path)
+    File.chmod(0640, local_file_path)
     moderate(local_file_path)
     @mini_magick_service.create_thumbnail(local_file_path) unless @mini_magick_service.nil?
     true

@@ -16,7 +16,7 @@ module Api
       def update
         device = ClientDevice.find_by!(uuid: params[:uuid], user: current_user)
 
-        permitted = device_params
+        permitted = device_params.to_h.compact_blank
         device.update!(permitted) unless permitted.empty?
 
         render json: device_payload(device)

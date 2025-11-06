@@ -35,11 +35,11 @@ module Api
         assignments = QuestionAssignment
                       .where(relationship: relationship)
                       .where('question_date < ?', before_date)
-                      .order(question_date: :desc)
+                      .joins(:answers)
+                      .where(answers: { user_id: current_user.id })
                       .includes(:question, :answers)
-
-        # Only include days where the caller has already answered
-        assignments = assignments.select { |qa| qa.answers.any? { |a| a.user_id == current_user.id } }
+                      .order(question_date: :desc)
+                      .distinct
 
         render json: assignments.first(limit).map { |qa| assignment_payload(qa, include_answers: true) }
       end
@@ -97,7 +97,7 @@ module Api
         end
 
         scoped = chosen_category_id.present? ? base_scope.where(category_id: chosen_category_id) : base_scope
-        question = scoped.order(Arel.sql('RANDOM()')).first || base_scope.order(Arel.sql('RANDOM()')).first
+        question = scoped.order(Arel.sql('RAND()')).first || base_scope.order(Arel.sql('RAND()')).first
         QuestionAssignment.create!(relationship: relationship, question: question, question_date: date)
       end
 

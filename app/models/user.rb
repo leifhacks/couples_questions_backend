@@ -19,6 +19,8 @@ class User < IdentifiedRecord
   before_save { self.identifier ||= generate_random_uuid(8, :identifier) }
   before_save { self.uuid ||= generate_random_uuid }
 
+  validates :name, format: { with: NAME_REGEX }, allow_nil: true
+
   def self.cleanup
     deleted_users =  User.where.missing(:client_devices)
     result = deleted_users.size

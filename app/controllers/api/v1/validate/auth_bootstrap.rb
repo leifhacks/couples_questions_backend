@@ -12,7 +12,7 @@ module Api
 
           validates :name, presence: true
           validates :device_token, presence: true
-          validates :iso_code, presence: true
+          validates :iso_code, presence: true, format: { with: ClientDevice::ISO_CODE_REGEX }
 
           def initialize(params = {})
             # decoder has already expanded params; accept nested device or flat

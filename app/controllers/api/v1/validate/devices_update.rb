@@ -9,7 +9,7 @@ module Api
 
           attr_accessor :device_token, :platform, :iso_code, :timezone_name, :timezone_offset_seconds
 
-          validates :iso_code, format: { with: ClientDevice::ISO_CODE_REGEX }, allow_nil: true, allow_blank: true
+          validates :iso_code, format: { with: ClientDevice::ISO_CODE_REGEX }, allow_nil: true
 
           # No required fields; allow partial updates
           def initialize(params = {})

@@ -37,6 +37,7 @@ class Relationship < UuidRecord
   end
 
   def set_timezone_from_calculation
+    return if users.none?
     name, offset = calculate_timezone_components
     self.timezone_name = name
     self.timezone_offset_seconds = offset

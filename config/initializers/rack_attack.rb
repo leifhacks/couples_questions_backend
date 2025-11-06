@@ -9,7 +9,9 @@ class Rack::Attack
   # safelisting). It must implement .increment and .write like
   # ActiveSupport::Cache::Store
 
-  # Rack::Attack.cache.store = ActiveSupport::Cache::MemoryStore.new
+  Rack::Attack.cache.store = (ENV['RACK_ATTACK_REDIS_URL'] || ENV['REDIS_URL']) ?
+    ActiveSupport::Cache::RedisCacheStore.new(url: ENV['RACK_ATTACK_REDIS_URL'] || ENV['REDIS_URL']) :
+    ActiveSupport::Cache::MemoryStore.new
 
   ### Throttle Spammy Clients ###
 
@@ -21,7 +23,7 @@ class Rack::Attack
   # counted by rack-attack and this throttle may be activated too
   # quickly. If so, enable the condition to exclude them from tracking.
 
-  # Throttle all requests by IP (60rpm)
+  # Throttle all requests by IP (baseline)
   #
   # Key: "rack::attack:#{Time.now.to_i/:period}:req/ip:#{req.ip}"
   throttle('req/ip', limit: 300, period: 5.minutes) do |req|
@@ -40,10 +42,16 @@ class Rack::Attack
   # Throttle POST requests to /login by IP address
   #
   # Key: "rack::attack:#{Time.now.to_i/:period}:logins/ip:#{req.ip}"
-  throttle('logins/ip', limit: 5, period: 20.seconds) do |req|
-    if req.path == '/login' && req.post?
-      req.ip
-    end
+  throttle('auth/bootstrap/ip', limit: 10, period: 1.minute) do |req|
+    req.ip if req.post? && req.path == '/api/v1/auth/bootstrap'
+  end
+
+  throttle('auth/refresh/ip', limit: 30, period: 5.minutes) do |req|
+    req.ip if req.post? && req.path == '/api/v1/auth/refresh'
+  end
+
+  throttle('auth/invalidate/ip', limit: 30, period: 5.minutes) do |req|
+    req.ip if req.post? && req.path == '/api/v1/auth/invalidate'
   end
 
   # Throttle POST requests to /login by email param
@@ -54,11 +62,8 @@ class Rack::Attack
   # throttle logins for another user and force their login requests to be
   # denied, but that's not very common and shouldn't happen to you. (Knock
   # on wood!)
-  throttle("logins/email", limit: 5, period: 20.seconds) do |req|
-    if req.path == '/login' && req.post?
-      # return the email if present, nil otherwise
-      req.params['email'].presence
-    end
+  throttle('images/up/ip', limit: 60, period: 10.minutes) do |req|
+    req.ip if req.post? && req.path == '/api/v1/images/up'
   end
 
   ### Custom Throttle Response ###

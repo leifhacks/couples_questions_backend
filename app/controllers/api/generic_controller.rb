@@ -48,13 +48,15 @@ module Api
       msg_params['item_data'] = msg_params['item_data'].to_s.truncate(30) unless msg_params['item_data'].nil?
       msg_params['receipt_data'] = msg_params['receipt_data'].to_s.truncate(30) unless msg_params['receipt_data'].nil?
       Rails.logger.info("#{self.class}.#{__method__}: #{msg_params}")
+    rescue JSON::ParserError, ArgumentError, TypeError
+      render json: { error: 'invalid_data' }, status: :bad_request
     end
 
     def validate_with_validator(validator = @validator)
       activity = validator.new(params)
       return if activity.valid?
 
-      render json: { error: activity.errors }
+      render json: { error: activity.errors }, status: :unprocessable_entity
     end
   end
 end
