@@ -1,0 +1,258 @@
+{
+  "name_en": "Intimacy & Desire",
+  "name_de": "Intimität & Wunsch",
+  "description_en": "Gently explore comfort zones, attraction, and what makes you feel close.",
+  "description_de": "Erkundet einfühlsam Komfortzonen, Anziehung und das, was euch Nähe spüren lässt.",
+  "questions": [
+    {
+      "body_en": "What makes you feel emotionally close to me?",
+      "body_de": "Was lässt dich dich mir emotional nah fühlen?",
+      "depth": 2
+    },
+    {
+      "body_en": "Which kind of touch is most comforting for you?",
+      "body_de": "Welche Art Berührung tröstet dich am meisten?",
+      "depth": 0
+    },
+    {
+      "body_en": "How do you like us to reconnect after a busy day?",
+      "body_de": "Wie sollen wir nach einem vollen Tag wieder zueinander finden?",
+      "depth": 1
+    },
+    {
+      "body_en": "What helps you feel safe being vulnerable?",
+      "body_de": "Was hilft dir, dich verletzlich zu zeigen und dich sicher zu fühlen?",
+      "depth": 3
+    },
+    {
+      "body_en": "How do we keep intimacy playful and pressure‑free?",
+      "body_de": "Wie halten wir Intimität spielerisch und druckfrei?",
+      "depth": 2
+    },
+    {
+      "body_en": "Which signals from me say ‘I want you close’?",
+      "body_de": "Welche Signale von mir bedeuten für dich ‚Ich möchte dich nah bei mir‘?",
+      "depth": 1
+    },
+    {
+      "body_en": "How do you want us to talk about desire and boundaries?",
+      "body_de": "Wie sollen wir über Wunsch und Grenzen sprechen?",
+      "depth": 0
+    },
+    {
+      "body_en": "What kind of quality time deepens your attraction?",
+      "body_de": "Welche Art Quality Time verstärkt deine Anziehung?",
+      "depth": 0
+    },
+    {
+      "body_en": "What makes you feel seen and cherished?",
+      "body_de": "Was lässt dich dich gesehen und wertgeschätzt fühlen?",
+      "depth": 2
+    },
+    {
+      "body_en": "How can we create a cozy atmosphere for closeness?",
+      "body_de": "Wie schaffen wir eine gemütliche Atmosphäre für Nähe?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s one thing about closeness you wish people asked more?",
+      "body_de": "Was ist eine Sache an Nähe, nach der du dir öfter Fragen wünschst?",
+      "depth": 1
+    },
+    {
+      "body_en": "What small change in closeness would make a big difference for you?",
+      "body_de": "Welche kleine Veränderung bei Nähe würde für dich viel bewirken?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s your favorite memory related to closeness?",
+      "body_de": "Was ist deine liebste Erinnerung in Bezug auf Nähe?",
+      "depth": 1
+    },
+    {
+      "body_en": "Share a funny story from your life connected to closeness.",
+      "body_de": "Erzähl eine lustige Geschichte aus deinem Leben, die mit Nähe zu tun hat.",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s something you want to learn next about closeness?",
+      "body_de": "Was möchtest du als Nächstes über Nähe lernen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What boundary would you set around closeness?",
+      "body_de": "Welche Grenze würdest du bei Nähe setzen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What inspires you about closeness lately?",
+      "body_de": "Was inspiriert dich in letzter Zeit an Nähe?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s a misconception about closeness you’d correct?",
+      "body_de": "Welches Missverständnis über Nähe würdest du korrigieren?",
+      "depth": 2
+    },
+    {
+      "body_en": "How should our approach to closeness evolve over time?",
+      "body_de": "Wie sollte sich unser Umgang mit Nähe im Laufe der Zeit entwickeln?",
+      "depth": 3
+    },
+    {
+      "body_en": "What’s an easy win for us this month in closeness?",
+      "body_de": "Welcher leichte Gewinn wäre diesen Monat bei Nähe möglich?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s one thing about touch you wish people asked more?",
+      "body_de": "Was ist eine Sache an Berührung, nach der du dir öfter Fragen wünschst?",
+      "depth": 1
+    },
+    {
+      "body_en": "What small change in touch would make a big difference for you?",
+      "body_de": "Welche kleine Veränderung bei Berührung würde für dich viel bewirken?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s your favorite memory related to touch?",
+      "body_de": "Was ist deine liebste Erinnerung in Bezug auf Berührung?",
+      "depth": 1
+    },
+    {
+      "body_en": "Share a funny story from your life connected to touch.",
+      "body_de": "Erzähl eine lustige Geschichte aus deinem Leben, die mit Berührung zu tun hat.",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s something you want to learn next about touch?",
+      "body_de": "Was möchtest du als Nächstes über Berührung lernen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What boundary would you set around touch?",
+      "body_de": "Welche Grenze würdest du bei Berührung setzen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What inspires you about touch lately?",
+      "body_de": "Was inspiriert dich in letzter Zeit an Berührung?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s a misconception about touch you’d correct?",
+      "body_de": "Welches Missverständnis über Berührung würdest du korrigieren?",
+      "depth": 2
+    },
+    {
+      "body_en": "How should our approach to touch evolve over time?",
+      "body_de": "Wie sollte sich unser Umgang mit Berührung im Laufe der Zeit entwickeln?",
+      "depth": 3
+    },
+    {
+      "body_en": "What’s an easy win for us this month in touch?",
+      "body_de": "Welcher leichte Gewinn wäre diesen Monat bei Berührung möglich?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s one thing about vulnerability you wish people asked more?",
+      "body_de": "Was ist eine Sache an Verletzlichkeit, nach der du dir öfter Fragen wünschst?",
+      "depth": 1
+    },
+    {
+      "body_en": "What small change in vulnerability would make a big difference for you?",
+      "body_de": "Welche kleine Veränderung bei Verletzlichkeit würde für dich viel bewirken?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s your favorite memory related to vulnerability?",
+      "body_de": "Was ist deine liebste Erinnerung in Bezug auf Verletzlichkeit?",
+      "depth": 1
+    },
+    {
+      "body_en": "Share a funny story from your life connected to vulnerability.",
+      "body_de": "Erzähl eine lustige Geschichte aus deinem Leben, die mit Verletzlichkeit zu tun hat.",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s something you want to learn next about vulnerability?",
+      "body_de": "Was möchtest du als Nächstes über Verletzlichkeit lernen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What boundary would you set around vulnerability?",
+      "body_de": "Welche Grenze würdest du bei Verletzlichkeit setzen?",
+      "depth": 3
+    },
+    {
+      "body_en": "What inspires you about vulnerability lately?",
+      "body_de": "Was inspiriert dich in letzter Zeit an Verletzlichkeit?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s a misconception about vulnerability you’d correct?",
+      "body_de": "Welches Missverständnis über Verletzlichkeit würdest du korrigieren?",
+      "depth": 2
+    },
+    {
+      "body_en": "How should our approach to vulnerability evolve over time?",
+      "body_de": "Wie sollte sich unser Umgang mit Verletzlichkeit im Laufe der Zeit entwickeln?",
+      "depth": 3
+    },
+    {
+      "body_en": "What’s an easy win for us this month in vulnerability?",
+      "body_de": "Welcher leichte Gewinn wäre diesen Monat bei Verletzlichkeit möglich?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s one thing about quality time you wish people asked more?",
+      "body_de": "Was ist eine Sache an Quality Time, nach der du dir öfter Fragen wünschst?",
+      "depth": 0
+    },
+    {
+      "body_en": "What small change in quality time would make a big difference for you?",
+      "body_de": "Welche kleine Veränderung bei Quality Time würde für dich viel bewirken?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s your favorite memory related to quality time?",
+      "body_de": "Was ist deine liebste Erinnerung in Bezug auf Quality Time?",
+      "depth": 1
+    },
+    {
+      "body_en": "Share a funny story from your life connected to quality time.",
+      "body_de": "Erzähl eine lustige Geschichte aus deinem Leben, die mit Quality Time zu tun hat.",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s something you want to learn next about quality time?",
+      "body_de": "Was möchtest du als Nächstes über Quality Time lernen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What boundary would you set around quality time?",
+      "body_de": "Welche Grenze würdest du bei Quality Time setzen?",
+      "depth": 0
+    },
+    {
+      "body_en": "What inspires you about quality time lately?",
+      "body_de": "Was inspiriert dich in letzter Zeit an Quality Time?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s a misconception about quality time you’d correct?",
+      "body_de": "Welches Missverständnis über Quality Time würdest du korrigieren?",
+      "depth": 2
+    },
+    {
+      "body_en": "How should our approach to quality time evolve over time?",
+      "body_de": "Wie sollte sich unser Umgang mit Quality Time im Laufe der Zeit entwickeln?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s an easy win for us this month in quality time?",
+      "body_de": "Welcher leichte Gewinn wäre diesen Monat bei Quality Time möglich?",
+      "depth": 0
+    }
+  ]
+}

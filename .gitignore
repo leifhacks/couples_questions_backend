@@ -33,5 +33,5 @@
 /config/master.key
 
 .idea/*
-*.json
+/*.json
 *.p8

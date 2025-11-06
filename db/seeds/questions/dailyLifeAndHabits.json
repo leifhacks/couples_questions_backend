@@ -1,0 +1,258 @@
+{
+  "name_en": "Daily Life & Habits",
+  "name_de": "Alltag & Gewohnheiten",
+  "description_en": "Discover how you both see routines, chores, and lifestyle choices.",
+  "description_de": "Findet heraus, wie ihr Routinen, Haushaltsaufgaben und Lebensstilentscheidungen seht.",
+  "questions": [
+    {
+      "body_en": "Which routine makes your day run smoothly?",
+      "body_de": "Welche Routine lässt deinen Tag rund laufen?",
+      "depth": 0
+    },
+    {
+      "body_en": "How should we split chores when life gets busy?",
+      "body_de": "Wie sollen wir Haushaltsaufgaben aufteilen, wenn es stressig ist?",
+      "depth": 1
+    },
+    {
+      "body_en": "What tiny habit boosts your mood reliably?",
+      "body_de": "Welche kleine Gewohnheit hebt zuverlässig deine Stimmung?",
+      "depth": 0
+    },
+    {
+      "body_en": "How would you like our mornings to feel?",
+      "body_de": "Wie sollen sich unsere Morgen anfühlen?",
+      "depth": 0
+    },
+    {
+      "body_en": "Which spending habit could we fine‑tune together?",
+      "body_de": "Welche Ausgabengewohnheit könnten wir gemeinsam verbessern?",
+      "depth": 2
+    },
+    {
+      "body_en": "How do you want to make household decisions fair?",
+      "body_de": "Wie wollen wir Haushaltsentscheidungen fair treffen?",
+      "depth": 2
+    },
+    {
+      "body_en": "What meal or food ritual feels like ‘home’ to you?",
+      "body_de": "Welche Mahlzeit oder welches Ritual fühlt sich nach ‚Zuhause‘ an?",
+      "depth": 0
+    },
+    {
+      "body_en": "What helps you switch off from work and arrive mentally?",
+      "body_de": "Was hilft dir, von der Arbeit abzuschalten und mental anzukommen?",
+      "depth": 0
+    },
+    {
+      "body_en": "Which digital boundaries would improve our downtime?",
+      "body_de": "Welche digitalen Grenzen würden unsere freie Zeit verbessern?",
+      "depth": 2
+    },
+    {
+      "body_en": "How can we make errands or chores more fun together?",
+      "body_de": "Wie machen wir Besorgungen oder Haushalt gemeinsam spaßiger?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s one thing about routines you wish people asked more?",
+      "body_de": "Was ist eine Sache an Routinen, nach der du dir öfter Fragen wünschst?",
+      "depth": 1
+    },
+    {
+      "body_en": "What small change in routines would make a big difference for you?",
+      "body_de": "Welche kleine Veränderung bei Routinen würde für dich viel bewirken?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s your favorite memory related to routines?",
+      "body_de": "Was ist deine liebste Erinnerung in Bezug auf Routinen?",
+      "depth": 1
+    },
+    {
+      "body_en": "Share a funny story from your life connected to routines.",
+      "body_de": "Erzähl eine lustige Geschichte aus deinem Leben, die mit Routinen zu tun hat.",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s something you want to learn next about routines?",
+      "body_de": "Was möchtest du als Nächstes über Routinen lernen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What boundary would you set around routines?",
+      "body_de": "Welche Grenze würdest du bei Routinen setzen?",
+      "depth": 3
+    },
+    {
+      "body_en": "What inspires you about routines lately?",
+      "body_de": "Was inspiriert dich in letzter Zeit an Routinen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s a misconception about routines you’d correct?",
+      "body_de": "Welches Missverständnis über Routinen würdest du korrigieren?",
+      "depth": 2
+    },
+    {
+      "body_en": "How should our approach to routines evolve over time?",
+      "body_de": "Wie sollte sich unser Umgang mit Routinen im Laufe der Zeit entwickeln?",
+      "depth": 3
+    },
+    {
+      "body_en": "What’s an easy win for us this month in routines?",
+      "body_de": "Welcher leichte Gewinn wäre diesen Monat bei Routinen möglich?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s one thing about chores you wish people asked more?",
+      "body_de": "Was ist eine Sache an Haushalt, nach der du dir öfter Fragen wünschst?",
+      "depth": 1
+    },
+    {
+      "body_en": "What small change in chores would make a big difference for you?",
+      "body_de": "Welche kleine Veränderung bei Haushalt würde für dich viel bewirken?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s your favorite memory related to chores?",
+      "body_de": "Was ist deine liebste Erinnerung in Bezug auf Haushalt?",
+      "depth": 1
+    },
+    {
+      "body_en": "Share a funny story from your life connected to chores.",
+      "body_de": "Erzähl eine lustige Geschichte aus deinem Leben, die mit Haushalt zu tun hat.",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s something you want to learn next about chores?",
+      "body_de": "Was möchtest du als Nächstes über Haushalt lernen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What boundary would you set around chores?",
+      "body_de": "Welche Grenze würdest du bei Haushalt setzen?",
+      "depth": 0
+    },
+    {
+      "body_en": "What inspires you about chores lately?",
+      "body_de": "Was inspiriert dich in letzter Zeit an Haushalt?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s a misconception about chores you’d correct?",
+      "body_de": "Welches Missverständnis über Haushalt würdest du korrigieren?",
+      "depth": 2
+    },
+    {
+      "body_en": "How should our approach to chores evolve over time?",
+      "body_de": "Wie sollte sich unser Umgang mit Haushalt im Laufe der Zeit entwickeln?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s an easy win for us this month in chores?",
+      "body_de": "Welcher leichte Gewinn wäre diesen Monat bei Haushalt möglich?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s one thing about finances you wish people asked more?",
+      "body_de": "Was ist eine Sache an Finanzen, nach der du dir öfter Fragen wünschst?",
+      "depth": 1
+    },
+    {
+      "body_en": "What small change in finances would make a big difference for you?",
+      "body_de": "Welche kleine Veränderung bei Finanzen würde für dich viel bewirken?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s your favorite memory related to finances?",
+      "body_de": "Was ist deine liebste Erinnerung in Bezug auf Finanzen?",
+      "depth": 1
+    },
+    {
+      "body_en": "Share a funny story from your life connected to finances.",
+      "body_de": "Erzähl eine lustige Geschichte aus deinem Leben, die mit Finanzen zu tun hat.",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s something you want to learn next about finances?",
+      "body_de": "Was möchtest du als Nächstes über Finanzen lernen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What boundary would you set around finances?",
+      "body_de": "Welche Grenze würdest du bei Finanzen setzen?",
+      "depth": 3
+    },
+    {
+      "body_en": "What inspires you about finances lately?",
+      "body_de": "Was inspiriert dich in letzter Zeit an Finanzen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s a misconception about finances you’d correct?",
+      "body_de": "Welches Missverständnis über Finanzen würdest du korrigieren?",
+      "depth": 2
+    },
+    {
+      "body_en": "How should our approach to finances evolve over time?",
+      "body_de": "Wie sollte sich unser Umgang mit Finanzen im Laufe der Zeit entwickeln?",
+      "depth": 3
+    },
+    {
+      "body_en": "What’s an easy win for us this month in finances?",
+      "body_de": "Welcher leichte Gewinn wäre diesen Monat bei Finanzen möglich?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s one thing about screens you wish people asked more?",
+      "body_de": "Was ist eine Sache an Bildschirme, nach der du dir öfter Fragen wünschst?",
+      "depth": 1
+    },
+    {
+      "body_en": "What small change in screens would make a big difference for you?",
+      "body_de": "Welche kleine Veränderung bei Bildschirme würde für dich viel bewirken?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s your favorite memory related to screens?",
+      "body_de": "Was ist deine liebste Erinnerung in Bezug auf Bildschirme?",
+      "depth": 1
+    },
+    {
+      "body_en": "Share a funny story from your life connected to screens.",
+      "body_de": "Erzähl eine lustige Geschichte aus deinem Leben, die mit Bildschirme zu tun hat.",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s something you want to learn next about screens?",
+      "body_de": "Was möchtest du als Nächstes über Bildschirme lernen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What boundary would you set around screens?",
+      "body_de": "Welche Grenze würdest du bei Bildschirme setzen?",
+      "depth": 3
+    },
+    {
+      "body_en": "What inspires you about screens lately?",
+      "body_de": "Was inspiriert dich in letzter Zeit an Bildschirme?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s a misconception about screens you’d correct?",
+      "body_de": "Welches Missverständnis über Bildschirme würdest du korrigieren?",
+      "depth": 2
+    },
+    {
+      "body_en": "How should our approach to screens evolve over time?",
+      "body_de": "Wie sollte sich unser Umgang mit Bildschirme im Laufe der Zeit entwickeln?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s an easy win for us this month in screens?",
+      "body_de": "Welcher leichte Gewinn wäre diesen Monat bei Bildschirme möglich?",
+      "depth": 0
+    }
+  ]
+}
