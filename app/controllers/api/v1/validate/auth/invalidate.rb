@@ -4,7 +4,7 @@ module Api
   module V1
     module Validate
       module Auth
-        class Refresh
+        class Invalidate
           include ActiveModel::Validations
 
           attr_accessor :refresh_token
@@ -19,5 +19,6 @@ module Api
     end
   end
 end
+
 
 
