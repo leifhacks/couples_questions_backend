@@ -17,8 +17,6 @@ module Api
           user = create_user!
 
           relationship = Relationship.create!(
-            distance: bootstrap_params[:distance],
-            relationship_type: bootstrap_params[:description],
             timezone_name: device_params[:timezone_name],
             timezone_offset_seconds: device_params[:timezone_offset_seconds]
           )
@@ -99,14 +97,7 @@ module Api
       end
 
       def create_user!
-        favorite_category = if bootstrap_params[:favorite_category_uuid].present?
-                              Category.find_by!(uuid: bootstrap_params[:favorite_category_uuid])
-                            end
-
-        User.create!(
-          name: bootstrap_params[:name],
-          favorite_category: favorite_category
-        )
+        User.create!()
       end
 
       def bootstrap_response(user, device, relationship, invite_code, access_token, refresh_token)
@@ -147,10 +138,6 @@ module Api
 
       def bootstrap_params
         params.permit(
-          :name,
-          :favorite_category_uuid,
-          :distance,
-          :description,
           device: %i[device_token platform iso_code timezone_name timezone_offset_seconds]
         )
       end
