@@ -5,7 +5,7 @@ module Api
     class MeController < GenericController
       include ::UserAuthentication
       def initialize
-        super(nil, Base64Decoder.new)
+        super(Validate::Me::Update, Base64Decoder.new)
       end
 
       skip_before_action :validate_with_validator

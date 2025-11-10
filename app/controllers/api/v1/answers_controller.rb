@@ -6,7 +6,7 @@ module Api
       include ::UserAuthentication
 
       def initialize
-        super(nil, Base64Decoder.new)
+        super(Validate::Answers::Update, Base64Decoder.new)
       end
 
       before_action :authenticate_user!

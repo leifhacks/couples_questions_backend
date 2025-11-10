@@ -6,7 +6,7 @@ module Api
       include ::UserAuthentication
 
       def initialize
-        super(nil, Base64Decoder.new)
+        super(Validate::Noop, Base64Decoder.new)
       end
 
       skip_before_action :validate_with_validator
