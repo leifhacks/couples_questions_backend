@@ -10,6 +10,7 @@ class User < IdentifiedRecord
   has_many :client_devices, dependent: :destroy
   has_many :user_sessions, dependent: :destroy
   has_many :push_notifications, dependent: :destroy
+  has_many :created_invite_codes, class_name: 'InviteCode', foreign_key: 'created_by_user_id', dependent: :destroy
   has_many :relationship_memberships, dependent: :destroy
   has_many :relationships, through: :relationship_memberships
   has_many :answers, dependent: :destroy
