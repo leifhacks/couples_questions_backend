@@ -25,7 +25,7 @@ module Api
       private
 
       def device_params
-        params.permit(:device_token, :platform, :iso_code, :timezone_name, :timezone_offset_seconds)
+        params.require(:device).permit(:device_token, :platform, :iso_code, :timezone_name, :timezone_offset_seconds)
       end
 
       def device_payload(device)
