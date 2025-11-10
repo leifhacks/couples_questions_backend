@@ -8,6 +8,7 @@ class User < IdentifiedRecord
   NAME_REGEX = /\A[A-Za-z0-9ÄäÖöÜüß\-_ ]+\z/
 
   has_many :client_devices, dependent: :destroy
+  has_many :user_sessions, dependent: :destroy
   has_many :push_notifications, dependent: :destroy
   has_many :relationship_memberships, dependent: :destroy
   has_many :relationships, through: :relationship_memberships

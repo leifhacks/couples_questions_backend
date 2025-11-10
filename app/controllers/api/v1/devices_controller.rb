@@ -12,7 +12,7 @@ module Api
       before_action :authenticate_user!
       before_action -> { validate_with_validator(Validate::Devices::Update) }, only: [:update]
 
-      # PUT /api/v1/devices/:uuid
+      # POST /api/v1/devices/:uuid
       def update
         device = ClientDevice.find_by!(uuid: params[:uuid], user: current_user)
 

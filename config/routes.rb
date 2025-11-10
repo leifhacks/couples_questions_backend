@@ -4,7 +4,7 @@ Rails.application.routes.draw do
       post 'auth/bootstrap', to: 'auth#bootstrap'
       post 'auth/refresh', to: 'auth#refresh'
       post 'auth/invalidate', to: 'auth#invalidate'
-      put 'devices/:uuid', to: 'devices#update'
+      post 'devices/:uuid', to: 'devices#update'
       get 'relationship', to: 'relationship#show'
       post 'relationship', to: 'relationship#update'
       post 'relationship/new_invite', to: 'relationship#new_invite'
