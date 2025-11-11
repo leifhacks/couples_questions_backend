@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       post 'devices/:uuid', to: 'devices#update'
       get 'relationship', to: 'relationship#show'
       post 'relationship', to: 'relationship#update'
-      post 'relationship/new_invite', to: 'relationship#new_invite'
+      get 'relationship/new_invite', to: 'relationship#new_invite'
       post 'relationship/unpair', to: 'relationship#unpair'
       post 'relationship/confirm_invite', to: 'relationship#confirm_invite'
       post 'relationship/redeem_invite', to: 'relationship#redeem_invite'

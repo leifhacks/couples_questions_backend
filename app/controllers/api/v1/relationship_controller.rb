@@ -29,7 +29,7 @@ module Api
         render json: relationship_payload(relationship)
       end
 
-      # POST /api/v1/relationship/new_invite
+      # GET /api/v1/relationship/new_invite
       def new_invite
         relationship = current_user.current_relationship
         return render(json: { error: 'invalid_status' }, status: :bad_request) if relationship.ACTIVE?
@@ -126,13 +126,14 @@ module Api
         partner_tz_name = latest_device&.timezone_name
 
         {
+          uuid: relationship.uuid,
           status: relationship.status,
           distance: relationship.distance,
+          type: relationship.type,
           timezone_name: relationship.timezone_name,
           timezone_offset_seconds: relationship.timezone_offset_seconds,
-          relationship_type: relationship.relationship_type,
           invite_code: invite.nil? ? nil : { code: invite.code, expires_at: invite.expires_at },
-          partner: partner.nil? ? nil : { uuid: partner.uuid, name: partner.name, image_path: partner.image_path, timezone_name: partner_tz_name, timezone_offset_seconds: partner_tz_offset }
+          partner: partner.nil? ? nil : { uuid: partner.uuid, name: partner.name, image_path: partner.image_path, timezone_name: partner_tz_name, timezone_offset_seconds: partner_tz_offset },
         }
       end
 

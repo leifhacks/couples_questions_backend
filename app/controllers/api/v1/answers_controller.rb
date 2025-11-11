@@ -12,7 +12,7 @@ module Api
       before_action :authenticate_user!
       before_action -> { validate_with_validator(Validate::Answers::Update) }, only: [:update]
 
-      # PUT /api/v1/answers
+      # POST /api/v1/answers
       def update
         relationship = current_user.current_relationship
         return render(json: { error: 'no_relationship' }, status: :not_found) if relationship.nil?

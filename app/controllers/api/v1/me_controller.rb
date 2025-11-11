@@ -18,7 +18,7 @@ module Api
         render json: me_payload(current_user)
       end
 
-      # PUT /api/v1/me
+      # POST /api/v1/me
       def update
         ActiveRecord::Base.transaction do
           update_attrs = {}
