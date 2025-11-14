@@ -125,6 +125,7 @@ module Api
         latest_device = partner&.client_devices&.order(updated_at: :desc)&.first
         partner_tz_offset = latest_device&.timezone_offset_seconds
         partner_tz_name = latest_device&.timezone_name
+        current_membership = relationship.relationship_memberships.find_by(user: current_user)
 
         {
           uuid: relationship.uuid,
@@ -135,6 +136,7 @@ module Api
           timezone_offset_seconds: relationship.timezone_offset_seconds,
           invite_code: invite.nil? ? nil : { code: invite.code, expires_at: invite.expires_at },
           partner: partner.nil? ? nil : { uuid: partner.uuid, name: partner.name, image_path: partner.image_path, timezone_name: partner_tz_name, timezone_offset_seconds: partner_tz_offset },
+          current_user_role: current_membership&.role,
         }
       end
 
@@ -152,7 +154,7 @@ module Api
         return relationship if relationship.present?
 
         timezone_name, timezone_offset = current_user.latest_timezone_components
-        new_relationship, invite = relationship_bootstrap_service.create_for_user!(
+        _, invite = relationship_bootstrap_service.create_for_user!(
           user: current_user,
           timezone_name: timezone_name,
           timezone_offset_seconds: timezone_offset
