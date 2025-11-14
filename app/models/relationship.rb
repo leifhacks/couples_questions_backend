@@ -25,9 +25,9 @@ class Relationship < UuidRecord
   # Returns [timezone_name, timezone_offset_seconds], preferring largest offset; tie-breaker by latest updated_at.
   def calculate_timezone_components
     latest_candidates = users.map do |u|
-      d = u.client_devices.order(updated_at: :desc).first
-      next nil if d.nil? || d.timezone_offset_seconds.nil?
-      [d.timezone_name, d.timezone_offset_seconds, d.updated_at]
+      name, offset, updated_at = u.latest_timezone_components
+      next nil if offset.nil?
+      [name, offset, updated_at]
     end.compact
 
     return [nil, nil] if latest_candidates.empty?

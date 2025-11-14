@@ -34,7 +34,8 @@ module Api
         relationship = current_user.current_relationship
         return render(json: { error: 'invalid_status' }, status: :bad_request) if relationship.ACTIVE?
 
-        invite = invite_code_service.issue!(relationship: relationship, created_by_user: current_user)
+        invite = @bootstrapped_relationship_invite ||
+                 invite_code_service.issue!(relationship: relationship, created_by_user: current_user)
         render json: { invite_code: { code: invite.code, expires_at: invite.expires_at } }
       end
 
@@ -110,7 +111,7 @@ module Api
       end
 
       def ensure_active_or_pending_relationship!
-        relationship = current_user.current_relationship
+        relationship = ensure_relationship_present!
         return render(json: { error: 'no_relationship' }, status: :not_found) if relationship.nil?
         return render(json: { error: 'relationship_ended' }, status: :bad_request) if relationship.ENDED?
       end
@@ -129,7 +130,7 @@ module Api
           uuid: relationship.uuid,
           status: relationship.status,
           distance: relationship.distance,
-          type: relationship.type,
+          type: relationship.relationship_type,
           timezone_name: relationship.timezone_name,
           timezone_offset_seconds: relationship.timezone_offset_seconds,
           invite_code: invite.nil? ? nil : { code: invite.code, expires_at: invite.expires_at },
@@ -140,6 +141,25 @@ module Api
       # Invite creation centralized in InviteCodeService
       def invite_code_service
         @invite_code_service ||= InviteCodeService.new
+      end
+
+      def relationship_bootstrap_service
+        @relationship_bootstrap_service ||= RelationshipBootstrapService.new
+      end
+
+      def ensure_relationship_present!
+        relationship = current_user.current_relationship
+        return relationship if relationship.present?
+
+        timezone_name, timezone_offset = current_user.latest_timezone_components
+        new_relationship, invite = relationship_bootstrap_service.create_for_user!(
+          user: current_user,
+          timezone_name: timezone_name,
+          timezone_offset_seconds: timezone_offset
+        )
+        current_user.reload
+        @bootstrapped_relationship_invite = invite
+        current_user.current_relationship
       end
     end
   end

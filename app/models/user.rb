@@ -23,6 +23,12 @@ class User < IdentifiedRecord
 
   validates :name, format: { with: NAME_REGEX }, allow_nil: true
 
+  def latest_timezone_components
+    device = client_devices.order(updated_at: :desc).first
+    return [nil, nil, nil] if device.nil?
+    [device.timezone_name, device.timezone_offset_seconds, device.updated_at]
+  end
+
   def self.cleanup
     deleted_users =  User.where.missing(:client_devices)
     result = deleted_users.size

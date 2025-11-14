@@ -16,14 +16,11 @@ module Api
         ActiveRecord::Base.transaction do
           user = create_user!
 
-          relationship = Relationship.create!(
+          relationship, invite_code = relationship_bootstrap_service.create_for_user!(
+            user: user,
             timezone_name: device_params[:timezone_name],
             timezone_offset_seconds: device_params[:timezone_offset_seconds]
           )
-
-          RelationshipMembership.create!(relationship: relationship, user: user, role: 'OWNER')
-
-          invite_code = invite_code_service.issue!(relationship: relationship, created_by_user: user)
 
           device = user.client_devices.create!(
             device_token: device_params[:device_token],
@@ -32,8 +29,6 @@ module Api
             timezone_name: device_params[:timezone_name],
             timezone_offset_seconds: device_params[:timezone_offset_seconds]
           )
-
-          user.update!(current_relationship_id: relationship.id)
 
           refresh_token = token_service.generate_refresh_token
           UserSession.create!(
@@ -92,8 +87,8 @@ module Api
         @token_service ||= TokenService.new(refresh_token_ttl: 10 * 365 * 24 * 60 * 60) # 10 years
       end
 
-      def invite_code_service
-        @invite_code_service ||= InviteCodeService.new
+      def relationship_bootstrap_service
+        @relationship_bootstrap_service ||= RelationshipBootstrapService.new
       end
 
       def create_user!
