@@ -16,7 +16,7 @@ class AccessTokenFetcher
 
   def from_header
     HEADER_KEYS.each do |key|
-      token = normalized_token(@request.headers(key))
+      token = normalized_token(@request.headers[key])
       return token if token.present?
     end
     nil
