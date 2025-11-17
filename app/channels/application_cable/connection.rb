@@ -61,12 +61,13 @@ module ApplicationCable
       end
 
       previous_connection = device.web_socket_connection
-      previous_connection&.destroy!
 
-      connection = WebSocketConnection.create!
-      device.update!(web_socket_connection: connection)
-
-      connection
+      ActiveRecord::Base.transaction do
+        connection = WebSocketConnection.create!
+        device.update!(web_socket_connection: connection)
+        previous_connection&.destroy!
+        connection
+      end
     end
 
     def token_service

@@ -69,6 +69,7 @@ class Relationship < UuidRecord
       user.client_devices.each do |device|
         connection = device.web_socket_connection
         next if connection.nil?
+        next if skip_broadcast_device?(device)
 
         BroadcastWorker.perform_async(connection.uuid, message)
       end
@@ -84,6 +85,13 @@ class Relationship < UuidRecord
       'status' => status,
       'user_uuid' => user.uuid
     }
+  end
+
+  def skip_broadcast_device?(device)
+    initiator_device_token = Current.respond_to?(:initiator_device_token) ? Current.initiator_device_token : nil
+    return false if initiator_device_token.blank?
+
+    device.device_token == initiator_device_token
   end
 end
 

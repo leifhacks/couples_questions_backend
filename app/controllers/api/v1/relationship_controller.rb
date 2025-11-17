@@ -11,6 +11,7 @@ module Api
 
       before_action :authenticate_user!
       skip_before_action :validate_data, :decode_params, only: [:show]
+      before_action :assign_current_initiator_device
       before_action :ensure_active_or_pending_relationship!, only: [:show, :update, :new_invite]
       before_action -> { validate_with_validator(Validate::Relationship::Update) }, only: [:update]
       before_action -> { validate_with_validator(Validate::Relationship::ConfirmInvite) }, only: [:confirm_invite]
@@ -65,7 +66,6 @@ module Api
         return render(json: { error: 'partner_not_found' }, status: :not_found) if partner.nil?
 
         membership = RelationshipMembership.find_by(relationship: relationship, user: current_user)
-
 
         case params[:action_type]
         when 'APPROVE'
@@ -157,6 +157,13 @@ module Api
 
         relationship.update!(status: 'ACTIVE')
         render json: relationship_payload(relationship)
+      end
+
+      def assign_current_initiator_device
+        return unless defined?(Current)
+
+        header_value = request.headers['X-Initiator-Device-Token']
+        Current.initiator_device_token = header_value.presence
       end
 
       def reject_relationship(relationship, membership)
