@@ -61,20 +61,17 @@ module Api
         relationship = current_user.current_relationship
         return render(json: { error: 'invalid_status' }, status: :bad_request) unless relationship&.PENDING?
 
-        membership = RelationshipMembership.find_by(relationship: relationship, user: current_user)
-        return render(json: { error: 'forbidden' }, status: :forbidden) unless membership&.OWNER?
-
         partner = relationship.users.find_by(uuid: params[:partner_uuid])
         return render(json: { error: 'partner_not_found' }, status: :not_found) if partner.nil?
 
+        membership = RelationshipMembership.find_by(relationship: relationship, user: current_user)
+
+
         case params[:action_type]
         when 'APPROVE'
-          relationship.update!(status: 'ACTIVE')
-          render json: relationship_payload(relationship)
+          approve_relationship(relationship, membership)
         when 'REJECT'
-          RelationshipMembership.where(relationship: relationship, user: partner).destroy_all
-          partner.update!(current_relationship_id: nil)
-          render json: relationship_payload(relationship)
+          reject_relationship(relationship, membership)
         else
           render json: { error: 'invalid_action' }, status: :bad_request
         end
@@ -162,6 +159,31 @@ module Api
         current_user.reload
         @bootstrapped_relationship_invite = invite
         current_user.current_relationship
+      end
+
+      def approve_relationship(relationship, membership)
+        return render(json: { error: 'forbidden' }, status: :forbidden) unless membership&.OWNER?
+
+        relationship.update!(status: 'ACTIVE')
+        render json: relationship_payload(relationship)
+      end
+
+      def reject_relationship(relationship, membership)
+        return render(json: { error: 'forbidden' }, status: :forbidden) if membership.nil?
+
+        if membership&.OWNER?  
+          partner = relationship.users.find_by(uuid: params[:partner_uuid])
+          return render(json: { error: 'partner_not_found' }, status: :not_found) if partner.nil?
+
+          partner.update!(current_relationship_id: nil)
+          RelationshipMembership.where(relationship: relationship, user: partner).destroy_all
+        else
+
+          current_user.update!(current_relationship_id: nil)
+          RelationshipMembership.where(relationship: relationship, user: current_user).destroy_all
+        end
+        
+        render json: relationship_payload(relationship)
       end
     end
   end
