@@ -105,8 +105,8 @@ class Relationship < UuidRecord
   def relationship_status_message(user)
     {
       'event' => 'relationship_updated',
-      'relationship' => extended_payload(user).deep_stringify_keys
-    }
+      'relationship' => extended_payload(user)
+    }.as_json
   end
 
   def skip_broadcast_device?(device)
