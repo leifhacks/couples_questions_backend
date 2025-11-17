@@ -28,7 +28,14 @@ class WebSocketChannel < ApplicationCable::Channel
 
   def unsubscribed
     Rails.logger.info("#{self.class}.#{__method__}: #{params}")
-    web_socket_connection&.destroy!
+    return if web_socket_connection.nil?
+
+    ActiveRecord::Base.transaction do
+      device = web_socket_connection.client_device
+      device&.update!(web_socket_connection: nil)
+      web_socket_connection.destroy!
+    end
+
     stop_all_streams
   end
 
