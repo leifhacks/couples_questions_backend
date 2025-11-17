@@ -99,7 +99,9 @@ class Relationship < UuidRecord
       user.client_devices.each do |device|
         Rails.logger.info "Broadcasting relationship change for device #{device.device_token}"
         connection = device.web_socket_connection
+        Rails.logger.info "Stopping broadcast for connection #{connection.uuid} because it is nil" if connection.nil?
         next if connection.nil?
+        Rails.logger.info "Skipping broadcast for device #{device.device_token} because it is the initiator device" if skip_broadcast_device?(device)
         next if skip_broadcast_device?(device)
 
         Rails.logger.info "Broadcasting relationship change for connection #{connection.uuid}"
