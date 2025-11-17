@@ -48,7 +48,6 @@ class Relationship < UuidRecord
   end
 
   def broadcast_membership_change!(user:)
-    Rails.logger.info "Broadcasting membership change for user #{user.uuid}"
     broadcast_relationship_change(user_ids: (users.pluck(:id) + [user&.id]).compact.uniq)
   end
 
@@ -88,23 +87,16 @@ class Relationship < UuidRecord
   end
 
   def broadcast_relationship_change(user_ids:)
-    Rails.logger.info "Broadcasting relationship change for user ids: #{user_ids}"
     ids = Array(user_ids).compact.uniq
     return if ids.blank?
 
     User.includes(client_devices: :web_socket_connection).where(id: ids).find_each do |user|
-      Rails.logger.info "Broadcasting relationship change for user #{user.uuid}"
       message = relationship_status_message(user)
-      Rails.logger.info "Broadcasting relationship change message: #{message}"
       user.client_devices.each do |device|
-        Rails.logger.info "Broadcasting relationship change for device #{device.device_token}"
         connection = device.web_socket_connection
-        Rails.logger.info "Stopping broadcast for connection #{connection.uuid} because it is nil" if connection.nil?
         next if connection.nil?
-        Rails.logger.info "Skipping broadcast for device #{device.device_token} because it is the initiator device" if skip_broadcast_device?(device)
         next if skip_broadcast_device?(device)
 
-        Rails.logger.info "Broadcasting relationship change for connection #{connection.uuid}"
         BroadcastWorker.perform_async(connection.uuid, message)
       end
     end
