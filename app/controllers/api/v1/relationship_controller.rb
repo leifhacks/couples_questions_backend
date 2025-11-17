@@ -20,14 +20,14 @@ module Api
       # GET /api/v1/relationship
       def show
         relationship = current_user.current_relationship
-        render json: relationship_payload(relationship)
+        render json: relationship.extended_payload(current_user)
       end
 
       # POST /api/v1/relationship
       def update
         relationship = current_user.current_relationship
         relationship.update!(update_params) unless update_params.empty?
-        render json: relationship_payload(relationship)
+        render json: relationship.extended_payload(current_user)
       end
 
       # GET /api/v1/relationship/new_invite
@@ -95,7 +95,7 @@ module Api
             relationship.users.reload.each { |u| u.update!(current_relationship_id: relationship.id) }
             code.update!(used_at: Time.current)
           end
-          render json: relationship_payload(relationship)
+          render json: relationship.extended_payload(current_user)
         else
           render json: { error: 'already_paired' }, status: :bad_request
         end
@@ -111,21 +111,6 @@ module Api
         relationship = ensure_relationship_present!
         return render(json: { error: 'no_relationship' }, status: :not_found) if relationship.nil?
         return render(json: { error: 'relationship_ended' }, status: :bad_request) if relationship.ENDED?
-      end
-
-      def relationship_payload(relationship)
-        invite = InviteCode.where(relationship: relationship)
-                           .order(created_at: :desc)
-                           .first
-
-        partner = relationship.users.where.not(id: current_user.id).first
-        current_membership = relationship.relationship_memberships.find_by(user: current_user)
-
-        relationship.payload.merge(
-          invite_code: invite.nil? ? nil : invite.payload,
-          partner: partner.nil? ? nil : partner.partner_payload,
-          current_user_role: current_membership&.role,
-        )
       end
 
       # Invite creation centralized in InviteCodeService
@@ -156,7 +141,7 @@ module Api
         return render(json: { error: 'forbidden' }, status: :forbidden) unless membership&.OWNER?
 
         relationship.update!(status: 'ACTIVE')
-        render json: relationship_payload(relationship)
+        render json: relationship.extended_payload(current_user)
       end
 
       def assign_current_initiator_device
@@ -181,7 +166,7 @@ module Api
           RelationshipMembership.where(relationship: relationship, user: current_user).destroy_all
         end
         
-        render json: relationship_payload(relationship)
+        render json: relationship.extended_payload(current_user)
       end
     end
   end

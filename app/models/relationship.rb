@@ -32,6 +32,25 @@ class Relationship < UuidRecord
     }
   end
 
+  def extended_payload(current_user)
+    invite = InviteCode.where(relationship: self)
+                        .order(created_at: :desc)
+                        .first
+
+    partner = users.where.not(id: current_user.id).first
+    current_membership = relationship_memberships.find_by(user: current_user)
+
+    relationship.payload.merge(
+      invite_code: invite.nil? ? nil : invite.payload,
+      partner: partner.nil? ? nil : partner.partner_payload,
+      current_user_role: current_membership&.role,
+    )
+  end
+
+  def broadcast_membership_change!(user:)
+    broadcast_relationship_change(user_ids: (users.pluck(:id) + [user&.id]).compact.uniq)
+  end
+
   private
 
   # Determine timezone from partners' latest devices.
@@ -62,10 +81,17 @@ class Relationship < UuidRecord
 
   def broadcast_status_change
     user_ids = @status_change_user_ids.presence || users.pluck(:id)
-    return if user_ids.blank?
+    broadcast_relationship_change(user_ids: user_ids)
+  ensure
+    @status_change_user_ids = nil
+  end
 
-    User.includes(client_devices: :web_socket_connection).where(id: user_ids).find_each do |user|
-      message = relationship_status_message_for(user)
+  def broadcast_relationship_change(user_ids:)
+    ids = Array(user_ids).compact.uniq
+    return if ids.blank?
+
+    User.includes(client_devices: :web_socket_connection).where(id: ids).find_each do |user|
+      message = relationship_status_message(user)
       user.client_devices.each do |device|
         connection = device.web_socket_connection
         next if connection.nil?
@@ -74,16 +100,12 @@ class Relationship < UuidRecord
         BroadcastWorker.perform_async(connection.uuid, message)
       end
     end
-  ensure
-    @status_change_user_ids = nil
   end
 
-  def relationship_status_message_for(user)
+  def relationship_status_message(user)
     {
-      'event' => 'relationship_status_changed',
-      'relationship_uuid' => uuid,
-      'status' => status,
-      'user_uuid' => user.uuid
+      'event' => 'relationship_updated',
+      'relationship' => extended_payload(user)
     }
   end
 

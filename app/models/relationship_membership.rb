@@ -10,11 +10,21 @@ class RelationshipMembership < ApplicationRecord
   belongs_to :user
 
   after_commit :recalculate_relationship_timezone
+  after_commit :broadcast_member_added, on: :create
+  after_commit :broadcast_member_removed, on: :destroy
 
   private
 
   def recalculate_relationship_timezone
     relationship&.recalculate_timezone!
+  end
+
+  def broadcast_member_added
+    relationship&.broadcast_membership_change!(user: user)
+  end
+
+  def broadcast_member_removed
+    relationship&.broadcast_membership_change!(user: user)
   end
 end
 
