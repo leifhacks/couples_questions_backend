@@ -40,7 +40,7 @@ class Relationship < UuidRecord
     partner = users.where.not(id: current_user.id).first
     current_membership = relationship_memberships.find_by(user: current_user)
 
-    relationship.payload.merge(
+    payload.merge(
       invite_code: invite.nil? ? nil : invite.payload,
       partner: partner.nil? ? nil : partner.partner_payload,
       current_user_role: current_membership&.role,
