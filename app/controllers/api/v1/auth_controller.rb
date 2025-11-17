@@ -62,13 +62,7 @@ module Api
         )
 
         access_token = token_service.issue_access_token(user)
-        render json: {
-          access_token: access_token,
-          refresh_token: new_refresh,
-          token_type: 'Bearer',
-          access_token_expires_in: token_service.access_token_ttl,
-          refresh_token_expires_at: UserSession.find_by(refresh_token_hash: token_service.hash_refresh_token(new_refresh), active: true)&.expires_at
-        }
+        render json: token_payload(access_token, new_refresh)
       end
 
       # POST /api/v1/auth/invalidate
@@ -96,38 +90,20 @@ module Api
       end
 
       def bootstrap_response(user, device, relationship, invite_code, access_token, refresh_token)
+        token_payload(access_token, refresh_token).merge(
+          user: user.payload,
+          device: device.payload,
+          relationship: relationship.payload.merge(invite_code: invite_code.payload)
+        )
+      end
+
+      def token_payload(access_token, refresh_token)
         {
           access_token: access_token,
           refresh_token: refresh_token,
           token_type: 'Bearer',
           access_token_expires_in: token_service.access_token_ttl,
-          refresh_token_expires_at: UserSession.find_by(refresh_token_hash: token_service.hash_refresh_token(refresh_token), active: true)&.expires_at,
-          user: {
-            uuid: user.uuid,
-            name: user.name,
-            favorite_category_uuid: user.favorite_category&.uuid,
-            image_path: user.image_path,
-            current_relationship_uuid: relationship.uuid
-          },
-          device: {
-            uuid: device.uuid,
-            platform: device.platform,
-            iso_code: device.iso_code,
-            timezone_name: device.timezone_name,
-            timezone_offset_seconds: device.timezone_offset_seconds
-          },
-          relationship: {
-            uuid: relationship.uuid,
-            status: relationship.status,
-            distance: relationship.distance,
-            relationship_type: relationship.relationship_type,
-            timezone_name: relationship.timezone_name,
-            timezone_offset_seconds: relationship.timezone_offset_seconds,
-            invite_code: {
-              code: invite_code.code,
-              expires_at: invite_code.expires_at
-            }
-          }
+          refresh_token_expires_at: UserSession.find_by(refresh_token_hash: token_service.hash_refresh_token(refresh_token), active: true)&.expires_at
         }
       end
 

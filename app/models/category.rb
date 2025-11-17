@@ -5,6 +5,14 @@
 #-------------------------------------------------------------------------------
 class Category < UuidRecord
   has_many :questions
+
+  def payload(lang)
+    name = lang == 'de' ? name_de : name_en
+    description = lang == 'de' ? description_de : description_en
+    {
+      uuid: uuid,
+      name: name,
+      description: description
+    }
+  end
 end
-
-

@@ -6,4 +6,11 @@
 class Answer < UuidRecord
   belongs_to :question_assignment
   belongs_to :user
+
+  def payload
+    {
+      uuid: uuid,
+      body: body
+    }
+  end
 end

@@ -16,7 +16,7 @@ module Api
       # GET /api/v1/categories
       def index
         lang = language_code_for(current_user)
-        render json: Category.all.map { |c| category_payload(c, lang) }
+        render json: Category.all.map { |c| c.payload(lang) }
       end
 
       # GET /api/v1/categories/:uuid/questions
@@ -32,7 +32,7 @@ module Api
         scope = category.questions.where(is_active: true)
         questions = scope.order(created_at: :desc).offset(offset).limit(limit)
 
-        render json: questions.map { |q| question_brief_payload(q, lang) }
+        render json: questions.map { |q| q.brief_payload(lang) }
       end
 
       private
@@ -40,19 +40,6 @@ module Api
       def language_code_for(user)
         user.client_devices.order(updated_at: :desc).first&.language_code || 'en'
       end
-
-      def category_payload(category, lang)
-        name = lang == 'de' ? category.name_de : category.name_en
-        description = lang == 'de' ? category.description_de : category.description_en
-        { uuid: category.uuid, name: name, description: description }
-      end
-
-      def question_brief_payload(question, lang)
-        body = lang == 'de' ? question.body_de : question.body_en
-        { uuid: question.uuid, question: body }
-      end
     end
   end
 end
-
-

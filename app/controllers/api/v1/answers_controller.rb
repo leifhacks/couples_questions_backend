@@ -28,7 +28,7 @@ module Api
         answer.body = answer_body
         answer.save!
 
-        render json: { uuid: answer.uuid, body: answer.body }
+        render json: answer.payload
       end
     end
   end

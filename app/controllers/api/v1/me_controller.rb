@@ -15,7 +15,7 @@ module Api
 
       # GET /api/v1/me
       def show
-        render json: me_payload(current_user)
+        render json: current_user.payload
       end
 
       # POST /api/v1/me
@@ -43,22 +43,8 @@ module Api
           current_user.update!(update_attrs) unless update_attrs.empty?
         end
 
-        render json: me_payload(current_user)
+        render json: current_user.payload
       end
-
-      private
-
-      def me_payload(user)
-        {
-          uuid: user.uuid,
-          name: user.name,
-          favorite_category_uuid: user.favorite_category&.uuid,
-          image_path: user.image_path,
-          current_relationship_uuid: user.current_relationship&.uuid
-        }
-      end
-
-      # auth methods are provided by UserAuthentication concern
     end
   end
 end

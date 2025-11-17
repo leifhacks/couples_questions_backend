@@ -29,6 +29,29 @@ class User < IdentifiedRecord
     [device.timezone_name, device.timezone_offset_seconds, device.updated_at]
   end
 
+  def payload
+    {
+      uuid: uuid,
+      name: name,
+      favorite_category_uuid: favorite_category&.uuid,
+      image_path: image_path,
+      current_relationship_uuid: current_relationship&.uuid
+    }
+  end
+
+  def partner_payload
+    latest_device = client_devices.order(updated_at: :desc).first
+    timezone_name = latest_device&.timezone_name
+    timezone_offset_seconds = latest_device&.timezone_offset_seconds
+    {
+      uuid: uuid,
+      name: name,
+      image_path: image_path,
+      timezone_name: timezone_name,
+      timezone_offset_seconds: timezone_offset_seconds,
+    }
+  end
+
   def self.cleanup
     deleted_users =  User.where.missing(:client_devices)
     result = deleted_users.size

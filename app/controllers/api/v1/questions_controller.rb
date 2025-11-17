@@ -103,8 +103,6 @@ module Api
 
       def assignment_payload(assignment, include_answers:)
         lang = language_code_for(current_user)
-        question = assignment.question
-        body = lang == 'de' ? question.body_de : question.body_en
 
         my_answer = assignment.answers.find { |a| a.user_id == current_user.id }
         partner_answer = assignment.answers.find { |a| a.user_id != current_user.id }
@@ -112,16 +110,11 @@ module Api
         # Withhold partner_answer until both have answered
         partner_visible = my_answer.present? && partner_answer.present?
 
-        payload = {
-          uuid: assignment.uuid,
-          relationship_uuid: assignment.relationship.uuid,
-          question_date: assignment.question_date,
-          question: body
-        }
+        payload = assignment.payload(lang)
 
         if include_answers
-          payload[:my_answer] = my_answer.nil? ? nil : { uuid: my_answer.uuid, body: my_answer.body }
-          payload[:partner_answer] = partner_visible ? { uuid: partner_answer.uuid, body: partner_answer.body } : nil
+          payload[:my_answer] = my_answer.nil? ? nil : my_answer.payload
+          payload[:partner_answer] = partner_visible ? partner_answer.payload : nil
         end
 
         payload

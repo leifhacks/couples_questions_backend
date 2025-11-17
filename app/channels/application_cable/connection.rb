@@ -4,38 +4,73 @@ module ApplicationCable
 
     def connect
       decode_data
-      self.web_socket_connection = get_connection
+      user = authenticate_user
+      self.web_socket_connection = establish_connection_for(user)
     end
 
     private
 
     def decode_data
-      parser = Base64Decoder.new
+      encoded = request.params[:data]
+      return if encoded.blank?
 
-      decoded_hash = parser.call(request.params[:data])
+      parser = Base64Decoder.new
+      decoded_hash = parser.call(encoded)
+
       request.params.delete('data')
       decoded_hash.each do |key, value|
         request.params[key] = value
       end
+    rescue JSON::ParserError => e
+      Rails.logger.info("#{self.class}.#{__method__}: Unable to decode params: #{e.message}")
+      reject_unauthorized_connection
     end
 
-    def get_connection
+    def authenticate_user
+      token = AccessTokenFetcher.new(request).call
+      if token.blank?
+        Rails.logger.info("#{self.class}.#{__method__}: Missing access token: #{request.params}")
+        reject_unauthorized_connection
+      end
+
+      user = token_service.user_from_access_token(token)
+      if user.nil?
+        Rails.logger.info("#{self.class}.#{__method__}: Invalid access token: #{request.params}")
+        reject_unauthorized_connection
+      end
+
+      user
+    end
+
+    def establish_connection_for(user)
       device_token = request.params[:device_token]
-      if device_token.nil?
+      if device_token.blank?
         Rails.logger.info("#{self.class}.#{__method__}: Missing device token: #{request.params}")
-        return reject_unauthorized_connection
+        reject_unauthorized_connection
       end
 
       device = ClientDevice.find_by(device_token: device_token)
       if device.nil?
         Rails.logger.info("#{self.class}.#{__method__}: Missing device: #{request.params}")
-        return reject_unauthorized_connection
+        reject_unauthorized_connection
       end
 
-      web_socket_connection = device.web_socket_connection
-      web_socket_connection&.destroy!
+      if user.nil? || device.user_id != user.id
+        Rails.logger.info("#{self.class}.#{__method__}: Device does not belong to current user: #{request.params}")
+        reject_unauthorized_connection
+      end
 
-      WebSocketConnection.create!(client_device: device)
+      previous_connection = device.web_socket_connection
+      previous_connection&.destroy!
+
+      connection = WebSocketConnection.create!
+      device.update!(web_socket_connection: connection)
+
+      connection
+    end
+
+    def token_service
+      @token_service ||= TokenService.new
     end
   end
 end

@@ -36,7 +36,7 @@ module Api
 
         invite = @bootstrapped_relationship_invite ||
                  invite_code_service.issue!(relationship: relationship, created_by_user: current_user)
-        render json: { invite_code: { code: invite.code, expires_at: invite.expires_at } }
+        render json: { invite_code: invite.payload }
       end
 
       # POST /api/v1/relationship/unpair
@@ -119,22 +119,13 @@ module Api
                            .first
 
         partner = relationship.users.where.not(id: current_user.id).first
-        latest_device = partner&.client_devices&.order(updated_at: :desc)&.first
-        partner_tz_offset = latest_device&.timezone_offset_seconds
-        partner_tz_name = latest_device&.timezone_name
         current_membership = relationship.relationship_memberships.find_by(user: current_user)
 
-        {
-          uuid: relationship.uuid,
-          status: relationship.status,
-          distance: relationship.distance,
-          type: relationship.relationship_type,
-          timezone_name: relationship.timezone_name,
-          timezone_offset_seconds: relationship.timezone_offset_seconds,
-          invite_code: invite.nil? ? nil : { code: invite.code, expires_at: invite.expires_at },
-          partner: partner.nil? ? nil : { uuid: partner.uuid, name: partner.name, image_path: partner.image_path, timezone_name: partner_tz_name, timezone_offset_seconds: partner_tz_offset },
+        relationship.payload.merge(
+          invite_code: invite.nil? ? nil : invite.payload,
+          partner: partner.nil? ? nil : partner.partner_payload,
           current_user_role: current_membership&.role,
-        }
+        )
       end
 
       # Invite creation centralized in InviteCodeService

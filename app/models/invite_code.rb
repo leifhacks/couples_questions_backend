@@ -9,7 +9,14 @@ class InviteCode < ApplicationRecord
 
   before_create :generate_code
 
-  CODE_CHARSET = (("A".."Z").to_a + ("0".."9").to_a).freeze
+  CODE_CHARSET = (("A".."Z").to_a + ("1".."9").to_a).freeze
+
+  def payload
+    {
+      code: code,
+      expires_at: expires_at
+    }
+  end
 
   private
 

@@ -19,6 +19,16 @@ class ClientDevice < UuidRecord
     result
   end
 
+  def payload
+    {
+      uuid: uuid,
+      platform: platform,
+      iso_code: iso_code,
+      timezone_name: timezone_name,
+      timezone_offset_seconds: timezone_offset_seconds
+    }
+  end
+
   def platform_from_token
     device_token.include?(':') || device_token.include?('-') ? 'android' : 'ios'
   end
