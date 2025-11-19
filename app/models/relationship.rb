@@ -13,7 +13,7 @@ class Relationship < UuidRecord
   has_many :answers, through: :question_assignments
 
   before_save :set_timezone_from_calculation
-  before_save :cache_status_change_user_ids
+
   after_commit :broadcast_status_change, on: [:create, :update]
 
   def recalculate_timezone!
@@ -52,10 +52,7 @@ class Relationship < UuidRecord
   end
 
   def broadcast_status_change
-    user_ids = @status_change_user_ids.presence || users.pluck(:id)
-    broadcast_relationship_change(user_ids: user_ids)
-  ensure
-    @status_change_user_ids = nil
+    broadcast_relationship_change(user_ids: users.pluck(:id))
   end
 
   private
@@ -80,10 +77,6 @@ class Relationship < UuidRecord
     name, offset = calculate_timezone_components
     self.timezone_name = name
     self.timezone_offset_seconds = offset
-  end
-
-  def cache_status_change_user_ids
-    @status_change_user_ids = users.pluck(:id)
   end
 
   def broadcast_relationship_change(user_ids:)
