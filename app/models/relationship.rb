@@ -87,16 +87,21 @@ class Relationship < UuidRecord
   end
 
   def broadcast_relationship_change(user_ids:)
+    Rails.logger.info("Broadcasting relationship change to users: #{user_ids}")
     ids = Array(user_ids).compact.uniq
+    Rails.logger.info("Filtered user ids: #{ids}")
     return if ids.blank?
 
     User.includes(client_devices: :web_socket_connection).where(id: ids).find_each do |user|
+      Rails.logger.info("Broadcasting relationship change to user: #{user.name}")
       message = relationship_status_message(user)
       user.client_devices.each do |device|
+        R
         connection = device.web_socket_connection
         next if connection.nil?
         next if skip_broadcast_device?(device)
 
+        Rails.logger.info("Broadcasting relationship change to device: #{device.device_token}")
         BroadcastWorker.perform_async(connection.uuid, message)
       end
     end
