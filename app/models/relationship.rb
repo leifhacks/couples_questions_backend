@@ -96,7 +96,7 @@ class Relationship < UuidRecord
       Rails.logger.info("Broadcasting relationship change to user: #{user.name}")
       message = relationship_status_message(user)
       user.client_devices.each do |device|
-        R
+        Rails.logger.info("Broadcasting relationship change to device: #{device.device_token}")
         connection = device.web_socket_connection
         next if connection.nil?
         next if skip_broadcast_device?(device)
