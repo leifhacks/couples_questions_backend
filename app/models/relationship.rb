@@ -51,6 +51,13 @@ class Relationship < UuidRecord
     broadcast_relationship_change(user_ids: (users.pluck(:id) + [user&.id]).compact.uniq)
   end
 
+  def broadcast_status_change
+    user_ids = @status_change_user_ids.presence || users.pluck(:id)
+    broadcast_relationship_change(user_ids: user_ids)
+  ensure
+    @status_change_user_ids = nil
+  end
+
   private
 
   # Determine timezone from partners' latest devices.
@@ -77,13 +84,6 @@ class Relationship < UuidRecord
 
   def cache_status_change_user_ids
     @status_change_user_ids = users.pluck(:id)
-  end
-
-  def broadcast_status_change
-    user_ids = @status_change_user_ids.presence || users.pluck(:id)
-    broadcast_relationship_change(user_ids: user_ids)
-  ensure
-    @status_change_user_ids = nil
   end
 
   def broadcast_relationship_change(user_ids:)
