@@ -52,14 +52,17 @@ module Api
         user = session.user
 
         # Rotate session
-        session.update!(active: false)
-        new_refresh = token_service.generate_refresh_token
-        UserSession.create!(
-          user: user,
-          refresh_token_hash: token_service.hash_refresh_token(new_refresh),
-          expires_at: token_service.refresh_expires_at,
-          active: true
-        )
+        new_refresh = nil
+        ActiveRecord::Base.transaction do
+          session.update!(active: false)
+          new_refresh = token_service.generate_refresh_token
+          UserSession.create!(
+            user: user,
+            refresh_token_hash: token_service.hash_refresh_token(new_refresh),
+            expires_at: token_service.refresh_expires_at,
+            active: true
+          )
+        end
 
         access_token = token_service.issue_access_token(user)
         render json: token_payload(access_token, new_refresh)

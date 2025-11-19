@@ -10,10 +10,12 @@ class InviteCodeService
   # Expires any currently active invites, then issues a new invite code.
   # Returns the created InviteCode.
   def issue!(relationship:, created_by_user:)
-    expire_active!(relationship: relationship)
-    InviteCode.create!(relationship: relationship,
-                       created_by_user: created_by_user,
-                       expires_at: Time.current + @ttl)
+    ActiveRecord::Base.transaction do
+      expire_active!(relationship: relationship)
+      InviteCode.create!(relationship: relationship,
+                         created_by_user: created_by_user,
+                         expires_at: Time.current + @ttl)
+    end
   end
 
   # Marks all active (unused and unexpired) invites as expired immediately.

@@ -48,7 +48,6 @@ class Relationship < UuidRecord
   end
 
   def broadcast_membership_change!(user:)
-    Rails.logger.info("broadcast_membership_change! Broadcasting membership change to users: #{users.pluck(:id) + [user&.name]}")
     broadcast_relationship_change(user_ids: (users.pluck(:id) + [user&.id]).compact.uniq)
   end
 
@@ -82,34 +81,22 @@ class Relationship < UuidRecord
 
   def broadcast_status_change
     user_ids = @status_change_user_ids.presence || users.pluck(:id)
-    Rails.logger.info("broadcast_status_change Broadcasting relationship change to users: #{user_ids.map { |id| User.find(id).name }}")
     broadcast_relationship_change(user_ids: user_ids)
   ensure
     @status_change_user_ids = nil
   end
 
   def broadcast_relationship_change(user_ids:)
-    Rails.logger.info("Broadcasting relationship change to users: #{user_ids.map { |id| User.find(id).name }}")
     ids = Array(user_ids).compact.uniq
-    Rails.logger.info("Filtered user ids: #{ids}")
     return if ids.blank?
 
     User.includes(client_devices: :web_socket_connection).where(id: ids).find_each do |user|
-      Rails.logger.info("Broadcasting relationship change to user: #{user.name}")
       message = relationship_status_message(user)
       user.client_devices.each do |device|
-        Rails.logger.info("Broadcasting relationship change to device: #{device.device_token}")
         connection = device.web_socket_connection
-        if connection.nil?
-          Rails.logger.info("No connection found for device: #{device.device_token}")
-          next
-        end
-        if skip_broadcast_device?(device)
-          Rails.logger.info("Skipping broadcast to device: #{device.device_token}")
-          next
-        end
+        next if connection.nil?
+        next if skip_broadcast_device?(device)
 
-        Rails.logger.info("Finally broadcasting relationship change to device: #{device.device_token}")
         BroadcastWorker.perform_async(connection.uuid, message)
       end
     end

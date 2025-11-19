@@ -45,16 +45,25 @@ module Api
         relationship = current_user.current_relationship
         return render(json: { error: 'invalid_status' }, status: :bad_request) unless relationship&.ACTIVE?
 
+        participants = relationship.users.to_a
+
         ActiveRecord::Base.transaction do
           relationship.update!(status: 'ENDED')
           relationship.relationship_memberships.includes(:user).find_each do |m|
             m.user.update!(current_relationship_id: nil)
           end
-          # Optionally remove memberships entirely after unpair
           relationship.relationship_memberships.destroy_all
         end
 
-        render json: { status: 'ok' }
+        current_user_new_relationship = nil
+        participants.uniq(&:id).each do |participant|
+          relationship, = bootstrap_new_relationship_for(participant)
+          current_user_new_relationship ||= relationship if participant.id == current_user.id
+        end
+
+        return render(json: { error: 'bootstrap_failed' }, status: :internal_server_error) if current_user_new_relationship.nil?
+
+        render json: current_user_new_relationship.extended_payload(current_user)
       end
 
       # POST /api/v1/relationship/confirm_invite
@@ -103,45 +112,42 @@ module Api
 
       private
 
-      def update_params
-        params.permit(:relationship_type, :distance)
+      def approve_relationship(relationship, membership)
+        return render(json: { error: 'forbidden' }, status: :forbidden) unless membership&.OWNER?
+
+        relationship.update!(status: 'ACTIVE')
+        render json: relationship.extended_payload(current_user)
+      end
+
+      def reject_relationship(relationship, membership)
+        return render(json: { error: 'forbidden' }, status: :forbidden) if membership.nil?
+
+        owner_membership = membership&.OWNER?
+        partner = relationship.users.find_by(uuid: params[:partner_uuid]) if owner_membership
+        return render(json: { error: 'partner_not_found' }, status: :not_found) if owner_membership && partner.nil?
+
+        user_to_remove = owner_membership ? partner : current_user
+
+        ActiveRecord::Base.transaction do
+          user_to_remove.update!(current_relationship_id: nil)
+          RelationshipMembership.where(relationship: relationship, user: user_to_remove).destroy_all
+        end
+
+        if owner_membership
+          invite_code_service.issue!(relationship: relationship, created_by_user: current_user)
+          relationship = relationship.reload
+        end
+
+        new_relationship, = bootstrap_new_relationship_for(user_to_remove)
+        response_relationship = user_to_remove == current_user ? new_relationship : relationship
+
+        render json: response_relationship.extended_payload(current_user)
       end
 
       def ensure_active_or_pending_relationship!
         relationship = ensure_relationship_present!
         return render(json: { error: 'no_relationship' }, status: :not_found) if relationship.nil?
         return render(json: { error: 'relationship_ended' }, status: :bad_request) if relationship.ENDED?
-      end
-
-      # Invite creation centralized in InviteCodeService
-      def invite_code_service
-        @invite_code_service ||= InviteCodeService.new
-      end
-
-      def relationship_bootstrap_service
-        @relationship_bootstrap_service ||= RelationshipBootstrapService.new
-      end
-
-      def ensure_relationship_present!
-        relationship = current_user.current_relationship
-        return relationship if relationship.present?
-
-        timezone_name, timezone_offset = current_user.latest_timezone_components
-        _, invite = relationship_bootstrap_service.create_for_user!(
-          user: current_user,
-          timezone_name: timezone_name,
-          timezone_offset_seconds: timezone_offset
-        )
-        current_user.reload
-        @bootstrapped_relationship_invite = invite
-        current_user.current_relationship
-      end
-
-      def approve_relationship(relationship, membership)
-        return render(json: { error: 'forbidden' }, status: :forbidden) unless membership&.OWNER?
-
-        relationship.update!(status: 'ACTIVE')
-        render json: relationship.extended_payload(current_user)
       end
 
       def assign_current_initiator_device
@@ -151,22 +157,36 @@ module Api
         Current.initiator_device_token = header_value.presence
       end
 
-      def reject_relationship(relationship, membership)
-        return render(json: { error: 'forbidden' }, status: :forbidden) if membership.nil?
+      def update_params
+        params.permit(:relationship_type, :distance)
+      end
 
-        if membership&.OWNER?  
-          partner = relationship.users.find_by(uuid: params[:partner_uuid])
-          return render(json: { error: 'partner_not_found' }, status: :not_found) if partner.nil?
+      def ensure_relationship_present!
+        relationship = current_user.current_relationship
+        return relationship if relationship.present?
 
-          partner.update!(current_relationship_id: nil)
-          RelationshipMembership.where(relationship: relationship, user: partner).destroy_all
-        else
+        relationship, invite = bootstrap_new_relationship_for(current_user)
+        @bootstrapped_relationship_invite = invite
+        relationship
+      end
 
-          current_user.update!(current_relationship_id: nil)
-          RelationshipMembership.where(relationship: relationship, user: current_user).destroy_all
-        end
-        
-        render json: relationship.extended_payload(current_user)
+      def bootstrap_new_relationship_for(user)
+        timezone_name, timezone_offset = user.latest_timezone_components
+        relationship, invite = relationship_bootstrap_service.create_for_user!(
+          user: user,
+          timezone_name: timezone_name,
+          timezone_offset_seconds: timezone_offset
+        )
+        user.reload
+        [relationship, invite]
+      end
+
+      def invite_code_service
+        @invite_code_service ||= InviteCodeService.new
+      end
+
+      def relationship_bootstrap_service
+        @relationship_bootstrap_service ||= RelationshipBootstrapService.new
       end
     end
   end
