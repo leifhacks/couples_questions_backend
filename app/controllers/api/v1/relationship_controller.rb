@@ -133,10 +133,9 @@ module Api
           RelationshipMembership.where(relationship: relationship, user: user_to_remove).destroy_all
         end
 
-        if owner_membership
-          invite_code_service.issue!(relationship: relationship, created_by_user: current_user)
-          relationship = relationship.reload
-        end
+        user_to_keep = owner_membership ? current_user : partner
+        invite_code_service.issue!(relationship: relationship, created_by_user: user_to_keep)
+        relationship = relationship.reload
 
         new_relationship, = bootstrap_new_relationship_for(user_to_remove)
         response_relationship = user_to_remove == current_user ? new_relationship : relationship

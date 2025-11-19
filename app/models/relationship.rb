@@ -13,8 +13,8 @@ class Relationship < UuidRecord
   has_many :answers, through: :question_assignments
 
   before_save :set_timezone_from_calculation
-  before_save :cache_status_change_user_ids, if: -> { will_save_change_to_status? }
-  after_commit :broadcast_status_change, on: [:create, :update], if: -> { saved_change_to_status? }
+  before_save :cache_status_change_user_ids
+  after_commit :broadcast_status_change, on: [:create, :update]
 
   def recalculate_timezone!
     name, offset = calculate_timezone_components

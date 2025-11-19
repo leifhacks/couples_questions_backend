@@ -8,6 +8,7 @@ class InviteCode < ApplicationRecord
   belongs_to :created_by_user, class_name: 'User'
 
   before_create :generate_code
+  after_commit :broadcast_status_change, on: [:create, :update]
 
   CODE_CHARSET = (("A".."Z").to_a + ("1".."9").to_a).freeze
 
@@ -26,6 +27,8 @@ class InviteCode < ApplicationRecord
       break unless self.class.exists?(code: code)
     end
   end
+
+  def broadcast_status_change
+    relationship.broadcast_status_change
+  end
 end
-
-
