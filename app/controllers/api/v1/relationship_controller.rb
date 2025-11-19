@@ -122,18 +122,18 @@ module Api
       def reject_relationship(relationship, membership)
         return render(json: { error: 'forbidden' }, status: :forbidden) if membership.nil?
 
-        owner_membership = membership&.OWNER?
-        partner = relationship.users.find_by(uuid: params[:partner_uuid]) if owner_membership
-        return render(json: { error: 'partner_not_found' }, status: :not_found) if owner_membership && partner.nil?
+        partner = relationship.users.find_by(uuid: params[:partner_uuid])
+        return render(json: { error: 'partner_not_found' }, status: :not_found) if partner.nil?
 
+        owner_membership = membership&.OWNER?
         user_to_remove = owner_membership ? partner : current_user
+        user_to_keep = owner_membership ? current_user : partner
 
         ActiveRecord::Base.transaction do
           user_to_remove.update!(current_relationship_id: nil)
           RelationshipMembership.where(relationship: relationship, user: user_to_remove).destroy_all
         end
 
-        user_to_keep = owner_membership ? current_user : partner
         invite_code_service.issue!(relationship: relationship, created_by_user: user_to_keep)
         relationship = relationship.reload
 
