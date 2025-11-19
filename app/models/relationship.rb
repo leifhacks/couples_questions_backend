@@ -48,6 +48,7 @@ class Relationship < UuidRecord
   end
 
   def broadcast_membership_change!(user:)
+    Rails.logger.info("broadcast_membership_change! Broadcasting membership change to users: #{users.pluck(:id) + [user&.name]}")
     broadcast_relationship_change(user_ids: (users.pluck(:id) + [user&.id]).compact.uniq)
   end
 
@@ -81,13 +82,14 @@ class Relationship < UuidRecord
 
   def broadcast_status_change
     user_ids = @status_change_user_ids.presence || users.pluck(:id)
+    Rails.logger.info("broadcast_status_change Broadcasting relationship change to users: #{user_ids.map { |id| User.find(id).name }}")
     broadcast_relationship_change(user_ids: user_ids)
   ensure
     @status_change_user_ids = nil
   end
 
   def broadcast_relationship_change(user_ids:)
-    Rails.logger.info("Broadcasting relationship change to users: #{user_ids}")
+    Rails.logger.info("Broadcasting relationship change to users: #{user_ids.map { |id| User.find(id).name }}")
     ids = Array(user_ids).compact.uniq
     Rails.logger.info("Filtered user ids: #{ids}")
     return if ids.blank?

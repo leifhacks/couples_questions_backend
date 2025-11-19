@@ -20,10 +20,12 @@ class RelationshipMembership < ApplicationRecord
   end
 
   def broadcast_member_added
+    Rails.logger.info("broadcast_member_added Broadcasting membership change to users: #{user&.name}")
     relationship&.broadcast_membership_change!(user: user)
   end
 
   def broadcast_member_removed
+    Rails.logger.info("broadcast_member_removed Broadcasting membership change to users: #{user&.name}")
     relationship&.broadcast_membership_change!(user: user)
   end
 end
