@@ -100,10 +100,16 @@ class Relationship < UuidRecord
       user.client_devices.each do |device|
         Rails.logger.info("Broadcasting relationship change to device: #{device.device_token}")
         connection = device.web_socket_connection
-        next if connection.nil?
-        next if skip_broadcast_device?(device)
+        if connection.nil?
+          Rails.logger.info("No connection found for device: #{device.device_token}")
+          next
+        end
+        if skip_broadcast_device?(device)
+          Rails.logger.info("Skipping broadcast to device: #{device.device_token}")
+          next
+        end
 
-        Rails.logger.info("Broadcasting relationship change to device: #{device.device_token}")
+        Rails.logger.info("Finally broadcasting relationship change to device: #{device.device_token}")
         BroadcastWorker.perform_async(connection.uuid, message)
       end
     end
