@@ -84,22 +84,12 @@ class Relationship < UuidRecord
     return if ids.blank?
 
     User.includes(client_devices: :web_socket_connection).where(id: ids).find_each do |user|
-      message = relationship_status_message(user)
       user.client_devices.each do |device|
-        connection = device.web_socket_connection
-        next if connection.nil?
         next if skip_broadcast_device?(device)
 
-        BroadcastWorker.perform_async(connection.uuid, message)
+        RelationshipBroadcastWorker.perform_async(device.id, user.id, self.id)
       end
     end
-  end
-
-  def relationship_status_message(user)
-    {
-      'event' => 'relationship_updated',
-      'relationship' => extended_payload(user)
-    }.as_json
   end
 
   def skip_broadcast_device?(device)

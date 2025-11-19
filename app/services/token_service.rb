@@ -52,5 +52,3 @@ class TokenService
     nil
   end
 end
-
-
