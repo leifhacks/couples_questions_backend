@@ -23,14 +23,23 @@ class Answer < UuidRecord
   private
 
   def broadcast_status_change
-    question_assignment.relationship.users.each do |user|
-      next if user.id == self.user.id
+    relationship_users = question_assignment.relationship.users.to_a
+    return unless all_relationship_users_answered?(relationship_users)
 
+    relationship_users.each do |user|
       user.client_devices.each do |device|
         next if Current.skip_broadcast_device?(device)
 
         AnswerBroadcastWorker.perform_async(device.id, user.id, self.id)
       end
     end
+  end
+
+  def all_relationship_users_answered?(relationship_users)
+    expected_user_ids = relationship_users.map(&:id)
+    return false if expected_user_ids.blank?
+
+    answered_user_ids = question_assignment.answers.select(:user_id).distinct.pluck(:user_id)
+    (expected_user_ids - answered_user_ids).empty?
   end
 end

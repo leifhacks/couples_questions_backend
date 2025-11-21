@@ -83,7 +83,7 @@ class Relationship < UuidRecord
     ids = Array(user_ids).compact.uniq
     return if ids.blank?
 
-    User.includes(client_devices: :web_socket_connection).where(id: ids).find_each do |user|
+    User.where(id: ids).find_each do |user|
       user.client_devices.each do |device|
         next if Current.skip_broadcast_device?(device)
 
@@ -92,5 +92,3 @@ class Relationship < UuidRecord
     end
   end
 end
-
-
