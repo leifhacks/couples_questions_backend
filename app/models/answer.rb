@@ -9,10 +9,10 @@ class Answer < UuidRecord
 
   after_commit :broadcast_status_change, on: [:create, :update]
 
-  def payload
+  def payload(include_body: true)
     {
       uuid: uuid,
-      body: body,
+      body: include_body ? body : nil,
       reaction: reaction,
       created_at: created_at,
       user_uuid: user.uuid,

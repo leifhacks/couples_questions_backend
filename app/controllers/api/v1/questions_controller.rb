@@ -113,7 +113,7 @@ module Api
         partner_visible = my_answer.present? && partner_answer.present?
 
         payload[:my_answer] = my_answer&.payload
-        payload[:partner_answer] = partner_answer.payload if partner_visible
+        payload[:partner_answer] = partner_answer&.payload(include_body: partner_visible)
 
         payload
       end
