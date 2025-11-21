@@ -1,14 +1,15 @@
 #-------------------------------------------------------------------------------
-# Worker which broadcasts relationship updates to connected clients
+# Worker which broadcasts answer updates to connected clients
 #-------------------------------------------------------------------------------
-class RelationshipBroadcastWorker < BaseBroadcastWorker
+class AnswerBroadcastWorker < BaseBroadcastWorker
   private
 
-  def find_resource(relationship_id)
-    Relationship.find_by(id: relationship_id)
+  def find_resource(answer_id)
+    Answer.find_by(id: answer_id)
   end
 
-  def resource_still_valid?(user, relationship)
+  def resource_still_valid?(user, answer)
+    relationship = answer.question_assignment.relationship
     unless relationship.users.exists?(id: user.id)
       Rails.logger.info("#{self.class}.perform skipping: user #{user.id} no longer belongs to relationship #{relationship.id}")
       return false
@@ -17,10 +18,10 @@ class RelationshipBroadcastWorker < BaseBroadcastWorker
     true
   end
 
-  def build_message(user, relationship)
+  def build_message(user, answer)
     {
-      'event' => 'relationship_updated',
-      'relationship' => relationship.extended_payload(user)
+      'event' => 'answer_updated',
+      'answer' => answer.payload(user)
     }.as_json
   end
 end

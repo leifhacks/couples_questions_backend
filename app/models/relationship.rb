@@ -85,18 +85,11 @@ class Relationship < UuidRecord
 
     User.includes(client_devices: :web_socket_connection).where(id: ids).find_each do |user|
       user.client_devices.each do |device|
-        next if skip_broadcast_device?(device)
+        next if Current.skip_broadcast_device?(device)
 
         RelationshipBroadcastWorker.perform_async(device.id, user.id, self.id)
       end
     end
-  end
-
-  def skip_broadcast_device?(device)
-    initiator_device_token = Current.respond_to?(:initiator_device_token) ? Current.initiator_device_token : nil
-    return false if initiator_device_token.blank?
-
-    device.device_token == initiator_device_token
   end
 end
 
