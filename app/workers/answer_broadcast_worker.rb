@@ -4,7 +4,6 @@
 class AnswerBroadcastWorker < BaseBroadcastWorker
   def perform(device_id, user_id, answer_id, include_answer_body)
     @include_answer_body = include_answer_body
-    Rails.logger.info("AnswerBroadcastWorker.perform include_answer_body: #{@include_answer_body}")
     super(device_id, user_id, answer_id)
   end
 
@@ -17,7 +16,6 @@ class AnswerBroadcastWorker < BaseBroadcastWorker
   def resource_still_valid?(user, answer)
     relationship = answer.question_assignment.relationship
     unless relationship.users.exists?(id: user.id)
-      Rails.logger.info("#{self.class}.perform skipping: user #{user.id} no longer belongs to relationship #{relationship.id}")
       return false
     end
 
