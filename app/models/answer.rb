@@ -30,7 +30,7 @@ class Answer < UuidRecord
       user.client_devices.each do |device|
         next if Current.skip_broadcast_device?(device)
 
-        AnswerBroadcastWorker.perform_async(device.id, user.id, self.id, include_answer_body)
+        AnswerBroadcastWorker.perform_async(device.id, user.id, self.id, include_answer_body || user.id == self.user.id)
       end
     end
   end
