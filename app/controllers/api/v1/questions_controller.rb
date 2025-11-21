@@ -112,7 +112,7 @@ module Api
         # Withhold partner_answer until both have answered
         partner_visible = my_answer.present? && partner_answer.present?
 
-        payload[:my_answer] = my_answer.payload
+        payload[:my_answer] = my_answer&.payload
         payload[:partner_answer] = partner_answer.payload if partner_visible
 
         payload
