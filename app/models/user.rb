@@ -5,7 +5,7 @@
 #-------------------------------------------------------------------------------
 class User < IdentifiedRecord
   IDENTIFIER_REGEX = /\A[0-9a-f]{8}\z/
-  NAME_REGEX = /\A[A-Za-z0-9ÄäÖöÜüß\-_ ]+\z/
+  NAME_REGEX = /\A[A-Za-z0-9ÄäÖöÜüß\-_ ]*\z/
 
   has_many :client_devices, dependent: :destroy
   has_many :user_sessions, dependent: :destroy
