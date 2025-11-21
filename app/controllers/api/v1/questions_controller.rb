@@ -103,6 +103,8 @@ module Api
 
       def assignment_payload(assignment, include_answers:)
         lang = language_code_for(current_user)
+        payload = assignment.payload(lang)
+        return payload unless include_answers
 
         my_answer = assignment.answers.find { |a| a.user_id == current_user.id }
         partner_answer = assignment.answers.find { |a| a.user_id != current_user.id }
@@ -110,12 +112,8 @@ module Api
         # Withhold partner_answer until both have answered
         partner_visible = my_answer.present? && partner_answer.present?
 
-        payload = assignment.payload(lang)
-
-        if include_answers
-          payload[:my_answer] = my_answer.nil? ? nil : my_answer.payload
-          payload[:partner_answer] = partner_visible ? partner_answer.payload : nil
-        end
+        payload[:my_answer] = my_answer.payload
+        payload[:partner_answer] = partner_answer.payload if partner_visible
 
         payload
       end
@@ -127,5 +125,3 @@ module Api
     end
   end
 end
-
-

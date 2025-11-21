@@ -8,8 +8,13 @@ class Question < UuidRecord
 
   has_many :question_assignments, dependent: :destroy
 
-  def brief_payload(lang)
-    { uuid: uuid, question: body(lang) }
+  def payload(lang)
+    { 
+      uuid: uuid, 
+      body: body(lang), 
+      depth_level: depth_level, 
+      category_uuid: category.uuid
+    }
   end
 
   def body(lang)

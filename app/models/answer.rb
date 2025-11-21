@@ -10,7 +10,11 @@ class Answer < UuidRecord
   def payload
     {
       uuid: uuid,
-      body: body
+      body: body,
+      reaction: reaction,
+      created_at: created_at,
+      user_uuid: user.uuid,
+      question_assignment_uuid: question_assignment.uuid
     }
   end
 end

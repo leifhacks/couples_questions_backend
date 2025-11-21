@@ -14,7 +14,7 @@ class QuestionAssignment < UuidRecord
       uuid: uuid,
       relationship_uuid: relationship.uuid,
       question_date: question_date,
-      question: question.body(lang)
+      question: question.payload(lang)
     }
   end
 end

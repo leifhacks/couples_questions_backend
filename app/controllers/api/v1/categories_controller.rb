@@ -32,7 +32,7 @@ module Api
         scope = category.questions.where(is_active: true)
         questions = scope.order(created_at: :desc).offset(offset).limit(limit)
 
-        render json: questions.map { |q| q.brief_payload(lang) }
+        render json: questions.map { |q| q.payload(lang) }
       end
 
       private
