@@ -75,7 +75,7 @@ module Api
       end
 
       def create_user!
-        User.create!()
+        User.create!(name: '')
       end
 
       def bootstrap_response(user, device, relationship, invite_code, access_token, refresh_token)

@@ -6,13 +6,13 @@ class RelationshipBroadcastWorker
 
   sidekiq_options retry: false
 
-  MAX_RETRY_WINDOW_SECONDS = 10
+  MAX_RETRY_WINDOW_SECONDS = 5
   RETRY_INTERVAL_SECONDS = 2
 
   def perform(device_id, user_id, relationship_id, attempt = 0)
-    Rails.logger.info("#{self.class}.#{__method__}")
+    Rails.logger.info("#{self.class}.#{__method__}: Attempt no #{attempt}")
 
-    device = Device.find_by(id: device_id)
+    device = ClientDevice.find_by(id: device_id)
     user = User.find_by(id: user_id)
     relationship = Relationship.find_by(id: relationship_id)
     return if device.nil? || user.nil? || relationship.nil?
