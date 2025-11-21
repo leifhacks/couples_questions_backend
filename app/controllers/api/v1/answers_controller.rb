@@ -31,7 +31,7 @@ module Api
         partner_answer = assignment.answers.find { |a| a.user_id != current_user.id }
 
         render json: { my_answer: answer.payload, partner_answer: partner_answer&.payload }
-      end0
+      end
     end
   end
 end
