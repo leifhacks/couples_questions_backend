@@ -30,6 +30,7 @@ class Answer < UuidRecord
       user.client_devices.each do |device|
         next if Current.skip_broadcast_device?(device)
 
+        Rails.logger.info("Broadcasting answer update to user #{user.id} on device #{device.id} with include_answer_body: #{include_answer_body}, equal id: #{user.id == self.user.id}")
         AnswerBroadcastWorker.perform_async(device.id, user.id, self.id, include_answer_body || user.id == self.user.id)
       end
     end

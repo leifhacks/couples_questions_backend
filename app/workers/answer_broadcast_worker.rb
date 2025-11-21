@@ -3,8 +3,9 @@
 #-------------------------------------------------------------------------------
 class AnswerBroadcastWorker < BaseBroadcastWorker
   def perform(device_id, user_id, answer_id, include_answer_body)
-    super(device_id, user_id, answer_id)
     @include_answer_body = include_answer_body
+    Rails.logger.info("AnswerBroadcastWorker.perform include_answer_body: #{@include_answer_body}")
+    super(device_id, user_id, answer_id)
   end
 
   private
@@ -24,6 +25,7 @@ class AnswerBroadcastWorker < BaseBroadcastWorker
   end
 
   def build_message(user, answer)
+    Rails.logger.info("AnswerBroadcastWorker.build_message include_answer_body: #{@include_answer_body}")
     {
       'event' => 'answer_updated',
       'answer' => answer.payload(include_body: @include_answer_body)
