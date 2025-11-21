@@ -43,7 +43,7 @@ class Relationship < UuidRecord
     payload.merge(
       invite_code: invite.nil? ? nil : invite.payload,
       partner: partner.nil? ? nil : partner.partner_payload,
-      current_user_role: current_membership&.role,
+      current_user_role: current_membership.role,
     )
   end
 
