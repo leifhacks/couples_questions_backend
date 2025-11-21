@@ -2,6 +2,11 @@
 # Worker which broadcasts answer updates to connected clients
 #-------------------------------------------------------------------------------
 class AnswerBroadcastWorker < BaseBroadcastWorker
+  def perform(device_id, user_id, answer_id, include_answer_body)
+    super(device_id, user_id, answer_id)
+    @include_answer_body = include_answer_body
+  end
+
   private
 
   def find_resource(answer_id)
@@ -21,7 +26,7 @@ class AnswerBroadcastWorker < BaseBroadcastWorker
   def build_message(user, answer)
     {
       'event' => 'answer_updated',
-      'answer' => answer.payload(user)
+      'answer' => answer.payload(include_body: @include_answer_body)
     }.as_json
   end
 end

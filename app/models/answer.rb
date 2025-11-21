@@ -24,13 +24,13 @@ class Answer < UuidRecord
 
   def broadcast_status_change
     relationship_users = question_assignment.relationship.users.to_a
-    return unless all_relationship_users_answered?(relationship_users)
+    include_answer_body = all_relationship_users_answered?(relationship_users)
 
     relationship_users.each do |user|
       user.client_devices.each do |device|
         next if Current.skip_broadcast_device?(device)
 
-        AnswerBroadcastWorker.perform_async(device.id, user.id, self.id)
+        AnswerBroadcastWorker.perform_async(device.id, user.id, self.id, include_answer_body)
       end
     end
   end
