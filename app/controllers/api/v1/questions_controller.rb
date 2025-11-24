@@ -37,7 +37,6 @@ module Api
                       .where(relationship: relationship)
                       .where('question_date < ?', before_date)
                       .joins(:answers)
-                      .where(answers: { user_id: current_user.id })
                       .includes(:question, :answers)
                       .order(question_date: :desc)
                       .distinct
