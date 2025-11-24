@@ -10,8 +10,9 @@ module Api
       end
 
       skip_before_action :validate_with_validator
-      skip_before_action :validate_data, :decode_params, only: [:index, :category_questions]
+      skip_before_action :validate_data, :decode_params, only: [:index]
       before_action :authenticate_user!
+      before_action -> { validate_with_validator(Validate::Categories::CategoryQuestions) }, only: [:category_questions]
 
       # GET /api/v1/categories
       def index

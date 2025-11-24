@@ -10,9 +10,10 @@ module Api
       end
 
       skip_before_action :validate_with_validator
-      skip_before_action :validate_data, :decode_params, only: [:today_question, :journal]
+      skip_before_action :validate_data, :decode_params, only: [:today_question]
       before_action :authenticate_user!
       before_action :ensure_active_relationship!, only: [:today_question, :journal]
+      before_action -> { validate_with_validator(Validate::Questions::Journal) }, only: [:journal]
 
       # GET /api/v1/today_question
       def today_question
