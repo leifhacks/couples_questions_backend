@@ -36,10 +36,8 @@ module Api
         assignments = QuestionAssignment
                       .where(relationship: relationship)
                       .where('question_date < ?', before_date)
-                      .joins(:answers)
                       .includes(:question, :answers)
                       .order(question_date: :desc)
-                      .distinct
 
         render json: assignments.first(limit).map { |qa| assignment_payload(qa, include_answers: true) }
       end
