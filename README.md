@@ -19,3 +19,16 @@ rails db:migrate
 
 ApiKey.create
 whenever --update-crontab --set environment=$RAILS_ENV wheneverCrontab
+
+### Create questions
+
+relationship = Relationship.where(status: "ACTIVE").last
+
+date = relationship.question_assignments.last.question_date
+base_scope = Question.where(is_active: true)
+
+100.times do
+    date -= 1
+    question = base_scope.order(Arel.sql('RAND()')).first
+    assignment = QuestionAssignment.create!(relationship: relationship, question: question, question_date: date)
+end
