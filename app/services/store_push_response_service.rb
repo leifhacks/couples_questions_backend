@@ -14,8 +14,9 @@ class StorePushResponseService
     errors = []
 
     response.each do |token, msg|
-      client_device = @client_model.find_by(device_token: token)
-      client_device.update(last_response: msg)
+      @client_model.where(device_token: token).find_each do |client_device|
+        client_device.update(last_response: msg)
+      end
       errors.push(msg['error']['status']) if msg.key?('error')
       errors.push(msg['reason']) if msg.key?('reason')
     end

@@ -49,14 +49,14 @@ module ApplicationCable
         reject_unauthorized_connection
       end
 
-      device = ClientDevice.find_by(device_token: device_token)
-      if device.nil?
-        Rails.logger.info("#{self.class}.#{__method__}: Missing device: #{request.params}")
+      if user.nil?
+        Rails.logger.info("#{self.class}.#{__method__}: Missing user: #{request.params}")
         reject_unauthorized_connection
       end
 
-      if user.nil? || device.user_id != user.id
-        Rails.logger.info("#{self.class}.#{__method__}: Device does not belong to current user: #{request.params}")
+      device = user.client_devices.where(device_token: device_token).order(created_at: :desc).first
+      if device.nil?
+        Rails.logger.info("#{self.class}.#{__method__}: Missing device: for user #{request.params}")
         reject_unauthorized_connection
       end
 
