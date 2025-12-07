@@ -4,7 +4,7 @@
 # Model for Question Categories
 #-------------------------------------------------------------------------------
 class Category < UuidRecord
-  has_many :questions
+  has_many :questions, dependent: :destroy
 
   def payload(lang)
     name = lang == 'de' ? name_de : name_en
