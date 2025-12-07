@@ -8,6 +8,7 @@ class Answer < UuidRecord
   belongs_to :user
 
   after_commit :broadcast_status_change, on: [:create, :update]
+  after_commit :enqueue_partner_answered_notification, on: :create
 
   def payload(include_body: true)
     {
@@ -23,23 +24,14 @@ class Answer < UuidRecord
   private
 
   def broadcast_status_change
-    relationship_users = question_assignment.relationship.users.to_a
-    include_answer_body = all_relationship_users_answered?(relationship_users)
-
-    relationship_users.each do |user|
-      user.client_devices.each do |device|
-        next if Current.skip_broadcast_device?(device)
-
-        AnswerBroadcastWorker.perform_async(device.id, user.id, self.id, include_answer_body || user.id == self.user.id)
-      end
-    end
+    AnswerStatusBroadcastService.new.call(self)
+  rescue => e
+    Rails.logger.error("#{self.class}.#{__method__}: Failed to broadcast answer status, #{e.message}")
   end
 
-  def all_relationship_users_answered?(relationship_users)
-    expected_user_ids = relationship_users.map(&:id)
-    return false if expected_user_ids.blank?
-
-    answered_user_ids = question_assignment.answers.select(:user_id).distinct.pluck(:user_id)
-    (expected_user_ids - answered_user_ids).empty?
+  def enqueue_partner_answered_notification
+    PartnerAnsweredNotificationService.new.call(self)
+  rescue => e
+    Rails.logger.error("#{self.class}.#{__method__}: Failed to enqueue partner notification, #{e.message}")
   end
 end

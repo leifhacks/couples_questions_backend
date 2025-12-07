@@ -20,6 +20,9 @@ Rails.application.routes.draw do
       post 'answers', to: 'answers#update'
       get 'categories', to: 'categories#index'
       get 'categories/:uuid/questions', to: 'categories#category_questions'
+      get 'push_notifications', to: 'push_notifications#show'
+      post 'push_notifications', to: 'push_notifications#update'
+      post 'push_notifications/delete', to: 'push_notifications#destroy'
     end
   end
 end

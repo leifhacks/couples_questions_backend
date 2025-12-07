@@ -30,3 +30,7 @@ end
 every 1.day, at: '1:30 am' do
   runner 'DatabaseBackupWorker.perform_async'
 end
+  
+every 1.minute do
+  runner 'FoodPushNotificationWorker.perform_async'
+end
