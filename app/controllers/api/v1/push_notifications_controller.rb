@@ -35,6 +35,14 @@ module Api
         updated = []
 
         ActiveRecord::Base.transaction do
+          notification_types = entries.map { |entry| entry[:notification_type] }.compact
+
+          if notification_types.empty?
+            current_user.push_notifications.destroy_all
+          else
+            current_user.push_notifications.where.not(notification_type: notification_types).destroy_all
+          end
+
           entries.each do |entry|
             notification_type = entry[:notification_type]
             hours = entry[:hours]
