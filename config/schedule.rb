@@ -32,5 +32,5 @@ every 1.day, at: '1:30 am' do
 end
   
 every 1.minute do
-  runner 'FoodPushNotificationWorker.perform_async'
+  runner 'ScheduledPushNotificationWorker.perform_async'
 end
