@@ -9,7 +9,9 @@ module Api
 
           attr_accessor :push_notifications
 
-          validates :push_notifications, presence: true
+          validates :push_notifications,
+                    presence: true,
+                    unless: -> { push_notifications.is_a?(Array) && push_notifications.empty? }
           validate :validate_entries
 
           def initialize(params = {})
@@ -24,9 +26,7 @@ module Api
               return
             end
 
-            push_notifications.each_with_index do |raw_entry, index|
-              entry = raw_entry.to_h.with_indifferent_access
-
+            push_notifications.each_with_index do |entry, index|
               %i[notification_type hours minutes].each do |field|
                 if entry[field].nil?
                   errors.add(:push_notifications, "entry #{index} is missing #{field}")

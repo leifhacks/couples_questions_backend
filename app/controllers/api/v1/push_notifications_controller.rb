@@ -35,9 +35,7 @@ module Api
         updated = []
 
         ActiveRecord::Base.transaction do
-          entries.each do |raw_entry|
-            entry = raw_entry.to_h.with_indifferent_access
-
+          entries.each do |entry|
             notification_type = entry[:notification_type]
             hours = entry[:hours]
             minutes = entry[:minutes]
@@ -56,7 +54,9 @@ module Api
         }
       end
 
-        # Placeholder endpoint; not part of the current requirements.
+      # POST /api/v1/push_notifications/delete
+
+      # Destroys all PushNotifications for the authenticated user.
       def destroy
         current_user.push_notifications.destroy_all
         render json: { status: 'ok' }
