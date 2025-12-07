@@ -57,9 +57,7 @@ module Api
           end
         end
 
-        render json: {
-          push_notifications: updated.map(&:payload)
-        }
+        render json: updated.map(&:payload)
       end
 
       # POST /api/v1/push_notifications/delete
