@@ -21,7 +21,7 @@ module Api
         question_date = current_date_in_relationship_tz(relationship)
 
         assignment = QuestionAssignment.find_by(relationship: relationship, question_date: question_date)
-        assignment ||= assign_question_for_date!(relationship, question_date)
+        assignment ||= question_assignment_service.assign_for_date!(relationship: relationship, date: question_date)
 
         render json: assignment_payload(assignment, include_answers: true)
       end
@@ -63,40 +63,8 @@ module Api
         user.client_devices.order(updated_at: :desc).first&.language_code || 'en'
       end
 
-      def assign_question_for_date!(relationship, date)
-        base_scope = Question.where(is_active: true)
-
-        my_fav = current_user.favorite_category_id
-        partner = relationship.users.where.not(id: current_user.id).first
-        partner_fav = partner&.favorite_category_id
-
-        chosen_category_id = nil
-        roll = rand
-
-        if my_fav.present? && partner_fav.present?
-          if my_fav == partner_fav
-            # Same favorite: 50% favorite, 50% random
-            chosen_category_id = my_fav if roll < 0.5
-          else
-            # Different favorites: 20% my fav, 20% partner fav, 60% random
-            if roll < 0.2
-              chosen_category_id = my_fav
-            elsif roll < 0.4
-              chosen_category_id = partner_fav
-            end
-          end
-        elsif my_fav.present? || partner_fav.present?
-          # One favorite present: 20% that favorite, 80% random
-          single_fav = my_fav || partner_fav
-          chosen_category_id = single_fav if roll < 0.2
-        else
-          # No favorites: 100% random across all categories
-          chosen_category_id = nil
-        end
-
-        scoped = chosen_category_id.present? ? base_scope.where(category_id: chosen_category_id) : base_scope
-        question = scoped.order(Arel.sql('RAND()')).first || base_scope.order(Arel.sql('RAND()')).first
-        QuestionAssignment.create!(relationship: relationship, question: question, question_date: date)
+      def question_assignment_service
+        @question_assignment_service ||= QuestionAssignmentService.new(user: current_user)
       end
 
       def assignment_payload(assignment, include_answers:)

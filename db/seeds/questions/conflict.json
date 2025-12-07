@@ -1,0 +1,247 @@
+{
+  "name_en": "Conflict",
+  "name_de": "Konflikt",
+  "description_en": "Reflect on tension and repair with kindness, so you can understand triggers, communicate needs more clearly, and find your way back to each other faster and more gently.",
+  "description_de": "Reflektiert Spannungen und Versöhnung mit Freundlichkeit, damit ihr Auslöser besser versteht, Bedürfnisse klarer kommuniziert und schneller sowie sanfter wieder zueinander findet.",
+  "questions": [
+    {
+      "body_en": "When you start to feel irritated with me, what are the first signs in your body or thoughts?",
+      "body_de": "Wenn du beginnst, dich über mich zu ärgern – was sind die ersten Signale in deinem Körper oder in deinen Gedanken?",
+      "depth": 3
+    },
+    {
+      "body_en": "In a conflict, what do you most need from me to feel that I’m still on your side, even if we disagree?",
+      "body_de": "Was brauchst du im Konflikt am meisten von mir, um zu spüren, dass ich trotz unterschiedlicher Meinung noch auf deiner Seite bin?",
+      "depth": 3
+    },
+    {
+      "body_en": "Which of my reactions in conflict makes it harder for you to stay open — and what would feel softer instead?",
+      "body_de": "Welche meiner Reaktionen im Streit macht es dir schwer, offen zu bleiben – und was würde sich stattdessen weicher anfühlen?",
+      "depth": 3
+    },
+    {
+      "body_en": "When you raise your voice, shut down, or retreat, what’s usually happening inside you in that moment?",
+      "body_de": "Wenn du deine Stimme erhebst, zumachst oder dich zurückziehst – was passiert in diesen Momenten typischerweise innerlich in dir?",
+      "depth": 3
+    },
+    {
+      "body_en": "What did you learn about conflict from your family growing up, and what do you want to do differently with me?",
+      "body_de": "Was hast du in deiner Familie über Konflikte gelernt – und was möchtest du mit mir bewusst anders machen?",
+      "depth": 3
+    },
+    {
+      "body_en": "During an argument, which sentence from me would help you relax your shoulders even a little?",
+      "body_de": "Welcher Satz von mir würde dir im Streit helfen, zumindest ein bisschen die Schultern zu entspannen?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s one small thing I could stop doing in conflict that would already make a big difference for you?",
+      "body_de": "Welche kleine Sache könnte ich im Streit aufhören zu tun, die für dich schon einen großen Unterschied machen würde?",
+      "depth": 3
+    },
+    {
+      "body_en": "When we argue over text, what makes it especially hard for you — and how could we make that easier?",
+      "body_de": "Was macht Streit per Chat für dich besonders schwer – und wie könnten wir es uns da leichter machen?",
+      "depth": 2,
+      "extra_relevance_for_distances": ["LONG_DISTANCE"]
+    },
+    {
+      "body_en": "What’s a repair step after conflict that really lands for you and helps you feel close again?",
+      "body_de": "Welcher Schritt nach einem Streit hilft dir wirklich, dich mir wieder nah zu fühlen?",
+      "depth": 3
+    },
+    {
+      "body_en": "When you say “I need space,” what does that practically mean for you and what doesn’t it mean?",
+      "body_de": "Wenn du sagst „Ich brauche Abstand“ – was bedeutet das für dich konkret, und was bedeutet es ausdrücklich nicht?",
+      "depth": 3
+    },
+    {
+      "body_en": "Which topics feel the most sensitive for you in conflict, and how can I step more gently there?",
+      "body_de": "Welche Themen sind für dich im Streit besonders sensibel – und wie kann ich dort achtsamer auftreten?",
+      "depth": 3
+    },
+    {
+      "body_en": "What’s one conflict pattern you’ve seen in us that you’d really like us to change over time?",
+      "body_de": "Welches Streit‑Muster zwischen uns würdest du gern mit der Zeit wirklich verändern?",
+      "depth": 3
+    },
+    {
+      "body_en": "When we’re tense, what helps you remember that I’m not your enemy, even if I feel like your opponent?",
+      "body_de": "Wenn es zwischen uns angespannt ist – was hilft dir, dich daran zu erinnern, dass ich nicht dein Feind bin, auch wenn ich mich gerade wie ein Gegenüber anfühle?",
+      "depth": 3
+    },
+    {
+      "body_en": "How do you feel about pausing a conflict and coming back to it later — does that feel helpful or scary?",
+      "body_de": "Wie geht es dir damit, einen Konflikt zu unterbrechen und später wieder aufzunehmen – fühlt sich das hilfreich oder eher beängstigend an?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s a phrase I use in conflict that stings more than I might realize?",
+      "body_de": "Welche Formulierung von mir verletzt dich im Streit stärker, als ich vermutlich ahne?",
+      "depth": 3
+    },
+    {
+      "body_en": "In arguments, do you tend to prioritize being understood or keeping the peace — and how can we balance both?",
+      "body_de": "Legst du im Streit eher Wert darauf, verstanden zu werden oder den Frieden zu wahren – und wie können wir beides besser ausbalancieren?",
+      "depth": 3
+    },
+    {
+      "body_en": "What’s one conflict from our past that you feel proud of how we eventually handled it?",
+      "body_de": "Auf welchen unserer vergangenen Konflikte bist du stolz, wenn du daran denkst, wie wir ihn letztlich bewältigt haben?",
+      "depth": 2
+    },
+    {
+      "body_en": "How do you prefer to start a difficult conversation: slowly with disclaimers, or directly but gently?",
+      "body_de": "Wie beginnst du schwierige Gespräche am liebsten: langsam mit vielen Einordnungen oder direkt, aber behutsam?",
+      "depth": 2
+    },
+    {
+      "body_en": "When we fight, what story does your mind start telling you about our relationship?",
+      "body_de": "Welche Geschichte beginnt dein Kopf über unsere Beziehung zu erzählen, wenn wir streiten?",
+      "depth": 3
+    },
+    {
+      "body_en": "What do you need to hear or see from me to trust that a conflict is actually resolved, not just buried?",
+      "body_de": "Was musst du von mir hören oder sehen, um zu vertrauen, dass ein Konflikt wirklich gelöst und nicht nur verdrängt ist?",
+      "depth": 3
+    },
+    {
+      "body_en": "Which of your needs tends to get lost fastest when there is tension between us?",
+      "body_de": "Welches deiner Bedürfnisse geht bei Spannungen zwischen uns am schnellsten unter?",
+      "depth": 3
+    },
+    {
+      "body_en": "How do you feel about using “time‑outs” in conflict, and what would a respectful time‑out look like for you?",
+      "body_de": "Wie stehst du zu „Time‑outs“ im Streit, und wie sähe ein respektvolles Time‑out für dich aus?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s something you wish I would do more often right at the beginning of a disagreement?",
+      "body_de": "Was wünschst du dir, dass ich besonders am Anfang eines Konflikts häufiger tun würde?",
+      "depth": 3
+    },
+    {
+      "body_en": "When you apologize, what do you hope I will focus on — the exact words, the effort, the change afterwards?",
+      "body_de": "Wenn du dich entschuldigst – worauf hoffst du, dass ich meinen Fokus lege: auf die genauen Worte, die Mühe dahinter oder die Veränderung danach?",
+      "depth": 2
+    },
+    {
+      "body_en": "How has our long‑distance situation made conflict easier in some ways, and harder in others?",
+      "body_de": "Wie hat unsere Fernsituation Konflikte in mancher Hinsicht leichter und in anderer Hinsicht schwieriger gemacht?",
+      "depth": 2,
+      "relationship_distances": ["LONG_DISTANCE"]
+    },
+    {
+      "body_en": "What’s one fear you carry in conflict that you rarely name out loud?",
+      "body_de": "Welche Angst trägst du in Streitsituationen mit dir herum, die du selten laut aussprichst?",
+      "depth": 3
+    },
+    {
+      "body_en": "If we had a rulebook for fighting fair, what’s one rule you’d definitely include?",
+      "body_de": "Wenn wir ein Regelbuch für „fair streiten“ hätten – welche Regel müsste deiner Meinung nach auf jeden Fall hinein?",
+      "depth": 2
+    },
+    {
+      "body_en": "When you feel hurt by me, what makes it easier for you to tell me instead of pulling away?",
+      "body_de": "Wenn du dich von mir verletzt fühlst – was macht es dir leichter, mir das zu sagen statt dich zurückzuziehen?",
+      "depth": 3
+    },
+    {
+      "body_en": "Which part of conflict is the most draining for you: the build‑up, the argument itself, or the aftermath?",
+      "body_de": "Welcher Teil von Konflikten ist für dich am anstrengendsten: der Aufbau, der Streit selbst oder die Zeit danach?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s a small ritual or phrase we could use to signal, I want to repair, even if we’re still upset?",
+      "body_de": "Welches kleine Ritual oder welche kurze Phrase könnten wir nutzen, um zu signalisieren: „Ich möchte reparieren“, selbst wenn wir noch aufgewühlt sind?",
+      "depth": 2
+    },
+    {
+      "body_en": "How do you feel about revisiting old conflicts to understand them better — helpful reflection or reopening wounds?",
+      "body_de": "Wie geht es dir damit, alte Konflikte noch einmal gemeinsam anzuschauen – eher hilfreiche Reflexion oder Wunden wieder aufreißen?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s a criticism style (from me or others) that shuts you down quickly?",
+      "body_de": "Welche Art Kritik (von mir oder anderen) bringt dich besonders schnell dazu, innerlich zuzumachen?",
+      "depth": 3
+    },
+    {
+      "body_en": "What helps you feel that your perspective is genuinely heard, even if we don’t end up agreeing?",
+      "body_de": "Was hilft dir, zu spüren, dass deine Sichtweise wirklich gehört wird, auch wenn wir am Ende nicht derselben Meinung sind?",
+      "depth": 3
+    },
+    {
+      "body_en": "When you are angry, what do you most hope I will remember about the softer feelings underneath?",
+      "body_de": "Wenn du wütend bist – was hoffst du, dass ich über die weicheren Gefühle darunter nicht vergesse?",
+      "depth": 3
+    },
+    {
+      "body_en": "How do you prefer we end a hard conversation for the day if we can’t fully resolve it yet?",
+      "body_de": "Wie möchtest du, dass wir ein schwieriges Gespräch für den Tag beenden, wenn wir es noch nicht komplett lösen können?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s something you appreciate about how I handle conflict, even if it’s not perfect?",
+      "body_de": "Was schätzt du an meiner Art, mit Konflikten umzugehen – auch wenn sie nicht perfekt ist?",
+      "depth": 2
+    },
+    {
+      "body_en": "If you imagine us in the future, what do you hope will feel different about the way we navigate tension?",
+      "body_de": "Wenn du dir uns in der Zukunft vorstellst – was hoffst du, dass sich an unserer Art, mit Spannungen umzugehen, verändert haben wird?",
+      "depth": 3
+    },
+    {
+      "body_en": "What do you need from me after a conflict to fully relax back into closeness?",
+      "body_de": "Was brauchst du nach einem Streit von mir, um dich wieder vollständig in unsere Nähe hinein entspannen zu können?",
+      "depth": 3
+    },
+    {
+      "body_en": "When we argue, which part of you feels most at risk — your dignity, your belonging, your freedom, something else?",
+      "body_de": "Welcher Teil von dir fühlt sich beim Streiten am meisten bedroht – deine Würde, deine Zugehörigkeit, deine Freiheit oder etwas anderes?",
+      "depth": 3
+    },
+    {
+      "body_en": "How has our way of handling conflict already improved compared to when we started?",
+      "body_de": "Wie hat sich unsere Art, mit Konflikten umzugehen, im Vergleich zum Anfang unserer Beziehung schon verbessert?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s a boundary you’d like us to set for ourselves around fighting (for example: no insults, no threats, no silent disappearing)?",
+      "body_de": "Welche Grenze möchtest du, dass wir für unsere Streits setzen (z. B. keine Beleidigungen, keine Drohungen, kein kommentarloses Verschwinden)?",
+      "depth": 3
+    },
+    {
+      "body_en": "When you’ve been hurt in past relationships, what pattern from back then do you want to avoid repeating with me?",
+      "body_de": "Wenn du an Verletzungen aus früheren Beziehungen denkst – welches Muster von damals möchtest du mit mir auf keinen Fall wiederholen?",
+      "depth": 3
+    },
+    {
+      "body_en": "How do you feel about saying “thank you” after a hard conversation — does it feel natural, awkward, or important?",
+      "body_de": "Wie fühlst du dich damit, nach einem schwierigen Gespräch „Danke“ zu sagen – wirkt das auf dich natürlich, unangenehm oder wichtig?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s one way we could make our conflicts a bit more about understanding and a bit less about winning?",
+      "body_de": "Wie könnten wir unsere Konflikte ein kleines Stück mehr auf Verstehen und ein bisschen weniger auf „gewinnen“ ausrichten?",
+      "depth": 3
+    },
+    {
+      "body_en": "If you could rewrite the ending of one conflict we’ve had, what would you have wanted to happen instead?",
+      "body_de": "Wenn du das Ende eines unserer vergangenen Streits neu schreiben könntest – was hättest du dir stattdessen gewünscht?",
+      "depth": 3
+    },
+    {
+      "body_en": "What do you hope we will remember about each other in the middle of our next argument?",
+      "body_de": "Was hoffst du, dass wir mitten in unserem nächsten Streit übereinander nicht vergessen?",
+      "depth": 3
+    },
+    {
+      "body_en": "What’s one small change you’d like to try in the way we handle conflict this month?",
+      "body_de": "Welche kleine Veränderung im Umgang mit Konflikten würdest du gern diesen Monat mit mir ausprobieren?",
+      "depth": 2
+    }
+  ]
+}
+
+

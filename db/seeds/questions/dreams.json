@@ -1,0 +1,248 @@
+{
+  "name_en": "Dreams",
+  "name_de": "Träume",
+  "description_en": "Explore personal and shared dreams for your life, love, and future together — from wild fantasies to quiet wishes you’ve never said out loud before.",
+  "description_de": "Erkundet persönliche und gemeinsame Träume für euer Leben, eure Liebe und eure Zukunft – von wilden Fantasien bis zu leisen Wünschen, die ihr bisher vielleicht noch nie ausgesprochen habt.",
+  "questions": [
+    {
+      "body_en": "When you picture our life a few years from now, what’s the first image that comes to mind?",
+      "body_de": "Wenn du dir unser Leben in ein paar Jahren vorstellst – welches Bild taucht als erstes vor deinem inneren Auge auf?",
+      "depth": 1
+    },
+    {
+      "body_en": "What is a personal dream you’re almost afraid to say out loud, but want me to know about?",
+      "body_de": "Welcher persönliche Traum macht dir fast ein bisschen Angst, ihn laut auszusprechen, und trotzdem möchtest du, dass ich ihn kenne?",
+      "depth": 2
+    },
+    {
+      "body_en": "If everything went better than expected for us, what would our best possible life actually look like day to day?",
+      "body_de": "Wenn für uns alles besser laufen würde als erwartet – wie sähe unser bestmögliches gemeinsames Leben im ganz normalen Alltag aus?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s one dream you had to put on hold that you secretly hope our relationship might help revive?",
+      "body_de": "Welchen Traum musstest du erst einmal auf Eis legen, von dem du heimlich hoffst, dass unsere Beziehung ihm wieder Leben einhaucht?",
+      "depth": 2
+    },
+    {
+      "body_en": "If we could design our ideal home base together, where would it be and what would it feel like inside?",
+      "body_de": "Wenn wir gemeinsam unseren idealen „Home‑Base“-Ort erschaffen könnten – wo wäre er und wie würde es sich darin anfühlen?",
+      "depth": 1,
+      "extra_relevance_for_distances": ["LIVING_TOGETHER"]
+    },
+    {
+      "body_en": "What’s a way you hope we’ll be different as a couple five years from now — and a way you hope we’re exactly the same?",
+      "body_de": "In welcher Hinsicht hoffst du, dass wir als Paar in fünf Jahren anders sind – und in welcher Hinsicht hoffst du, dass wir genau gleich geblieben sind?",
+      "depth": 2
+    },
+    {
+      "body_en": "Which dream of mine are you most excited to see me go after, and why?",
+      "body_de": "Welchen meiner Träume möchtest du am liebsten wahr werden sehen – und warum gerade diesen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s a shared adventure or project you’d love us to look back on one day and say, We actually did that?",
+      "body_de": "Auf welches gemeinsame Abenteuer oder Projekt möchtest du eines Tages zurückblicken und sagen: „Wow, das haben wir wirklich gemacht“?",
+      "depth": 2
+    },
+    {
+      "body_en": "How do you imagine our roles shifting over time as our careers, families, or priorities change?",
+      "body_de": "Wie stellst du dir vor, dass sich unsere Rollen im Laufe der Zeit verändern, wenn sich Jobs, Familie oder Prioritäten verschieben?",
+      "depth": 2
+    },
+    {
+      "body_en": "If you could be sure we wouldn’t fail, what bold decision would you love us to make together?",
+      "body_de": "Wenn du sicher wüsstest, dass wir nicht scheitern – welche mutige Entscheidung würdest du gern gemeinsam mit mir treffen?",
+      "depth": 3
+    },
+    {
+      "body_en": "Which version of yourself do you hope will be standing next to me in ten years?",
+      "body_de": "Welche Version von dir selbst hoffst du, dass in zehn Jahren an meiner Seite steht?",
+      "depth": 2,
+      "relationship_types": ["ENGAGED", "MARRIED", "DOMESTIC_PARTNERSHIP"]
+    },
+    {
+      "body_en": "What’s a dream about where or how we live that feels almost too big to admit?",
+      "body_de": "Welcher Traum darüber, wo oder wie wir leben, fühlt sich fast zu groß an, um ihn zuzugeben?",
+      "depth": 2
+    },
+    {
+      "body_en": "If distance wasn’t an issue at all, what would be the first big change you’d want us to make in our life setup?",
+      "body_de": "Wenn Distanz überhaupt keine Rolle spielen würde – welche große Veränderung würdest du als Erstes in unserem Lebens‑Setup wollen?",
+      "depth": 2,
+      "relationship_distances": ["NEARBY", "LONG_DISTANCE"]
+    },
+    {
+      "body_en": "What kind of couple do you hope our friends quietly describe us as when they talk about us in the future?",
+      "body_de": "Als welche Art Paar hoffst du, dass unsere Freund*innen uns in Zukunft heimlich beschreiben, wenn sie über uns reden?",
+      "depth": 1
+    },
+    {
+      "body_en": "Is there a childhood dream you once had that you’d like to revisit together in some form?",
+      "body_de": "Gibt es einen Kindheitstraum von dir, den du in irgendeiner Form gern noch einmal mit mir aufgreifen würdest?",
+      "depth": 2
+    },
+    {
+      "body_en": "What does a slow, peaceful morning in our dream future look like for you?",
+      "body_de": "Wie sieht für dich ein langsamer, friedlicher Morgen in unserer Traumzukunft aus?",
+      "depth": 1
+    },
+    {
+      "body_en": "If we wrote down a list called Our Big Life Experiments, what’s one thing you’d put on it?",
+      "body_de": "Wenn wir eine Liste mit dem Titel „Unsere großen Lebens‑Experimente“ schreiben würden – was würdest du darauf setzen?",
+      "depth": 2
+    },
+    {
+      "body_en": "What part of your future feels the most uncertain right now, and how do you hope I’ll be beside you in that?",
+      "body_de": "Welcher Teil deiner Zukunft fühlt sich gerade am unsichersten an, und wie hoffst du, dass ich an deiner Seite bin, während du da durchgehst?",
+      "depth": 3
+    },
+    {
+      "body_en": "When you think about us possibly living in the same place one day, what emotion comes up first?",
+      "body_de": "Wenn du daran denkst, dass wir eines Tages vielleicht am selben Ort leben – welches Gefühl taucht als erstes auf?",
+      "depth": 1,
+      "relationship_distances": ["NEARBY", "LONG_DISTANCE"]
+    },
+    {
+      "body_en": "What’s a dream about who you want to become that you haven’t really shared with many people?",
+      "body_de": "Welcher Traum darüber, wer du werden möchtest, ist einer, den du bisher kaum mit jemandem geteilt hast?",
+      "depth": 3
+    },
+    {
+      "body_en": "If we could take a one‑year break from all obligations, how would you love us to spend that year together?",
+      "body_de": "Wenn wir ein Jahr lang keine Verpflichtungen hätten – wie würdest du dieses Jahr am liebsten gemeinsam mit mir verbringen?",
+      "depth": 2
+    },
+    {
+      "body_en": "What do you hope will feel easier for us in the future than it does right now?",
+      "body_de": "Was hoffst du, dass sich in unserer gemeinsamen Zukunft leichter anfühlen wird als jetzt gerade?",
+      "depth": 2
+    },
+    {
+      "body_en": "Which of our current tiny habits do you secretly hope will still exist in ten years?",
+      "body_de": "Welche unserer kleinen Gewohnheiten von heute hoffst du heimlich, dass es sie in zehn Jahren immer noch gibt?",
+      "depth": 1,
+      "relationship_types": ["ENGAGED", "MARRIED", "DOMESTIC_PARTNERSHIP"]
+    },
+    {
+      "body_en": "If money and visas and logistics were all magically handled, where would you want us to spend a year living and why?",
+      "body_de": "Wenn Geld, Visa und Organisation magisch geregelt wären – wo würdest du gern ein Jahr lang mit mir leben und warum gerade dort?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s a shared value you never want us to lose sight of, no matter how our life changes?",
+      "body_de": "Welchen gemeinsamen Wert möchtest du nie aus den Augen verlieren, egal wie sehr sich unser Leben verändert?",
+      "depth": 2
+    },
+    {
+      "body_en": "If our life together were a book, what would you hope the chapter we’re in right now is called?",
+      "body_de": "Wenn unser gemeinsames Leben ein Buch wäre – wie würdest du das Kapitel nennen, in dem wir gerade sind?",
+      "depth": 1
+    },
+    {
+      "body_en": "What kind of impact do you secretly hope our relationship has on the people around us?",
+      "body_de": "Welche Wirkung hoffst du insgeheim, dass unsere Beziehung auf die Menschen um uns herum hat?",
+      "depth": 2
+    },
+    {
+      "body_en": "Is there a dream for our future that feels urgent to you, like something we shouldn’t postpone too long?",
+      "body_de": "Gibt es einen Traum für unsere Zukunft, der sich für dich dringend anfühlt – etwas, das wir nicht zu lange aufschieben sollten?",
+      "depth": 3
+    },
+    {
+      "body_en": "What do you hope our future arguments will look like compared to how we handle conflict now?",
+      "body_de": "Wie hoffst du, dass unsere zukünftigen Streitigkeiten aussehen werden im Vergleich zu dem, wie wir heute mit Konflikten umgehen?",
+      "depth": 2
+    },
+    {
+      "body_en": "If you imagine a future version of us giving advice to our current selves, what do you think we’d say?",
+      "body_de": "Wenn du dir eine zukünftige Version von uns vorstellst, die unserem heutigen Ich einen Rat gibt – was würden wir, glaubst du, sagen?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s a dream about our emotional connection that matters more to you than any job, house, or city?",
+      "body_de": "Welcher Traum über unsere emotionale Verbindung ist dir wichtiger als jeder Job, jedes Haus oder jede Stadt?",
+      "depth": 3
+    },
+    {
+      "body_en": "How do you imagine us taking care of each other when life gets really demanding or heavy?",
+      "body_de": "Wie stellst du dir vor, dass wir füreinander sorgen, wenn das Leben wirklich fordernd oder schwer wird?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s one small step you’d love us to take this year that feels like a move toward a bigger dream?",
+      "body_de": "Welchen kleinen Schritt würdest du dieses Jahr gern mit mir gehen, der sich wie ein Schritt auf einen größeren Traum zubewegt?",
+      "depth": 2
+    },
+    {
+      "body_en": "If we could guarantee one feeling that our future home always gives us, what feeling should that be?",
+      "body_de": "Wenn wir garantieren könnten, dass unser zukünftiges Zuhause uns immer ein bestimmtes Gefühl gibt – welches Gefühl sollte das sein?",
+      "depth": 2,
+      "extra_relevance_for_distances": ["LIVING_TOGETHER"]
+    },
+    {
+      "body_en": "What kind of traditions or yearly rituals do you dream of us having in the future?",
+      "body_de": "Von welchen Traditionen oder jährlichen Ritualen träumst du, die wir in Zukunft als Paar haben?",
+      "depth": 1
+    },
+    {
+      "body_en": "Which of your current worries do you hope your future self will smile about and say, You didn’t need to stress so much?",
+      "body_de": "Über welche deiner heutigen Sorgen hoffst du, dass dein zukünftiges Ich lächelt und sagt: „Du hättest dir nicht so viele Gedanken machen müssen“?",
+      "depth": 2
+    },
+    {
+      "body_en": "If we could choose three words that future‑us would use to describe our relationship, which words do you hope they’d pick?",
+      "body_de": "Wenn wir drei Wörter wählen könnten, mit denen unser zukünftiges Wir unsere Beziehung beschreibt – welche hoffst du, dass sie wählen?",
+      "depth": 2
+    },
+    {
+      "body_en": "What do you hope our future children, pets, or younger relatives would feel when they are around us as a couple?",
+      "body_de": "Was hoffst du, dass unsere zukünftigen Kinder, Haustiere oder jüngeren Verwandten fühlen, wenn sie mit uns als Paar zusammen sind?",
+      "depth": 2,
+      "relationship_types": ["ENGAGED", "MARRIED", "DOMESTIC_PARTNERSHIP"]
+    },
+    {
+      "body_en": "If we could fast‑forward to a moment where we feel deeply proud of how far we’ve come, what scene do you imagine?",
+      "body_de": "Wenn wir vorspulen könnten zu einem Moment, in dem wir unglaublich stolz darauf sind, wie weit wir gekommen sind – welche Szene stellst du dir vor?",
+      "depth": 3
+    },
+    {
+      "body_en": "What’s a dream about your own growth that you hope I will actively cheer you on in?",
+      "body_de": "Von welchem Traum über dein persönliches Wachstum hoffst du, dass ich dich aktiv darin anfeuere?",
+      "depth": 2
+    },
+    {
+      "body_en": "How do you imagine us taking care of our relationship when life feels more settled and less exciting than now?",
+      "body_de": "Wie stellst du dir vor, dass wir unsere Beziehung pflegen, wenn das Leben sich ruhiger und weniger aufregend anfühlt als jetzt?",
+      "depth": 2
+    },
+    {
+      "body_en": "What is one wild, slightly unrealistic dream you love imagining for us, even if it never actually happens?",
+      "body_de": "Welcher wilde, leicht unrealistische Traum für uns macht dir Spaß, ihn dir vorzustellen – selbst wenn er vielleicht nie passiert?",
+      "depth": 1
+    },
+    {
+      "body_en": "When you think of us growing old together, what small detail makes you smile the most?",
+      "body_de": "Wenn du daran denkst, dass wir gemeinsam alt werden – welches kleine Detail lässt dich dabei am meisten lächeln?",
+      "depth": 1,
+      "relationship_types": ["ENGAGED", "MARRIED", "DOMESTIC_PARTNERSHIP"]
+    },
+    {
+      "body_en": "What do you hope will still feel magical about us, even when our life is very ordinary on the surface?",
+      "body_de": "Was hoffst du, dass sich zwischen uns immer noch magisch anfühlt, auch wenn unser Leben von außen ganz alltäglich wirkt?",
+      "depth": 2
+    },
+    {
+      "body_en": "If you could write a wish for our relationship and hide it in a time capsule, what would you write?",
+      "body_de": "Wenn du einen Wunsch für unsere Beziehung aufschreiben und in einer Zeitkapsel verstecken könntest – was würdest du hineinschreiben?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s one way you hope we’ll surprise ourselves with what we manage to build together?",
+      "body_de": "Auf welche Weise hoffst du, dass wir uns selbst überraschen mit dem, was wir gemeinsam aufbauen?",
+      "depth": 2
+    }
+  ]
+}
+
+

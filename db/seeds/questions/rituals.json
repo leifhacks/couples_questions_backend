@@ -1,0 +1,240 @@
+{
+  "name_en": "Rituals",
+  "name_de": "Rituale",
+  "description_en": "Design tiny shared rituals and habits that keep you close, even across distance — from nightly check‑ins to weekly moments that make your relationship feel anchored and intentional.",
+  "description_de": "Gestaltet kleine gemeinsame Rituale und Gewohnheiten, die euch nah halten – auch auf Distanz –, von abendlichen Check‑ins bis zu wöchentlichen Momenten, die eure Beziehung geerdet und bewusst wirken lassen.",
+  "questions": [
+    {
+      "body_en": "What’s a tiny daily ritual we could start that would make our days feel more connected, even when we’re busy?",
+      "body_de": "Welches kleine tägliche Ritual könnten wir starten, damit sich unsere Tage verbundener anfühlen, selbst wenn wir gestresst sind?",
+      "depth": 1
+    },
+    {
+      "body_en": "Is there a moment in your day when a short message or call from me would feel extra comforting or grounding?",
+      "body_de": "Gibt es einen Moment in deinem Tag, in dem sich eine kurze Nachricht oder ein Anruf von mir besonders tröstlich oder erdend anfühlen würde?",
+      "depth": 1,
+      "extra_relevance_for_distances": ["LONG_DISTANCE"]
+    },
+    {
+      "body_en": "What’s a weekly ritual you’d love us to have that you’d actually look forward to, not just “should” do?",
+      "body_de": "Welches wöchentliche Ritual würdest du gern mit mir haben, auf das du dich wirklich freust und das sich nicht nach „wir sollten“ anfühlt?",
+      "depth": 1
+    },
+    {
+      "body_en": "Which existing habit of ours already feels like a ritual, even if we never named it that?",
+      "body_de": "Welche unserer jetzigen Gewohnheiten fühlt sich schon wie ein Ritual an, auch wenn wir es nie so genannt haben?",
+      "depth": 0
+    },
+    {
+      "body_en": "If we created a reunion ritual for when we see each other in person, what would it include every time?",
+      "body_de": "Wenn wir ein Wiedersehens‑Ritual hätten, jedes Mal wenn wir uns in echt sehen – was müsste immer dabei sein?",
+      "depth": 1,
+      "extra_relevance_for_distances": ["LONG_DISTANCE"]
+    },
+    {
+      "body_en": "What kind of goodnight or good‑morning ritual would make you feel especially held by me?",
+      "body_de": "Welche Art Gute‑Nacht‑ oder Guten‑Morgen‑Ritual würde dir besonders das Gefühl geben, von mir gehalten zu sein?",
+      "depth": 2,
+      "extra_relevance_for_distances": ["LIVING_TOGETHER"]
+    },
+    {
+      "body_en": "Is there a small check‑in question you’d love us to ask each other regularly (e.g., daily, weekly)?",
+      "body_de": "Gibt es eine kleine Check‑in‑Frage, die wir uns regelmäßig stellen sollten (z. B. täglich oder wöchentlich)?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s a seasonal or yearly ritual (e.g., anniversary, holidays) you dream of us establishing together?",
+      "body_de": "Von welchem saisonalen oder jährlichen Ritual (z. B. Jahrestag, Feiertage) träumst du, das wir gemeinsam etablieren?",
+      "depth": 1
+    },
+    {
+      "body_en": "Which ritual from your family, culture, or past would you like to adapt for our relationship?",
+      "body_de": "Welches Ritual aus deiner Familie, Kultur oder Vergangenheit würdest du gern für unsere Beziehung anpassen?",
+      "depth": 2
+    },
+    {
+      "body_en": "If we had a 5‑minute reset ritual for tough days, what would you want those 5 minutes to look like?",
+      "body_de": "Wenn wir ein 5‑Minuten‑Reset‑Ritual für anstrengende Tage hätten – wie sollten diese 5 Minuten aussehen?",
+      "depth": 2
+    },
+    {
+      "body_en": "What little signal or phrase could we use to say, I need closeness, without a long explanation?",
+      "body_de": "Welches kleine Zeichen oder welche kurze Phrase könnten wir nutzen, um zu sagen: „Ich brauche Nähe“, ohne viel erklären zu müssen?",
+      "depth": 2
+    },
+    {
+      "body_en": "If we chose one day per week as our “mini date day,” what simple things would you want it to include?",
+      "body_de": "Wenn wir einen Tag pro Woche als unseren „Mini‑Date‑Tag“ festlegen würden – welche einfachen Dinge sollten dazugehören?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s a digital ritual (like a shared playlist, photo, or emoji thread) that would feel fun and bonding for us?",
+      "body_de": "Welches digitale Ritual (z. B. eine gemeinsame Playlist, ein Foto‑ oder Emoji‑Thread) würde sich für uns spielerisch und verbindend anfühlen?",
+      "depth": 1
+    },
+    {
+      "body_en": "Is there a ritual around food or drinks you’d like us to have, even at a distance?",
+      "body_de": "Gibt es ein Ritual rund um Essen oder Trinken, das du gern mit mir hättest – auch wenn wir getrennt sind?",
+      "depth": 1
+    },
+    {
+      "body_en": "What kind of Sunday (or day‑off) ritual would make you feel like we’re really sharing life, not just updates?",
+      "body_de": "Welches Sonntags‑ oder Frei‑Tag‑Ritual würde dir das Gefühl geben, dass wir wirklich Leben teilen und nicht nur Infos austauschen?",
+      "depth": 2,
+      "extra_relevance_for_distances": ["LIVING_TOGETHER"]
+    },
+    {
+      "body_en": "Which moment of our day do you most wish we could “sync up” more often?",
+      "body_de": "Welchen Moment deines Tages würdest du dir am meisten wünschen, dass wir häufiger „synchron“ erleben?",
+      "depth": 1
+    },
+    {
+      "body_en": "If we created a short end‑of‑week reflection ritual, what question should always be part of it?",
+      "body_de": "Wenn wir ein kurzes Wochenabschluss‑Ritual hätten – welche Frage sollte darin immer vorkommen?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s a comforting ritual from your past that you miss and might want to reinvent with me?",
+      "body_de": "Welches tröstliche Ritual aus deiner Vergangenheit vermisst du und würdest es vielleicht mit mir neu erfinden wollen?",
+      "depth": 2
+    },
+    {
+      "body_en": "How would you like us to mark small milestones (like surviving a tough week or finishing a project)?",
+      "body_de": "Wie würdest du gern wollen, dass wir kleine Meilensteine feiern (z. B. eine anstrengende Woche überstanden oder ein Projekt beendet)?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s a playful ritual you’d love to start around our reunions and our goodbyes?",
+      "body_de": "Welches verspielte Ritual würdest du gern rund um unsere Wiedersehen und Abschiede einführen?",
+      "depth": 1,
+      "extra_relevance_for_distances": ["LONG_DISTANCE"]
+    },
+    {
+      "body_en": "If we had a monthly ritual to check in on our relationship, what would you want to always talk about?",
+      "body_de": "Wenn wir ein monatliches Ritual hätten, um bei unserer Beziehung einzuchecken – worüber würdest du immer sprechen wollen?",
+      "depth": 2
+    },
+    {
+      "body_en": "What evening ritual could help you feel like the day ends with us, not just with your to‑do list?",
+      "body_de": "Welches Abendritual würde dir helfen, den Tag mit „uns“ zu beenden und nicht nur mit deiner To‑do‑Liste?",
+      "depth": 2
+    },
+    {
+      "body_en": "Is there a way you’d like us to ritualize sharing good news so it feels really celebrated?",
+      "body_de": "Gibt es eine Art, wie du möchtest, dass wir gute Nachrichten ritualisieren, damit sie sich wirklich gefeiert anfühlen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What kind of ritual would help you feel emotionally close to me on days when we barely have time to text?",
+      "body_de": "Welches Ritual würde dir helfen, dich mir emotional nah zu fühlen, an Tagen, an denen wir kaum Zeit zum Schreiben haben?",
+      "depth": 2,
+      "extra_relevance_for_distances": ["LONG_DISTANCE"]
+    },
+    {
+      "body_en": "If we had a shared gratitude ritual, how would you like it to work for us?",
+      "body_de": "Wenn wir ein gemeinsames Dankbarkeits‑Ritual hätten – wie sollte es deiner Meinung nach für uns funktionieren?",
+      "depth": 2
+    },
+    {
+      "body_en": "Which time of day feels like it most wants a gentle ritual right now?",
+      "body_de": "Welche Tageszeit ruft für dich im Moment am meisten nach einem sanften Ritual?",
+      "depth": 1
+    },
+    {
+      "body_en": "What small ritual would you love to have around sending or receiving photos from each other?",
+      "body_de": "Welches kleine Ritual würdest du dir wünschen, wenn wir uns gegenseitig Fotos schicken oder bekommen?",
+      "depth": 1
+    },
+    {
+      "body_en": "If we did a tiny 2‑minute breathing or grounding ritual together on call sometimes, would that feel supportive or strange to you?",
+      "body_de": "Wenn wir manchmal ein kleines 2‑minütiges Atem‑ oder Grounding‑Ritual am Telefon machen würden – wäre das für dich unterstützend oder eher seltsam?",
+      "depth": 2,
+      "extra_relevance_for_distances": ["LONG_DISTANCE"]
+    },
+    {
+      "body_en": "What’s a ritual around conflict or tension that would help you feel safer when things are hard between us?",
+      "body_de": "Welches Ritual rund um Konflikte oder Spannung würde dir helfen, dich sicherer zu fühlen, wenn es zwischen uns schwierig ist?",
+      "depth": 3
+    },
+    {
+      "body_en": "How would you like us to mark the end of a fight, so we both feel genuinely reconnected?",
+      "body_de": "Wie würdest du gern wollen, dass wir das Ende eines Streits markieren, damit wir uns wirklich wieder verbunden fühlen?",
+      "depth": 3
+    },
+    {
+      "body_en": "Is there a ritual you’d like before we fall asleep, even if we’re not calling that night?",
+      "body_de": "Gibt es ein Ritual, das du dir vor dem Einschlafen wünschst, auch wenn wir an dem Abend nicht telefonieren?",
+      "depth": 2,
+      "extra_relevance_for_distances": ["LONG_DISTANCE"]
+    },
+    {
+      "body_en": "What kind of ritual would help you feel more present and less distracted when we talk?",
+      "body_de": "Welches Ritual würde dir helfen, dich präsenter und weniger abgelenkt zu fühlen, wenn wir miteinander sprechen?",
+      "depth": 2
+    },
+    {
+      "body_en": "If we could borrow a ritual from any culture in the world for couples, was there one you’ve seen or heard about that you like?",
+      "body_de": "Wenn wir uns ein Paar‑Ritual aus irgendeiner Kultur der Welt leihen könnten – gibt es eines, das du gesehen oder gehört hast und magst?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s a silly or playful ritual you’d enjoy that has no real purpose other than making us smile?",
+      "body_de": "Welches alberne oder verspielte Ritual fändest du schön, das keinen anderen Zweck hat, als uns zum Lächeln zu bringen?",
+      "depth": 1
+    },
+    {
+      "body_en": "If we had a ritual to start our calls, what would you want the first minute to feel like?",
+      "body_de": "Wenn wir ein Ritual hätten, um unsere Gespräche zu beginnen – wie sollte sich die erste Minute anfühlen?",
+      "depth": 1
+    },
+    {
+      "body_en": "How would you like us to ritualize talking about money, plans, or other practical things so it feels calmer?",
+      "body_de": "Wie würdest du gern wollen, dass wir Gespräche über Geld, Pläne oder andere praktische Themen ritualisieren, damit sie sich ruhiger anfühlen?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s a ritual around our physical reunions that would help you transition from solo‑life mode into “us” mode?",
+      "body_de": "Welches Ritual bei unseren physischen Wiedersehen würde dir helfen, vom Solo‑Alltag in den „Wir“‑Modus zu wechseln?",
+      "depth": 2,
+      "extra_relevance_for_distances": ["LONG_DISTANCE"]
+    },
+    {
+      "body_en": "Is there a yearly ritual you’d like for looking back on our messages, photos, or memories together?",
+      "body_de": "Gibt es ein jährliches Ritual, das du dir wünschst, um gemeinsam auf unsere Nachrichten, Fotos oder Erinnerungen zurückzuschauen?",
+      "depth": 2
+    },
+    {
+      "body_en": "What kind of morning ritual could help you start the day feeling chosen by me?",
+      "body_de": "Welches Morgenritual würde dir helfen, in den Tag zu starten mit dem Gefühl, von mir gewählt zu sein?",
+      "depth": 2,
+      "extra_relevance_for_distances": ["LIVING_TOGETHER"]
+    },
+    {
+      "body_en": "If we each had a tiny solo ritual that secretly honored our relationship each day, what would you choose for yourself?",
+      "body_de": "Wenn wir beide ein kleines Solo‑Ritual hätten, das heimlich unsere Beziehung ehrt – welches würdest du für dich wählen?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s a ritual you’d like us to have around sharing things we’re scared to bring up?",
+      "body_de": "Welches Ritual wünschst du dir, wenn wir Dinge teilen wollen, die wir uns eigentlich kaum zu sagen trauen?",
+      "depth": 3
+    },
+    {
+      "body_en": "If we created a short monthly ritual to revisit our dreams and plans, what would make it feel gentle rather than stressful?",
+      "body_de": "Wenn wir ein kurzes monatliches Ritual hätten, um unsere Träume und Pläne anzuschauen – was würde es sanft statt stressig machen?",
+      "depth": 2
+    },
+    {
+      "body_en": "Which ritual idea we’ve talked about (or you’ve thought of) do you secretly wish we’d start right away?",
+      "body_de": "Welche Ritual‑Idee, über die wir gesprochen haben (oder die du im Kopf hast), wünschst du dir insgeheim, dass wir sie sofort starten?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s one small ritual we could try just for a week to see how it feels, with no pressure to keep it forever?",
+      "body_de": "Welches kleine Ritual könnten wir eine Woche lang testweise ausprobieren, ganz ohne Druck, es für immer beizubehalten?",
+      "depth": 1
+    }
+  ]
+}
+
+

@@ -1,0 +1,264 @@
+{
+  "name_en": "Playful",
+  "name_de": "Verspielt",
+  "description_en": "Light, teasing questions that bring out your shared sense of humor and play — perfect for days when you just want to smile, flirt a little, and feel like best friends as well as partners.",
+  "description_de": "Leichte, neckische Fragen, die euren gemeinsamen Humor und eure Verspieltheit hervorholen – ideal für Tage, an denen ihr einfach lächeln, ein bisschen flirten und euch wie beste Freunde und Liebende zugleich fühlen wollt.",
+  "questions": [
+    {
+      "body_en": "If our relationship had a theme song this week, what would it be and why?",
+      "body_de": "Wenn unsere Beziehung diese Woche einen Titelsong hätte, welcher wäre es und warum?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s a silly little habit of mine that secretly makes you smile?",
+      "body_de": "Welche meiner kleinen, albernen Angewohnheiten bringt dich insgeheim zum Lächeln?",
+      "depth": 0
+    },
+    {
+      "body_en": "If we were characters in a rom-com, which scene from our real life would definitely be in the movie?",
+      "body_de": "Wenn wir Figuren in einer Rom‑Com wären: Welche Szene aus unserem echten Leben müsste unbedingt im Film vorkommen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s a ridiculous couple challenge you’d love us to try for a day?",
+      "body_de": "Welche völlig verrückte Couple‑Challenge würdest du gern mit mir für einen Tag ausprobieren?",
+      "depth": 0
+    },
+    {
+      "body_en": "If you could teleport me to you for just one hour right now, what would we do first?",
+      "body_de": "Wenn du mich jetzt für eine Stunde zu dir teleportieren könntest – was würden wir als Erstes machen?",
+      "depth": 0
+    },
+    {
+      "body_en": "Which emoji feels the most “us” lately, and what’s the story behind it?",
+      "body_de": "Welches Emoji fühlt sich in letzter Zeit am meisten nach „wir beide“ an – und welche Geschichte steckt dahinter?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s a playful nickname you’d give our relationship right now?",
+      "body_de": "Welchen verspielten Spitznamen würdest du unserer Beziehung gerade geben?",
+      "depth": 0
+    },
+    {
+      "body_en": "If we could swap lives for 24 hours, what’s the first thing you’d do as me?",
+      "body_de": "Wenn wir für 24 Stunden das Leben tauschen könnten – was wäre das Erste, das du als ich tun würdest?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s a small, totally unnecessary but fun ritual you’d love us to start?",
+      "body_de": "Welches kleine, völlig unnötige, aber lustige Ritual würdest du gern mit mir starten?",
+      "depth": 0
+    },
+    {
+      "body_en": "If you had to describe our chemistry using only food metaphors, how would you do it?",
+      "body_de": "Wenn du unsere Chemie nur mit Essens‑Metaphern beschreiben dürftest – wie würde das klingen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What was the last thing I did that almost made you laugh out loud, even if you pretended to stay cool?",
+      "body_de": "Was habe ich als Letztes getan, das dich fast laut lachen ließ, auch wenn du versucht hast, cool zu bleiben?",
+      "depth": 0
+    },
+    {
+      "body_en": "If we had a secret handshake, what would it include?",
+      "body_de": "Wenn wir einen geheimen Handschlag hätten – was müsste unbedingt dabei sein?",
+      "depth": 0
+    },
+    {
+      "body_en": "Which meme or gif would you send to describe our long‑distance vibe?",
+      "body_de": "Welches Meme oder GIF würdest du schicken, um unsere Long‑Distance‑Vibes zu beschreiben?",
+      "depth": 0,
+      "relationship_distances": ["LONG_DISTANCE"]
+    },
+    {
+      "body_en": "If you could press a button and instantly get a silly couple photo of us right now, what would we be doing?",
+      "body_de": "Wenn du auf einen Knopf drücken und sofort ein albernes Paar‑Foto von uns bekommen könntest – was würden wir darauf machen?",
+      "depth": 0
+    },
+    {
+      "body_en": "What ridiculous matching outfit would you secretly love us to wear together at least once?",
+      "body_de": "Welches völlig übertriebene Partner‑Outfit würdest du heimlich gern mindestens einmal mit mir tragen?",
+      "depth": 0
+    },
+    {
+      "body_en": "If our chat history was turned into a comic strip, which running joke has to be in every episode?",
+      "body_de": "Wenn unsere Chat‑History in einen Comic verwandelt würde – welcher Running Gag müsste in jeder Folge vorkommen?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s a playful bet you’d like to make with me this week?",
+      "body_de": "Welche spielerische Wette würdest du diese Woche gern mit mir abschließen?",
+      "depth": 0
+    },
+    {
+      "body_en": "If I were a character in your favorite game, movie, or series, who would I be and why?",
+      "body_de": "Wenn ich eine Figur in deinem Lieblingsspiel, -film oder in deiner Lieblingsserie wäre – wer wäre ich und warum?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s a harmless prank you’d pull on me if we were in the same room right now?",
+      "body_de": "Welchen harmlosen Streich würdest du mir spielen, wenn wir jetzt im selben Raum wären?",
+      "depth": 0
+    },
+    {
+      "body_en": "Which of my facial expressions do you find the funniest or cutest?",
+      "body_de": "Welche meiner Gesichtsausdrücke findest du am lustigsten oder am süßesten?",
+      "depth": 0
+    },
+    {
+      "body_en": "If we opened a tiny, silly business together just for fun, what would we sell?",
+      "body_de": "Wenn wir nur zum Spaß ein kleines, verrücktes Business zusammen eröffnen würden – was würden wir verkaufen?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s a childhood game you’d love to play with me now as adults?",
+      "body_de": "Welches Kindheitsspiel würdest du heute gern noch einmal mit mir als Erwachsene*r spielen?",
+      "depth": 0
+    },
+    {
+      "body_en": "If our love story had a title that sounds like a cheesy Netflix show, what would it be?",
+      "body_de": "Wenn unsere Liebesgeschichte einen Titel hätte, der wie eine kitschige Netflix‑Serie klingt – wie würde sie heißen?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s one inside joke you’d love us to create on purpose?",
+      "body_de": "Welchen Insider‑Witz würdest du gern ganz bewusst mit mir erschaffen?",
+      "depth": 0
+    },
+    {
+      "body_en": "If we could pause adult life for one carefree day together, what would our ‘no responsibilities’ day look like?",
+      "body_de": "Wenn wir das Erwachsenenleben für einen sorglosen Tag pausieren könnten – wie würde unser „keine Verpflichtungen“‑Tag aussehen?",
+      "depth": 1
+    },
+    {
+      "body_en": "Which song would you challenge me to a lip‑sync battle with?",
+      "body_de": "Zu welchem Song würdest du mich zu einem Lip‑Sync‑Battle herausfordern?",
+      "depth": 0
+    },
+    {
+      "body_en": "If we had a couple’s catchphrase, what would it be and when would we say it?",
+      "body_de": "Wenn wir einen gemeinsamen Catchphrase hätten – wie würde er lauten und wann würden wir ihn benutzen?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s something cute you imagine us doing when we’re old and a bit ridiculous together?",
+      "body_de": "Was stellst du dir vor, wie wir als alte, leicht verrückte Menschen süß miteinander umgehen?",
+      "depth": 1
+    },
+    {
+      "body_en": "If you could send me a surprise snack right now, what would you choose and why?",
+      "body_de": "Wenn du mir jetzt spontan einen Snack schicken könntest – was würdest du wählen und warum?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s a funny misunderstanding we’ve had that you can laugh about now?",
+      "body_de": "Welches lustige Missverständnis zwischen uns kannst du inzwischen richtig drüber lachen?",
+      "depth": 1
+    },
+    {
+      "body_en": "If we had a shared ‘couple emoji’ keyboard, which three icons would be pinned at the top?",
+      "body_de": "Wenn wir eine gemeinsame „Couple‑Emoji“‑Tastatur hätten – welche drei Icons wären ganz oben angepinnt?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s a small way I flirt with you that you secretly love?",
+      "body_de": "Auf welche kleine Art flirte ich mit dir, die du heimlich total liebst?",
+      "depth": 1
+    },
+    {
+      "body_en": "If we could turn one of our text messages into a poster, which one would you pick?",
+      "body_de": "Wenn wir eine unserer Nachrichten in ein Poster verwandeln könnten – welche würdest du aussuchen?",
+      "depth": 0,
+      "extra_relevance_for_distances": ["LONG_DISTANCE"]
+    },
+    {
+      "body_en": "What’s a silly ‘award’ you’d give me today?",
+      "body_de": "Welchen albernen Preis würdest du mir heute verleihen?",
+      "depth": 0
+    },
+    {
+      "body_en": "If our relationship had a mascot, what would it be and what would its personality be like?",
+      "body_de": "Wenn unsere Beziehung ein Maskottchen hätte – was wäre es und welchen Charakter hätte es?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s a playful question you wish I’d ask you more often?",
+      "body_de": "Welche verspielte Frage wünschst du dir, dass ich dir öfter stelle?",
+      "depth": 1
+    },
+    {
+      "body_en": "If we recorded a short ‘couple podcast’ episode just for us, what would today’s episode be about?",
+      "body_de": "Wenn wir eine kurze „Couple‑Podcast“‑Folge nur für uns aufnehmen würden – worum würde es heute gehen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s a weird little tradition you’d love us to have every time we reunite in person?",
+      "body_de": "Welche kleine, schräge Tradition würdest du gern haben, jedes Mal wenn wir uns in echt wiedersehen?",
+      "depth": 1,
+      "extra_relevance_for_distances": ["LONG_DISTANCE"]
+    },
+    {
+      "body_en": "If you could choose a filter that appears over us whenever we’re together, what would it look like?",
+      "body_de": "Wenn du einen Filter wählen könntest, der immer erscheint, wenn wir zusammen sind – wie würde er aussehen?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s a tiny, fun challenge you want us to complete before the end of the month?",
+      "body_de": "Welche kleine, spaßige Challenge möchtest du, dass wir bis Monatsende gemeinsam schaffen?",
+      "depth": 0
+    },
+    {
+      "body_en": "If I had a ‘battery bar’ showing my need for affection, what color would it be today?",
+      "body_de": "Wenn ich eine „Akkustands‑Anzeige“ für mein Bedürfnis nach Nähe hätte – welche Farbe hätte sie heute?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s the most chaotic date idea that actually sounds fun to you?",
+      "body_de": "Was ist die chaotischste Date‑Idee, die sich für dich trotzdem richtig spaßig anhört?",
+      "depth": 1
+    },
+    {
+      "body_en": "If we each had a superpower just for our relationship, what would yours be and what would mine be?",
+      "body_de": "Wenn wir beide eine Superkraft hätten, die nur für unsere Beziehung gilt – welche wäre deine und welche wäre meine?",
+      "depth": 1
+    },
+    {
+      "body_en": "Which of our habits would make people say, ‘They’re so cute, it’s annoying’?",
+      "body_de": "Welche unserer Angewohnheiten würde andere sagen lassen: „Die sind so süß, es ist schon nervig“?",
+      "depth": 1
+    },
+    {
+      "body_en": "If you could rename our chat with a funny new title, what would you call it right now?",
+      "body_de": "Wenn du unseren Chat gerade neu und lustig benennen könntest – wie würde er heißen?",
+      "depth": 0
+    },
+    {
+      "body_en": "What’s a small, playful surprise you’d love me to plan for you?",
+      "body_de": "Über welche kleine, verspielte Überraschung von mir würdest du dich richtig freuen?",
+      "depth": 1
+    },
+    {
+      "body_en": "If you had to compare our texting style to a weather forecast, what would it be today?",
+      "body_de": "Wenn du unseren Schreibstil mit einer Wettervorhersage vergleichen müsstest – wie wäre das Wetter heute?",
+      "depth": 0,
+      "extra_relevance_for_distances": ["LONG_DISTANCE"]
+    },
+    {
+      "body_en": "What’s something totally ordinary that becomes more fun when you imagine us doing it together?",
+      "body_de": "Welche total gewöhnliche Sache wird sofort lustiger, wenn du dir vorstellst, dass wir sie zusammen machen?",
+      "depth": 1
+    },
+    {
+      "body_en": "If someone watched a time‑lapse of our notifications together, what pattern would they notice?",
+      "body_de": "Wenn jemand ein Zeitraffer‑Video von unseren Benachrichtigungen sehen würde – welches Muster würde auffallen?",
+      "depth": 1
+    },
+    {
+      "body_en": "What’s one way we could add 1% more playfulness to our everyday messages?",
+      "body_de": "Wie könnten wir unseren Alltagsnachrichten 1 % mehr Verspieltheit hinzufügen?",
+      "depth": 1
+    }
+  ]
+}
+
+

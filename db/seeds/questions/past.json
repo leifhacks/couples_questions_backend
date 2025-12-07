@@ -1,0 +1,262 @@
+{
+  "name_en": "Past",
+  "name_de": "Vergangenheit",
+  "description_en": "Stories and memories from before and after you met, so you can understand each other’s roots, turning points, and the moments that made you who you are today.",
+  "description_de": "Geschichten und Erinnerungen von vor und nach eurem Kennenlernen, damit ihr die Wurzeln, Wendepunkte und prägenden Momente versteht, die euch zu den Menschen gemacht haben, die ihr heute seid.",
+  "questions": [
+    {
+      "body_en": "What is one childhood memory that still feels very vivid in your body when you think about it?",
+      "body_de": "Welche Kindheitserinnerung fühlt sich in deinem Körper immer noch ganz lebendig an, wenn du daran denkst?",
+      "depth": 2
+    },
+    {
+      "body_en": "When you think about your teenage self, what do you feel most proud of them for surviving or trying?",
+      "body_de": "Wenn du an dein Teenager‑Ich denkst – worauf bist du am meisten stolz, was es überstanden oder gewagt hat?",
+      "depth": 2
+    },
+    {
+      "body_en": "What is a small tradition or habit from your family home that you secretly miss?",
+      "body_de": "Welche kleine Tradition oder Gewohnheit aus deinem Elternhaus vermisst du insgeheim?",
+      "depth": 1
+    },
+    {
+      "body_en": "Which person from your past had a bigger impact on you than they probably realize?",
+      "body_de": "Welche Person aus deiner Vergangenheit hatte einen größeren Einfluss auf dich, als sie vermutlich ahnt?",
+      "depth": 2
+    },
+    {
+      "body_en": "What is a moment from your past that changed the direction of your life in a way you’re grateful for?",
+      "body_de": "Welcher Moment aus deiner Vergangenheit hat die Richtung deines Lebens verändert – auf eine Weise, für die du dankbar bist?",
+      "depth": 3
+    },
+    {
+      "body_en": "Is there a version of you from the past that you sometimes miss? What do you miss about them?",
+      "body_de": "Gibt es eine frühere Version von dir, die du manchmal vermisst? Was vermisst du an ihr?",
+      "depth": 3
+    },
+    {
+      "body_en": "What is a memory of feeling really seen or encouraged by someone when you were younger?",
+      "body_de": "An welche Erinnerung daran, dass dich jemand als Jüngere*r wirklich gesehen oder ermutigt hat, denkst du gern zurück?",
+      "depth": 2
+    },
+    {
+      "body_en": "What did you once believe about love or relationships that you don’t believe anymore?",
+      "body_de": "Was hast du früher über Liebe oder Beziehungen geglaubt, was du heute nicht mehr glaubst?",
+      "depth": 3
+    },
+    {
+      "body_en": "What’s a funny or slightly embarrassing story from your past that feels safe enough to share with me?",
+      "body_de": "Welche lustige oder leicht peinliche Geschichte aus deiner Vergangenheit fühlt sich sicher genug an, um sie mit mir zu teilen?",
+      "depth": 1
+    },
+    {
+      "body_en": "Looking back, what is one risk you took that you’re really glad you didn’t talk yourself out of?",
+      "body_de": "Wenn du zurückschaust: Welches Risiko bist du eingegangen, bei dem du heute sehr froh bist, dass du dich nicht davon abgehalten hast?",
+      "depth": 2
+    },
+    {
+      "body_en": "What kind of home did you dream of living in when you were a kid?",
+      "body_de": "In welcher Art Zuhause hast du dir als Kind vorgestellt, später einmal zu leben?",
+      "depth": 1
+    },
+    {
+      "body_en": "Which city, place, or landscape from your past still feels a bit like home to you?",
+      "body_de": "Welche Stadt, welcher Ort oder welche Landschaft aus deiner Vergangenheit fühlt sich für dich immer noch ein bisschen wie Zuhause an?",
+      "depth": 1
+    },
+    {
+      "body_en": "Was there a time in your life when you felt very alone? What helped you get through it?",
+      "body_de": "Gab es eine Zeit in deinem Leben, in der du dich sehr allein gefühlt hast? Was hat dir geholfen, da durchzukommen?",
+      "depth": 3
+    },
+    {
+      "body_en": "What is a decision from your past that you sometimes question, and what have you learned from it?",
+      "body_de": "Welche Entscheidung aus deiner Vergangenheit stellst du manchmal in Frage – und was hast du daraus gelernt?",
+      "depth": 3
+    },
+    {
+      "body_en": "How has your relationship with your body changed over the years?",
+      "body_de": "Wie hat sich deine Beziehung zu deinem Körper im Laufe der Jahre verändert?",
+      "depth": 3
+    },
+    {
+      "body_en": "What role did friendships play for you growing up, and how have they shaped the way you connect now?",
+      "body_de": "Welche Rolle haben Freundschaften in deinem Aufwachsen gespielt und wie haben sie geprägt, wie du dich heute verbindest?",
+      "depth": 2
+    },
+    {
+      "body_en": "What is a small, ordinary moment from your past that unexpectedly stayed with you?",
+      "body_de": "Welcher kleine, ganz alltägliche Moment aus deiner Vergangenheit ist überraschend bei dir hängen geblieben?",
+      "depth": 2
+    },
+    {
+      "body_en": "If you look back five years, what would past‑you be most surprised about in your life today?",
+      "body_de": "Wenn du fünf Jahre zurückblickst – worüber in deinem heutigen Leben wäre dein damaliges Ich am meisten überrascht?",
+      "depth": 2
+    },
+    {
+      "body_en": "What has been one of the hardest goodbyes in your life so far?",
+      "body_de": "Welcher Abschied war bisher einer der schwersten in deinem Leben?",
+      "depth": 3
+    },
+    {
+      "body_en": "Is there a place from your childhood or youth you’d love to show me one day? Why that place?",
+      "body_de": "Gibt es einen Ort aus deiner Kindheit oder Jugend, den du mir eines Tages gern zeigen würdest? Warum gerade diesen?",
+      "depth": 2
+    },
+    {
+      "body_en": "What did you learn about handling conflict from the way people argued or stayed silent around you growing up?",
+      "body_de": "Was hast du aus den Streits oder dem Schweigen der Menschen um dich herum als Kind über Konflikte gelernt?",
+      "depth": 3
+    },
+    {
+      "body_en": "When you think of your first crush or early loves, what do you remember most clearly?",
+      "body_de": "Wenn du an deinen ersten Crush oder frühe Verliebtheiten denkst – was erinnerst du am deutlichsten?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s a way you’ve grown that younger‑you would be really proud of?",
+      "body_de": "In welcher Hinsicht bist du gewachsen, worauf dein jüngeres Ich richtig stolz wäre?",
+      "depth": 2
+    },
+    {
+      "body_en": "What did you used to think your life would look like at this age, and how is reality different?",
+      "body_de": "Wie hast du dir früher dein Leben in deinem jetzigen Alter vorgestellt – und wie unterscheidet sich die Realität davon?",
+      "depth": 2
+    },
+    {
+      "body_en": "Is there a past version of your life you sometimes romanticize, and what is the full truth of that time?",
+      "body_de": "Gibt es eine frühere Lebensphase, die du manchmal romantisierst – und wie sah die ganze Wahrheit dieser Zeit aus?",
+      "depth": 3
+    },
+    {
+      "body_en": "What do you remember about the very first time we interacted or noticed each other?",
+      "body_de": "Woran erinnerst du dich an unser allererstes Aufeinandertreffen oder daran, als du mich zum ersten Mal wirklich wahrgenommen hast?",
+      "depth": 2
+    },
+    {
+      "body_en": "At what moment in our story did you first think, This might be something serious?",
+      "body_de": "In welchem Moment unserer Geschichte hast du zum ersten Mal gedacht: „Das könnte etwas Ernstes sein“?",
+      "depth": 2
+    },
+    {
+      "body_en": "What is one early memory of us that still makes you feel warm when you think about it?",
+      "body_de": "Welche frühe Erinnerung an uns lässt dich heute noch warm werden, wenn du daran denkst?",
+      "depth": 2
+    },
+    {
+      "body_en": "What were your first impressions of me, and which of them turned out to be wrong?",
+      "body_de": "Was waren deine ersten Eindrücke von mir – und welche davon lagen komplett daneben?",
+      "depth": 2
+    },
+    {
+      "body_en": "Looking back, what do you think was a quiet turning point for our relationship?",
+      "body_de": "Wenn du zurückschaust – was war für dich ein stiller Wendepunkt in unserer Beziehung?",
+      "depth": 3
+    },
+    {
+      "body_en": "What is a small, almost forgettable moment from our past that actually means a lot to you?",
+      "body_de": "Welcher kleine, beinahe unscheinbare Moment aus unserer gemeinsamen Vergangenheit bedeutet dir heimlich sehr viel?",
+      "depth": 2
+    },
+    {
+      "body_en": "When did you first feel really emotionally safe with me?",
+      "body_de": "Wann hast du dich zum ersten Mal so richtig emotional sicher mit mir gefühlt?",
+      "depth": 3
+    },
+    {
+      "body_en": "What do you remember about our first real conflict or misunderstanding, and how did it change us?",
+      "body_de": "Was erinnerst du von unserem ersten richtigen Konflikt oder Missverständnis – und wie hat er uns verändert?",
+      "depth": 3
+    },
+    {
+      "body_en": "What’s an early inside joke or shared reference that became part of our story?",
+      "body_de": "Welcher frühe Insider‑Witz oder Running Gag ist ein fester Teil unserer Geschichte geworden?",
+      "depth": 1
+    },
+    {
+      "body_en": "Is there a message, call, or visit from our early days that you’ll probably never forget?",
+      "body_de": "Gibt es eine Nachricht, einen Call oder ein Treffen aus unserer Anfangszeit, das du wahrscheinlich nie vergessen wirst?",
+      "depth": 2,
+      "extra_relevance_for_distances": ["LONG_DISTANCE"]
+    },
+    {
+      "body_en": "When you think back to one of our goodbyes, which one stands out the most and why?",
+      "body_de": "Wenn du an unsere Abschiede zurückdenkst – welcher sticht besonders hervor und warum?",
+      "depth": 3
+    },
+    {
+      "body_en": "What was a time when you felt especially proud of how we handled something hard together?",
+      "body_de": "Wann war ein Moment, in dem du besonders stolz darauf warst, wie wir gemeinsam etwas Schwieriges gemeistert haben?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s one of your favorite memories of us laughing together?",
+      "body_de": "Was ist eine deiner liebsten Erinnerungen daran, wie wir zusammen richtig gelacht haben?",
+      "depth": 1
+    },
+    {
+      "body_en": "How do you remember the season when we first started doing long distance or spending more time apart?",
+      "body_de": "Wie erinnerst du die Phase, in der wir zum ersten Mal eine Fernphase hatten oder viel Zeit getrennt verbracht haben?",
+      "depth": 3,
+      "relationship_distances": ["LONG_DISTANCE"]
+    },
+    {
+      "body_en": "What is a moment from our past where you realised, We’re actually a really good team?",
+      "body_de": "An welchen Moment aus unserer Vergangenheit erinnerst du dich, in dem dir klar wurde: „Wir sind eigentlich ein richtig gutes Team“?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s a misunderstanding between us that you can laugh about now?",
+      "body_de": "Welches Missverständnis zwischen uns bringt dich heute zum Lachen?",
+      "depth": 2
+    },
+    {
+      "body_en": "Is there a phase in our relationship that felt especially fragile looking back? What helped us through it?",
+      "body_de": "Gab es eine Phase in unserer Beziehung, die sich rückblickend besonders zerbrechlich anfühlt? Was hat uns da durchgeholfen?",
+      "depth": 3
+    },
+    {
+      "body_en": "What’s a way we’ve already grown as a couple that you’re really grateful for?",
+      "body_de": "In welcher Hinsicht sind wir als Paar schon gewachsen, wofür du richtig dankbar bist?",
+      "depth": 2
+    },
+    {
+      "body_en": "What is one of your favorite ordinary days we’ve had together?",
+      "body_de": "Was war einer deiner liebsten ganz gewöhnlichen Tage, die wir miteinander verbracht haben?",
+      "depth": 1
+    },
+    {
+      "body_en": "When did you first feel like we had our own little world or bubble together?",
+      "body_de": "Wann hast du zum ersten Mal das Gefühl gehabt, dass wir unsere eigene kleine Welt oder „Bubble“ haben?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s a moment from our early days that you wish we had a photo or video of?",
+      "body_de": "An welchen Moment aus unserer Anfangszeit wünschst du dir, wir hätten ein Foto oder Video?",
+      "depth": 1
+    },
+    {
+      "body_en": "What did our past arguments teach you about me and the way I love?",
+      "body_de": "Was haben unsere bisherigen Streitigkeiten dich über mich und meine Art zu lieben gelehrt?",
+      "depth": 3
+    },
+    {
+      "body_en": "Looking back, what’s something you were worried about in the beginning of our relationship that feels softer now?",
+      "body_de": "Wenn du zurückschaust – worüber hast du dir am Anfang unserer Beziehung Sorgen gemacht, das sich heute weicher anfühlt?",
+      "depth": 2
+    },
+    {
+      "body_en": "What’s a memory of us taking care of each other that you hope we never forget?",
+      "body_de": "An welche Erinnerung, in der wir besonders gut füreinander gesorgt haben, möchtest du dich immer erinnern?",
+      "depth": 3
+    },
+    {
+      "body_en": "If we wrote a chapter about our story so far, which scene from our past would have to be included?",
+      "body_de": "Wenn wir ein Kapitel über unsere bisherige Geschichte schreiben würden – welche Szene aus unserer Vergangenheit müsste unbedingt hinein?",
+      "depth": 2
+    }
+  ]
+}
+
+
