@@ -21,6 +21,11 @@ class Relationship < UuidRecord
     update!(timezone_name: name, timezone_offset_seconds: offset)
   end
 
+  def current_date_for(user)
+    offset = timezone_offset_seconds || latest_device_offset_for(user) || 0
+    (Time.now.utc + offset.to_i).to_date
+  end
+
   def payload
     {
       uuid: uuid,
@@ -90,5 +95,9 @@ class Relationship < UuidRecord
         RelationshipBroadcastWorker.perform_async(device.id, user.id, self.id)
       end
     end
+  end
+
+  def latest_device_offset_for(user)
+    user.client_devices.order(updated_at: :desc).limit(1).pick(:timezone_offset_seconds)
   end
 end

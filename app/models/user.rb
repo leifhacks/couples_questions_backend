@@ -52,6 +52,24 @@ class User < IdentifiedRecord
     }
   end
 
+  def tokens_by_platform_and_language
+    tokens_by_platform_and_lang = Hash.new do |platform_hash, platform|
+      platform_hash[platform] = Hash.new { |lang_hash, lang| lang_hash[lang] = [] }
+    end
+
+    client_devices.where.not(device_token: [nil, '']).find_each do |device|
+      platform = device.platform_from_token
+      next if platform.nil?
+
+      language = device.language_code.to_s.downcase == 'de' ? 'de' : 'en'
+      tokens_by_platform_and_lang[platform][language] << device.device_token
+    end
+
+    tokens_by_platform_and_lang
+  end
+
+  private
+
   def self.cleanup
     deleted_users =  User.where.missing(:client_devices)
     result = deleted_users.size

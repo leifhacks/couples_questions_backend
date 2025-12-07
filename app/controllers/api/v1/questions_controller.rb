@@ -18,7 +18,7 @@ module Api
       # GET /api/v1/today_question
       def today_question
         relationship = current_user.current_relationship
-        question_date = current_date_in_relationship_tz(relationship)
+        question_date = relationship.current_date_for(current_user)
 
         assignment = QuestionAssignment.find_by(relationship: relationship, question_date: question_date)
         assignment ||= question_assignment_service.assign_for_date!(relationship: relationship, date: question_date)
@@ -43,20 +43,11 @@ module Api
       end
 
       private
-
+      
       def ensure_active_relationship!
         relationship = current_user.current_relationship
         return render(json: { error: 'no_relationship' }, status: :not_found) if relationship.nil?
         return render(json: { error: 'relationship_ended' }, status: :bad_request) unless relationship.ACTIVE?
-      end
-
-      def current_date_in_relationship_tz(relationship)
-        offset = relationship&.timezone_offset_seconds || latest_device_offset_for(current_user) || 0
-        (Time.now.utc + offset.to_i).to_date
-      end
-
-      def latest_device_offset_for(user)
-        user.client_devices.order(updated_at: :desc).limit(1).pick(:timezone_offset_seconds)
       end
 
       def language_code_for(user)
