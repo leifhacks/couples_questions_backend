@@ -29,6 +29,10 @@ class User < IdentifiedRecord
     [device.timezone_name, device.timezone_offset_seconds, device.updated_at]
   end
 
+  def latest_device_offset
+    client_devices.order(updated_at: :desc).pick(:timezone_offset_seconds)
+  end
+
   def payload
     {
       uuid: uuid,

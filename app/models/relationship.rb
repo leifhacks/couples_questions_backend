@@ -22,7 +22,7 @@ class Relationship < UuidRecord
   end
 
   def current_date_for(user)
-    offset = timezone_offset_seconds || latest_device_offset_for(user) || 0
+    offset = timezone_offset_seconds || user.latest_device_offset || 0
     (Time.now.utc + offset.to_i).to_date
   end
 
@@ -97,7 +97,4 @@ class Relationship < UuidRecord
     end
   end
 
-  def latest_device_offset_for(user)
-    user.client_devices.order(updated_at: :desc).limit(1).pick(:timezone_offset_seconds)
-  end
 end
