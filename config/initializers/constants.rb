@@ -9,7 +9,7 @@ THUMBNAIL_SIZE = 240
 IMAGE_BASE_PATH = '/mnt/images'
 IMAGES_SUB_DIR = 'user_content'
 
-NOTIFICATION_TEXT_FOR_PARTNER = {
+ANSWER_ADDED_NOTIFICATION_TEXT = {
   'de' => [
     'Dein Partner hat die heutige Frage beantwortet.',
     'Beantworte selbst die Frage, um die Antwort zu sehen.'
@@ -20,7 +20,7 @@ NOTIFICATION_TEXT_FOR_PARTNER = {
   ]
 }.freeze
 
-NOTIFICATION_TEXT_FOR_USER = {
+ANSWER_REVEALED_NOTIFICATION_TEXT = {
   'de' => [
     'Dein Partner hat die heutige Frage beantwortet.',
     'Öffne die App, um die Antwort zu sehen.'

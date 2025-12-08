@@ -4,7 +4,7 @@ class ScheduledPushNotificationWorker
 
   def perform
     date = DateTime.now.utc
-    notifications = PushNotification.where(hours: date.hour, minutes: date.min)
+    notifications = PushNotification.where(hours: date.hour, minutes: date.min, notification_type: :DAILY_REMINDER)
     return if notifications.empty?
 
     @push_service = DevicesPushService.new(ClientDevice)

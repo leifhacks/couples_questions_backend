@@ -20,9 +20,9 @@ class PartnerAnsweredNotificationService
 
     all_users_answered = all_relationship_users_answered?(question_assignment, relationship.users)
     if all_users_answered
-      relationship.users.each { |user| enqueue_for_user(user) }
+      partners.each { |partner| enqueue_answer_revealed(partner) }
     else
-      partners.each { |partner| enqueue_for_partner(question_assignment, partner) }
+      partners.each { |partner| enqueue_answer_added(question_assignment, partner) }
     end
   end
 
@@ -36,16 +36,19 @@ class PartnerAnsweredNotificationService
     (expected_user_ids - answered_user_ids).empty?
   end
 
-  def enqueue_for_user(user)
+  def enqueue_answer_revealed(user)
+    return unless user.push_notifications.where(notification_type: :ANSWER_REVEALED).exists?
+
     tokens_by_platform_and_lang = user.tokens_by_platform_and_language
-    enqueue_notifications(tokens_by_platform_and_lang, NOTIFICATION_TEXT_FOR_USER)
+    enqueue_notifications(tokens_by_platform_and_lang, ANSWER_REVEALED_NOTIFICATION_TEXT)
   end
 
-  def enqueue_for_partner(question_assignment, partner)
+  def enqueue_answer_added(question_assignment, partner)
+    return unless partner.push_notifications.where(notification_type: :ANSWER_ADDED).exists?
     return if already_answered?(question_assignment, partner)
 
     tokens_by_platform_and_lang = partner.tokens_by_platform_and_language
-    enqueue_notifications(tokens_by_platform_and_lang, NOTIFICATION_TEXT_FOR_PARTNER)
+    enqueue_notifications(tokens_by_platform_and_lang, ANSWER_ADDED_NOTIFICATION_TEXT)
   end
 
   def already_answered?(question_assignment, partner)

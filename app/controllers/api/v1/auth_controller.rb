@@ -37,11 +37,13 @@ module Api
           utc_hours = utc_seconds / 3600
           utc_minutes = (utc_seconds % 3600) / 60
 
-          user.push_notifications.create!(
-            notification_type: 'daily_reminder',
-            hours: utc_hours,
-            minutes: utc_minutes
-          )
+          PushNotificationType.values.each do |type|
+            user.push_notifications.create!(
+              notification_type: type.name,
+              hours: utc_hours,
+              minutes: utc_minutes
+            )
+          end
 
           refresh_token = token_service.generate_refresh_token
           UserSession.create!(
