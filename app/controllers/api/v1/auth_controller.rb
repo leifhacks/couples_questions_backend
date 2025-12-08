@@ -37,7 +37,7 @@ module Api
           utc_hours = utc_seconds / 3600
           utc_minutes = (utc_seconds % 3600) / 60
 
-          PushNotificationType.values.each do |type|
+          PushNotification.notification_types.each do |type|
             user.push_notifications.create!(
               notification_type: type.name,
               hours: utc_hours,
