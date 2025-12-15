@@ -75,7 +75,8 @@ module Api
         session = find_active_session(token)
         return render json: { error: 'invalid_refresh_token' }, status: :unauthorized if session.nil?
 
-        session.update!(active: false)
+        user = session.user
+        user.destroy!
         render json: { status: 'ok' }
       end
 
