@@ -6,7 +6,7 @@ LINKS = {
 }.freeze
 
 THUMBNAIL_SIZE = 240
-IMAGE_BASE_PATH = '/mnt/images'
+IMAGE_BASE_PATH = '/mnt/data/images'
 IMAGES_SUB_DIR = 'user_content'
 
 ANSWER_ADDED_NOTIFICATION_TEXT = {
