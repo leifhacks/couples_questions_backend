@@ -40,15 +40,7 @@ module Api
         params[key] = value
       end
 
-      msg_params = params.clone
-      msg_params['id_token'] = msg_params['id_token'].truncate(10) unless msg_params['id_token'].nil?
-      msg_params['device_token'] = msg_params['device_token'].truncate(10) unless msg_params['device_token'].nil?
-      msg_params['access_token'] = msg_params['access_token'].truncate(10) unless msg_params['access_token'].nil?
-      msg_params['refresh_token'] = msg_params['refresh_token'].truncate(10) unless msg_params['refresh_token'].nil?
-      msg_params['item_data'] = msg_params['item_data'].to_s.truncate(30) unless msg_params['item_data'].nil?
-      msg_params['image_data'] = msg_params['image_data'].to_s.truncate(10) unless msg_params['image_data'].nil?
-      msg_params['receipt_data'] = msg_params['receipt_data'].to_s.truncate(30) unless msg_params['receipt_data'].nil?
-      Rails.logger.info("#{self.class}.#{__method__}: #{msg_params}")
+      Rails.logger.info("#{self.class}.#{__method__}: #{ParamsSanitizerService.new.sanitize(params)}")
     rescue JSON::ParserError, ArgumentError, TypeError
       render json: { error: 'invalid_data' }, status: :bad_request
     end

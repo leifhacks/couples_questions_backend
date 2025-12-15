@@ -12,12 +12,12 @@ class WebSocketChannel < ApplicationCable::Channel
     user = connection_user
 
     unless authorized_subscriber?(user)
-      Rails.logger.info("#{self.class}.#{__method__}: Unauthorized subscription attempt: #{params}")
+      Rails.logger.info("#{self.class}.#{__method__}: Unauthorized subscription attempt: #{ParamsSanitizerService.new.sanitize(params)}")
       reject
       return
     end
 
-    Rails.logger.info("#{self.class}.#{__method__}: #{web_socket_connection.uuid}, user: #{user&.uuid}, #{params}")
+    Rails.logger.info("#{self.class}.#{__method__}: #{web_socket_connection.uuid}, user: #{user&.uuid}, #{ParamsSanitizerService.new.sanitize(params)}")
 
     channel_name = WebSocketChannel.channel_name_from_uuid(web_socket_connection.uuid)
     stream_from(channel_name)
@@ -27,7 +27,7 @@ class WebSocketChannel < ApplicationCable::Channel
   end
 
   def unsubscribed
-    Rails.logger.info("#{self.class}.#{__method__}: #{params}")
+    Rails.logger.info("#{self.class}.#{__method__}: #{ParamsSanitizerService.new.sanitize(params)}")
     return if web_socket_connection.nil?
 
     ActiveRecord::Base.transaction do

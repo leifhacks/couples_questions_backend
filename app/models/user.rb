@@ -7,6 +7,10 @@ class User < IdentifiedRecord
   IDENTIFIER_REGEX = /\A[0-9a-f]{8}\z/
   NAME_REGEX = /\A[A-Za-z0-9ÄäÖöÜüß\-_ ]*\z/
 
+  SECONDS_PER_MINUTE = 60
+  SECONDS_PER_HOUR = 60 * SECONDS_PER_MINUTE
+  SECONDS_PER_DAY = 24 * SECONDS_PER_HOUR
+
   has_many :client_devices, dependent: :destroy
   has_many :user_sessions, dependent: :destroy
   has_many :push_notifications, dependent: :destroy
@@ -70,6 +74,29 @@ class User < IdentifiedRecord
     end
 
     tokens_by_platform_and_lang
+  end
+
+  # Recalculate stored UTC reminder times so the perceived local time stays stable
+  # when the user's effective timezone offset changes. The new offset is derived
+  # from the user's most recent devices.
+  def adjust_push_notifications_for_timezone_change!(from_offset_seconds:)
+    to_offset_seconds = latest_device_offset
+
+    return if from_offset_seconds.nil? || to_offset_seconds.nil?
+    return if from_offset_seconds == to_offset_seconds
+
+    delta_seconds = from_offset_seconds - to_offset_seconds
+
+    push_notifications.where.not(hours: nil, minutes: nil).find_each do |notification|
+      total_seconds = (notification.hours * SECONDS_PER_HOUR) + (notification.minutes * SECONDS_PER_MINUTE)
+      adjusted_seconds = (total_seconds + delta_seconds) % SECONDS_PER_DAY
+      new_hours, remainder = adjusted_seconds.divmod(SECONDS_PER_HOUR)
+      new_minutes = remainder / SECONDS_PER_MINUTE
+
+      next if notification.hours == new_hours && notification.minutes == new_minutes
+
+      notification.update!(hours: new_hours, minutes: new_minutes)
+    end
   end
 
   private

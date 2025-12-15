@@ -73,7 +73,9 @@ class Relationship < UuidRecord
 
     return [nil, nil] if latest_candidates.empty?
 
-    name, offset, _updated = latest_candidates.max_by { |(_name, offset, updated_at)| [offset, updated_at] }
+    name, offset, _updated = latest_candidates.min_by do |(_name, offset, updated_at)|
+      [offset, -updated_at.to_i]
+    end
     [name, offset]
   end
 
