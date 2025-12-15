@@ -10,6 +10,11 @@ class Base64FileStorageService
 
     decoded_data = Base64.decode64(data)
 
+    dir_name = File.dirname(path)
+    unless File.directory?(dir_name)
+      FileUtils.mkdir_p(dir_name)
+    end
+
     File.open(path, 'wb') do |f|
       f.write(decoded_data)
     end
