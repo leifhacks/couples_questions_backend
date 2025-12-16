@@ -32,14 +32,22 @@ module Api
         before_date = parse_date_param(params[:before]) || relationship.current_date_for(current_user) + 1.day
         limit = params[:limit].to_i
         limit = 20 if limit <= 0 || limit > 100
+        current_question_date = relationship.current_date_for(current_user)
 
         assignments = QuestionAssignment
                       .where(relationship: relationship)
                       .where('question_date < ?', before_date)
+                      .left_joins(:answers)
+                      .where(
+                        'question_assignments.question_date = :current_date OR answers.user_id = :user_id',
+                        current_date: current_question_date,
+                        user_id: current_user.id
+                      )
+                      .distinct
                       .includes(:question, :answers)
                       .order(question_date: :desc)
 
-        render json: assignments.first(limit).map { |qa| assignment_payload(qa, include_answers: true) }
+        render json: assignments.limit(limit).map { |qa| assignment_payload(qa, include_answers: true) }
       end
 
       private

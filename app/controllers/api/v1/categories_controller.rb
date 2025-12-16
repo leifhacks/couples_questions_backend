@@ -17,7 +17,7 @@ module Api
       # GET /api/v1/categories
       def index
         lang = language_code_for(current_user)
-        render json: Category.all.map { |c| c.payload(lang) }
+        render json: Category.all.reverse.map { |c| c.payload(lang) }
       end
 
       # GET /api/v1/categories/:uuid/questions
