@@ -12,7 +12,7 @@ class Category < UuidRecord
     {
       uuid: uuid,
       name: name,
-      image_name: image_name,
+      image_path: image_path,
       description: description
     }
   end
