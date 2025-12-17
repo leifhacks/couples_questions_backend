@@ -3,6 +3,7 @@
   "name_de": "Vergangenheit",
   "description_en": "Stories and memories from before and after you met, so you can understand each other’s roots, turning points, and the moments that made you who you are today.",
   "description_de": "Geschichten und Erinnerungen von vor und nach eurem Kennenlernen, damit ihr die Wurzeln, Wendepunkte und prägenden Momente versteht, die euch zu den Menschen gemacht haben, die ihr heute seid.",
+  "image_path": "categories/past.webp",
   "questions": [
     {
       "body_en": "What is one childhood memory that still feels very vivid in your body when you think about it?",
