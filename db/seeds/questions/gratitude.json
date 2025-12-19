@@ -8,235 +8,327 @@
     {
       "body_en": "What is one small thing I did recently that you quietly appreciated but maybe didn’t mention?",
       "body_de": "Was ist eine kleine Sache, die ich neulich getan habe und die du still geschätzt hast, ohne sie unbedingt anzusprechen?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "When you think about us being long‑distance, what are you secretly proud of in how we’re handling it?",
       "body_de": "Wenn du an unsere Fernbeziehung denkst – worauf bist du insgeheim stolz, wie wir damit umgehen?",
       "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet.",
       "relationship_distances": ["LONG_DISTANCE"]
     },
     {
       "body_en": "What quality in me are you especially grateful for these days, and where do you notice it most?",
       "body_de": "Für welche Eigenschaft von mir bist du in letzter Zeit besonders dankbar, und in welchen Momenten fällt sie dir am meisten auf?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What is something about our communication that you’re glad we already do pretty well?",
       "body_de": "Was an unserer Kommunikation macht dich froh, dass wir es jetzt schon ziemlich gut hinbekommen?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "When was a recent moment you felt especially cared for by me, even through a screen?",
       "body_de": "Wann hast du dich in letzter Zeit besonders von mir umsorgt gefühlt – selbst nur über den Bildschirm?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What do you appreciate about the way we repair and reconnect after tension or misunderstanding?",
       "body_de": "Was schätzt du daran, wie wir nach Spannungen oder Missverständnissen wieder aufeinander zugehen und uns verbinden?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What’s a tiny everyday habit of mine that makes your day a bit better?",
       "body_de": "Welche meiner kleinen Alltagsgewohnheiten macht deinen Tag ein kleines Stückchen besser?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What are you grateful that we’ve already learned as a couple, even if it was learned the hard way?",
       "body_de": "Wofür bist du dankbar, das wir als Paar bereits gelernt haben – auch wenn wir es auf die harte Tour lernen mussten?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "How has being with me added something positive to your life that you didn’t really expect?",
       "body_de": "Wie hat unsere Beziehung etwas Positives in dein Leben gebracht, womit du vorher gar nicht gerechnet hast?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What’s a small way we’ve grown together that you’re glad you didn’t miss out on?",
       "body_de": "In welcher kleinen Hinsicht sind wir gemeinsam gewachsen, und du bist froh, dass du das nicht verpasst hast?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What do you appreciate about how I respond when you’re stressed or overwhelmed?",
       "body_de": "Was schätzt du daran, wie ich reagiere, wenn du gestresst oder überfordert bist?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "Which of my messages or words from the past weeks are you still thinking about with a warm feeling?",
       "body_de": "An welche meiner Nachrichten oder Worte aus den letzten Wochen denkst du noch mit einem warmen Gefühl zurück?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What are you grateful for in the way we handle differences in opinion?",
       "body_de": "Wofür bist du dankbar darin, wie wir mit Meinungsverschiedenheiten umgehen?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What do you appreciate about my way of apologizing or taking responsibility when I get something wrong?",
       "body_de": "Was schätzt du an meiner Art, mich zu entschuldigen oder Verantwortung zu übernehmen, wenn ich etwas falsch gemacht habe?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "Which part of our story so far makes you feel the most thankful when you look back?",
       "body_de": "Welcher Teil unserer bisherigen Geschichte erfüllt dich beim Zurückblicken am meisten mit Dankbarkeit?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What is something about your own growth that you’re proud of and that benefits our relationship?",
       "body_de": "Worauf bist du in deinem eigenen Wachstum stolz, das auch unserer Beziehung zugutekommt?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What are three things about our connection that you would not want to trade for anything?",
       "body_de": "Welche drei Dinge an unserer Verbindung würdest du gegen nichts eintauschen wollen?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "When you compare where we are now to when we started, what development are you most grateful for?",
       "body_de": "Wenn du vergleichst, wo wir heute stehen im Gegensatz zum Anfang – für welche Entwicklung bist du am dankbarsten?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What’s a way I make you feel accepted that you might not have experienced in past relationships?",
       "body_de": "Auf welche Weise fühlst du dich von mir angenommen, die du in früheren Beziehungen vielleicht nicht kanntest?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What are you grateful we are not doing in our relationship that you’ve seen in other couples?",
       "body_de": "Wofür bist du dankbar, was wir in unserer Beziehung gerade nicht tun, was du aber bei anderen Paaren erlebt hast?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What do you appreciate about how we hold space for each other’s bad days?",
       "body_de": "Was schätzt du daran, wie wir Raum füreinander schaffen, wenn eine*r von uns einen schlechten Tag hat?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "When you imagine your life without our relationship, what would you miss the most?",
       "body_de": "Wenn du dir dein Leben ohne unsere Beziehung vorstellst – was würdest du am meisten vermissen?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What’s something about our long‑distance routines that you’re actually really thankful for?",
       "body_de": "Was an unseren Fernbeziehungs‑Routinen macht dich tatsächlich richtig dankbar?",
       "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet.",
       "relationship_distances": ["LONG_DISTANCE"]
     },
     {
       "body_en": "Which of my strengths are you most grateful for us having on our “team” as a couple?",
       "body_de": "Für welche meiner Stärken bist du am dankbarsten, dass sie in unserem „Team Beziehung“ vorhanden sind?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What do you appreciate about the way we both keep showing up, even when it’s not easy?",
       "body_de": "Was schätzt du daran, wie wir beide immer wieder auftauchen und dranbleiben, selbst wenn es nicht leicht ist?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What is one moment recently where you felt grateful simply to exist in my world and have me in yours?",
       "body_de": "Wann war kürzlich ein Moment, in dem du einfach nur dankbar warst, in meiner Welt zu existieren und mich in deiner zu haben?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What do you appreciate about the way I listen to you — and where do you notice it most?",
       "body_de": "Was schätzt du an meiner Art, dir zuzuhören – und in welchen Situationen fällt dir das besonders auf?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What has our relationship taught you so far that you feel genuinely grateful to have learned?",
       "body_de": "Was hat dir unsere Beziehung bisher beigebracht, wofür du aufrichtig dankbar bist, es gelernt zu haben?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What are you grateful for in the way we respect each other’s time, work, or rest?",
       "body_de": "Wofür bist du dankbar in der Art, wie wir die Zeit, Arbeit oder Erholung der jeweils anderen Person respektieren?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "Which of our shared memories do you return to when you need to remind yourself why this is worth it?",
       "body_de": "Zu welcher unserer gemeinsamen Erinnerungen kehrst du zurück, wenn du dir vor Augen führen willst, warum sich das alles lohnt?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What do you appreciate about how we allow each other to be different rather than trying to change each other?",
       "body_de": "Was schätzt du daran, wie wir einander unterschiedlich sein lassen, statt uns gegenseitig verändern zu wollen?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What is something you’re grateful that I know about you — even if it’s not always flattering?",
       "body_de": "Wofür bist du dankbar, dass ich es über dich weiß – selbst wenn es nicht immer schmeichelhaft ist?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "In what ways has our relationship made you kinder or softer with yourself?",
       "body_de": "In welcher Hinsicht hat unsere Beziehung dich dir selbst gegenüber freundlicher oder weicher gemacht?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What do you appreciate about how we talk about hard things, even if we’re still learning?",
       "body_de": "Was schätzt du daran, wie wir über schwierige Themen sprechen – auch wenn wir noch am Lernen sind?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What’s a small act of care you receive from me that you’d miss immediately if it suddenly stopped?",
       "body_de": "Welche kleine Fürsorge‑Geste von mir würdest du sofort vermissen, wenn sie plötzlich aufhören würde?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What do you appreciate about the way we handle each other’s insecurities or sensitivities?",
       "body_de": "Was schätzt du daran, wie wir mit den Unsicherheiten oder Empfindlichkeiten der jeweils anderen Person umgehen?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "Which of my reactions in a tough situation made you feel grateful for the kind of partner I am?",
       "body_de": "Welche meiner Reaktionen in einer schwierigen Situation hat dich dankbar dafür gemacht, was für ein Mensch ich als Partner*in bin?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What are you glad we laugh about together instead of fighting about?",
       "body_de": "Über welche Dinge bist du froh, dass wir darüber lachen statt uns darüber zu streiten?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What do you appreciate about how we give each other space without disappearing?",
       "body_de": "Was schätzt du daran, wie wir einander Raum geben, ohne ganz zu verschwinden?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "When you zoom out and look at our relationship from the outside, what makes you feel most thankful?",
       "body_de": "Wenn du von außen auf unsere Beziehung schaust – was macht dich darin am dankbarsten?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What do you appreciate about how we keep choosing each other, even on ordinary or hard days?",
       "body_de": "Was schätzt du daran, wie wir uns auch an gewöhnlichen oder schwierigen Tagen immer wieder füreinander entscheiden?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What is one thing about our connection that you hope you’ll still feel grateful for many years from now?",
       "body_de": "Was ist eine Sache an unserer Verbindung, für die du hoffst, dass du ihr noch in vielen Jahren dankbar sein wirst?",
       "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet.",
       "relationship_types": ["ENGAGED", "MARRIED", "DOMESTIC_PARTNERSHIP"]
     },
     {
       "body_en": "What are you grateful we’re learning to say to each other more often?",
       "body_de": "Wofür bist du dankbar, das wir lernen, einander häufiger zu sagen?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "Which of our shared values are you especially thankful for when life gets chaotic?",
       "body_de": "Für welche unserer gemeinsamen Werte bist du besonders dankbar, wenn das Leben chaotisch wird?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What do you appreciate about how we celebrate little wins or milestones together?",
       "body_de": "Was schätzt du daran, wie wir kleine Erfolge oder Meilensteine miteinander feiern?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     },
     {
       "body_en": "What’s one quiet way you’d like to thank me for something I might not even realize I did for you?",
       "body_de": "Auf welche leise Art würdest du mir gern danken für etwas, das ich für dich getan habe, ohne es vielleicht zu merken?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored gratitude-strengthening emotional closeness.",
+      "summary_de": "Heute habt ihr dankbarkeitsstärkende emotionale Nähe erkundet."
     }
   ]
 }

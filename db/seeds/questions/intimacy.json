@@ -8,232 +8,322 @@
     {
       "body_en": "When do you feel the most emotionally close to me, even with distance between us?",
       "body_de": "Wann fühlst du dich mir emotional am nächsten, selbst wenn räumliche Distanz zwischen uns liegt?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What helps you feel truly seen and not just checked in on when we talk?",
       "body_de": "Was hilft dir, dich wirklich gesehen zu fühlen und nicht nur „abgefragt“, wenn wir miteinander sprechen?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "Is there a part of you (a fear, a desire, a quirk) that you’d like me to understand more deeply?",
       "body_de": "Gibt es einen Teil von dir (eine Angst, ein Wunsch, eine Eigenart), von dem du dir wünschst, dass ich ihn noch besser verstehe?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What does feeling desired by me look and feel like for you — in words, actions, or energy?",
       "body_de": "Wie sieht es für dich aus und wie fühlt es sich an, dich von mir begehrt zu fühlen – in Worten, Gesten oder Energie?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "When you’re having a hard day, what kind of tenderness from me lands best: listening, reassurance, humor, or something else?",
       "body_de": "Wenn du einen schweren Tag hast – welche Art von Zärtlichkeit von mir kommt bei dir am besten an: Zuhören, Zuspruch, Humor oder etwas anderes?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "In which moments do you feel safest being vulnerable with me — and what makes those moments different?",
       "body_de": "In welchen Momenten fühlst du dich am sichersten, verletzlich mit mir zu sein – und was macht diese Momente anders?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What’s one way I could make it easier for you to share something that feels a bit scary or embarrassing?",
       "body_de": "Wie könnte ich es dir leichter machen, etwas mit mir zu teilen, das sich für dich ein bisschen beängstigend oder peinlich anfühlt?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "How do you like to receive affection in a long‑distance context (messages, voice, video, photos, surprises)?",
       "body_de": "Wie bekommst du in einer Fernbeziehung am liebsten Zuneigung (Nachrichten, Sprachnachrichten, Video, Fotos, Überraschungen)?",
       "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet.",
       "relationship_distances": ["LONG_DISTANCE"]
     },
     {
       "body_en": "What’s a gentle boundary you’d like me to know about, so our closeness can feel even safer for you?",
       "body_de": "Welche sanfte Grenze möchtest du, dass ich kenne, damit sich unsere Nähe für dich noch sicherer anfühlt?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What’s one intimate moment we’ve shared (emotional, physical, or conversational) that you replay in your mind with a smile?",
       "body_de": "Welchen intimen Moment zwischen uns (emotional, körperlich oder im Gespräch) spielst du in Gedanken immer wieder mit einem Lächeln ab?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What helps you shift from “practical mode” into “us mode” when we connect?",
       "body_de": "Was hilft dir, beim Kontakt mit mir vom „Organisations‑Modus“ in den „Wir‑Modus“ zu wechseln?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "How do you notice in your body that you feel safe with me?",
       "body_de": "Woran spürst du in deinem Körper, dass du dich bei mir sicher fühlst?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What’s something small I do that makes you feel especially emotionally held?",
       "body_de": "Welche kleine Sache von mir lässt dich besonders emotional gehalten fühlen?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "Are there topics that feel especially intimate or tender for you right now that you’d still like to explore together?",
       "body_de": "Gibt es Themen, die sich für dich im Moment besonders intim oder empfindlich anfühlen und die du trotzdem gern mit mir erforschen möchtest?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "When do you feel most comfortable initiating closeness with me — and when does it feel harder?",
       "body_de": "Wann fühlst du dich am wohlsten damit, Nähe zu mir zu initiieren – und wann fällt es dir eher schwer?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What’s one reassuring sentence from me that you never get tired of hearing?",
       "body_de": "Welchen einen beruhigenden Satz von mir könntest du immer wieder hören, ohne dass er sich abnutzt?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "How has being with me changed the way you experience emotional intimacy in general?",
       "body_de": "Wie hat unsere Beziehung deine Art verändert, emotionale Intimität generell zu erleben?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "When you pull back or need space, what do you wish I understood about what’s happening inside you?",
       "body_de": "Wenn du dich zurückziehst oder Abstand brauchst – was wünschst du dir, dass ich über dein inneres Erleben in solchen Momenten verstehe?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What kind of questions from me make you feel lovingly curious about, rather than judged?",
       "body_de": "Welche Art Fragen von mir lassen dich liebevoll neugierig befragt fühlen – statt bewertet?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "How do you like to be comforted when you feel ashamed or insecure about something?",
       "body_de": "Wie möchtest du getröstet werden, wenn du dich für etwas schämst oder unsicher fühlst?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What does emotional aftercare look like for you after a hard conversation between us?",
       "body_de": "Wie sieht emotionale „Aftercare“ für dich nach einem schwierigen Gespräch zwischen uns aus?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "Is there a way you’d like me to check in with you before we go into deeper or more vulnerable topics?",
       "body_de": "Gibt es eine Art, wie du dir wünschst, dass ich bei dir einchecke, bevor wir in sehr tiefe oder verletzliche Themen einsteigen?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What kind of compliments about you land the deepest and feel most nourishing?",
       "body_de": "Welche Art von Komplimenten über dich gehen am tiefsten und fühlen sich am nährendsten an?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "How do you feel most loved: through words, time, shared honesty, small gestures, or something else?",
       "body_de": "Wie fühlst du dich am meisten geliebt: durch Worte, Zeit, geteilte Ehrlichkeit, kleine Gesten oder etwas anderes?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What’s something about physical or sensual closeness that you’d like us to be able to talk about more easily?",
       "body_de": "Was an körperlicher oder sinnlicher Nähe würdest du dir wünschen, dass wir leichter und offener darüber sprechen können?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "When you imagine us finally being in the same place, what kind of everyday touch do you look forward to most?",
       "body_de": "Wenn du dir vorstellst, dass wir endlich am selben Ort sind – nach welcher Form von alltäglicher Berührung sehnst du dich am meisten?",
       "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet.",
       "relationship_distances": ["NEARBY", "LONG_DISTANCE"]
     },
     {
       "body_en": "Is there something you’re shy to ask for in terms of affection or closeness that you secretly wish I’d offer more?",
       "body_de": "Gibt es etwas in Bezug auf Zuneigung oder Nähe, um das du dich schämst zu bitten, dir aber heimlich wünschst, dass ich es öfter anbiete?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "How do you want me to respond when you share something that feels very raw or unfinished inside you?",
       "body_de": "Wie wünschst du dir, dass ich reagiere, wenn du etwas mit mir teilst, das sich in dir noch roh oder unfertig anfühlt?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What helps you trust that I can handle your more difficult emotions without pulling away?",
       "body_de": "Was hilft dir, darauf zu vertrauen, dass ich auch deine schwierigeren Gefühle aushalten kann, ohne mich abzuwenden?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What does a “soft evening” together look like for you, even if it’s just over a call or chat?",
       "body_de": "Wie sieht für dich ein „weicher Abend“ mit mir aus – selbst wenn er nur über Call oder Chat stattfindet?",
       "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet.",
       "extra_relevance_for_distances": ["LONG_DISTANCE"]
     },
     {
       "body_en": "Are there words or phrases that make you shut down a bit, even if I don’t mean them that way?",
       "body_de": "Gibt es Worte oder Formulierungen, bei denen du innerlich eher zumachst, auch wenn ich es nicht so meine?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What’s a question you secretly wish I’d ask you more often about your inner world?",
       "body_de": "Welche Frage über deine Innenwelt wünschst du dir heimlich, dass ich sie dir öfter stelle?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "How do you recognize that you’re starting to emotionally withdraw, and what could I gently do in those moments?",
       "body_de": "Woran merkst du, dass du dich emotional zurückziehst – und was könnte ich in solchen Momenten behutsam tun?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What’s one thing you wish I knew about how it feels for you to miss me?",
       "body_de": "Was ist eine Sache, von der du dir wünschst, dass ich weiß, wie es sich für dich anfühlt, mich zu vermissen?",
       "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet.",
       "extra_relevance_for_distances": ["LONG_DISTANCE"]
     },
     {
       "body_en": "When you feel insecure about us, what kind of reassurance actually helps and what doesn’t?",
       "body_de": "Wenn du dich unsicher in Bezug auf uns fühlst – welche Art von Beruhigung hilft dir wirklich und welche eher nicht?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "How would you like us to talk about fantasies, desires, or curiosity in a way that feels safe for both of us?",
       "body_de": "Wie wünschst du dir, dass wir über Fantasien, Wünsche oder Neugier sprechen – so, dass es sich für uns beide sicher anfühlt?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What kind of emotional check‑in ritual would make you feel regularly held and noticed by me?",
       "body_de": "Welches kleine emotionales Check‑in‑Ritual würde dir helfen, dich regelmäßig gehalten und wahrgenommen von mir zu fühlen?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "Is there a way I touch you (physically, with words, or with attention) that feels especially intimate to you?",
       "body_de": "Gibt es eine Art, wie ich dich berühre (körperlich, mit Worten oder mit Aufmerksamkeit), die sich für dich besonders intim anfühlt?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What do you need from me in order to feel like it’s okay to have needs with me?",
       "body_de": "Was brauchst du von mir, damit es sich für dich okay anfühlt, Bedürfnisse mir gegenüber zu haben?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "How do you hope our emotional intimacy will feel different or deeper a few years from now?",
       "body_de": "Wie hoffst du, dass sich unsere emotionale Intimität in ein paar Jahren anders oder tiefer anfühlen wird?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "When you imagine us being physically close again, what do you hope I’ll understand about your pace and comfort?",
       "body_de": "Wenn du dir vorstellst, dass wir wieder körperlich nah beieinander sind – was hoffst du, dass ich über dein Tempo und dein Wohlgefühl verstehe?",
       "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet.",
       "extra_relevance_for_distances": ["LONG_DISTANCE"]
     },
     {
       "body_en": "What’s one thing you’d like us to practice together to strengthen our emotional closeness?",
       "body_de": "Was ist eine Sache, die du gern gemeinsam mit mir üben würdest, um unsere emotionale Nähe zu stärken?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What does it mean to you to be fully yourself with me — and where do you still hold back a little?",
       "body_de": "Was bedeutet es für dich, bei mir ganz du selbst zu sein – und wo hältst du dich noch ein bisschen zurück?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "How would you like me to respond when you say “no” or “not right now” to something, so that intimacy still feels safe?",
       "body_de": "Wie möchtest du, dass ich reagiere, wenn du zu etwas „nein“ oder „jetzt nicht“ sagst, damit sich unsere Intimität weiterhin sicher anfühlt?",
-      "depth": 3
+      "depth": 3,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     },
     {
       "body_en": "What’s one way we already do intimacy well that you never want us to lose?",
       "body_de": "Was machen wir in Sachen Intimität deiner Meinung nach jetzt schon richtig gut, was wir auf keinen Fall verlieren sollten?",
-      "depth": 2
+      "depth": 2,
+      "summary_en": "Today, you both explored intimacy-nurturing honesty and tenderness.",
+      "summary_de": "Heute habt ihr Intimität nährende Ehrlichkeit und Zärtlichkeit erkundet."
     }
   ]
 }

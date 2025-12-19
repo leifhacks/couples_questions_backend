@@ -8,256 +8,356 @@
     {
       "body_en": "If our relationship had a theme song this week, what would it be and why?",
       "body_de": "Wenn unsere Beziehung diese Woche einen Titelsong hätte, welcher wäre es und warum?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both tuned into the playful soundtrack that reflects your connection's rhythm right now.",
+      "summary_de": "Heute habt ihr beide den verspielten Soundtrack aufgedreht, der gerade euren gemeinsamen Rhythmus einfängt."
     },
     {
       "body_en": "What’s a silly little habit of mine that secretly makes you smile?",
       "body_de": "Welche meiner kleinen, albernen Angewohnheiten bringt dich insgeheim zum Lächeln?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both noticed how the tiniest quirks become sweet signals of affection.",
+      "summary_de": "Heute habt ihr beide gespürt, wie die kleinsten Macken zu liebevollen Signalen werden."
     },
     {
       "body_en": "If we were characters in a rom-com, which scene from our real life would definitely be in the movie?",
       "body_de": "Wenn wir Figuren in einer Rom‑Com wären: Welche Szene aus unserem echten Leben müsste unbedingt im Film vorkommen?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both replayed real-life rom-com moments that keep your love story cinematic.",
+      "summary_de": "Heute habt ihr beide echte Rom‑Com‑Momente nacherzählt, die eure Liebesgeschichte filmreif machen."
     },
     {
       "body_en": "What’s a ridiculous couple challenge you’d love us to try for a day?",
       "body_de": "Welche völlig verrückte Couple‑Challenge würdest du gern mit mir für einen Tag ausprobieren?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both embraced a ridiculous challenge to keep curiosity and laughter in motion.",
+      "summary_de": "Heute habt ihr beide eine herrlich verrückte Challenge umarmt, um Neugier und Lachen in Schwung zu halten."
     },
     {
       "body_en": "If you could teleport me to you for just one hour right now, what would we do first?",
       "body_de": "Wenn du mich jetzt für eine Stunde zu dir teleportieren könntest – was würden wir als Erstes machen?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both imagined a spontaneous teleport date to savor the very first thing you'd do together.",
+      "summary_de": "Heute habt ihr beide ein spontanes Teleport-Date ausgemalt, um das allererste gemeinsame Tun auszukosten."
     },
     {
       "body_en": "Which emoji feels the most “us” lately, and what’s the story behind it?",
       "body_de": "Welches Emoji fühlt sich in letzter Zeit am meisten nach „wir beide“ an – und welche Geschichte steckt dahinter?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both traced the emoji that captures your current inside joke energy.",
+      "summary_de": "Heute habt ihr das Emoji gefunden, das eure aktuelle Insider-Joke-Energie einfängt."
     },
     {
       "body_en": "What’s a playful nickname you’d give our relationship right now?",
       "body_de": "Welchen verspielten Spitznamen würdest du unserer Beziehung gerade geben?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both crowned your bond with a playful nickname that matches its mood.",
+      "summary_de": "Heute habt ihr eure Verbindung mit einem verspielten Spitznamen gekrönt, der genau zu ihrer Stimmung passt."
     },
     {
       "body_en": "If we could swap lives for 24 hours, what’s the first thing you’d do as me?",
       "body_de": "Wenn wir für 24 Stunden das Leben tauschen könnten – was wäre das Erste, das du als ich tun würdest?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both imagined swapping lives to appreciate the quirks in each other's routines.",
+      "summary_de": "Heute habt ihr euch einen Lebenstausch ausgemalt, um die Eigenheiten im Alltag des anderen wertzuschätzen."
     },
     {
       "body_en": "What’s a small, totally unnecessary but fun ritual you’d love us to start?",
       "body_de": "Welches kleine, völlig unnötige, aber lustige Ritual würdest du gern mit mir starten?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both invented a tiny, joyful ritual to keep delight sprinkled through ordinary moments.",
+      "summary_de": "Heute habt ihr ein kleines, fröhliches Ritual erfunden, das euren Alltag immer wieder mit Freude bestäubt."
     },
     {
       "body_en": "If you had to describe our chemistry using only food metaphors, how would you do it?",
       "body_de": "Wenn du unsere Chemie nur mit Essens‑Metaphern beschreiben dürftest – wie würde das klingen?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both seasoned your chemistry with food metaphors to savor how sweet things feel.",
+      "summary_de": "Heute habt ihr eure Chemie mit Essensmetaphern gewürzt, um zu schmecken, wie süß sich gerade alles anfühlt."
     },
     {
       "body_en": "What was the last thing I did that almost made you laugh out loud, even if you pretended to stay cool?",
       "body_de": "Was habe ich als Letztes getan, das dich fast laut lachen ließ, auch wenn du versucht hast, cool zu bleiben?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both replayed the almost-laugh moment that proves how easily you crack each other up.",
+      "summary_de": "Heute habt ihr den Fast-Lach-Moment noch einmal erlebt, der zeigt, wie leicht ihr euch gegenseitig zum Kichern bringt."
     },
     {
       "body_en": "If we had a secret handshake, what would it include?",
       "body_de": "Wenn wir einen geheimen Handschlag hätten – was müsste unbedingt dabei sein?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both choreographed a secret handshake to celebrate your private language.",
+      "summary_de": "Heute habt ihr einen geheimen Handschlag choreografiert, um eure gemeinsame Geheimsprache zu feiern."
     },
     {
       "body_en": "Which meme or gif would you send to describe our long‑distance vibe?",
       "body_de": "Welches Meme oder GIF würdest du schicken, um unsere Long‑Distance‑Vibes zu beschreiben?",
       "depth": 0,
+      "summary_en": "Today, you both picked the meme energy that keeps long-distance feeling lighthearted.",
+      "summary_de": "Heute habt ihr das Meme-Gefühl gewählt, das eure Long-Distance-Zeit leicht und verspielt hält.",
       "relationship_distances": ["LONG_DISTANCE"]
     },
     {
       "body_en": "If you could press a button and instantly get a silly couple photo of us right now, what would we be doing?",
       "body_de": "Wenn du auf einen Knopf drücken und sofort ein albernes Paar‑Foto von uns bekommen könntest – was würden wir darauf machen?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both envisioned a spontaneous snapshot that shows your goofy spark.",
+      "summary_de": "Heute habt ihr euch ein spontanes Foto vorgestellt, das euren albernen Funken zeigt."
     },
     {
       "body_en": "What ridiculous matching outfit would you secretly love us to wear together at least once?",
       "body_de": "Welches völlig übertriebene Partner‑Outfit würdest du heimlich gern mindestens einmal mit mir tragen?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both dreamed up outrageous matching outfits that flaunt your playful pride.",
+      "summary_de": "Heute habt ihr übertriebene Partner-Outfits erträumt, die euren verspielten Stolz zeigen."
     },
     {
       "body_en": "If our chat history was turned into a comic strip, which running joke has to be in every episode?",
       "body_de": "Wenn unsere Chat‑History in einen Comic verwandelt würde – welcher Running Gag müsste in jeder Folge vorkommen?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both highlighted the running joke that would headline every comic about you.",
+      "summary_de": "Heute habt ihr den Running Gag hervorgehoben, der in jedem Comic über euch auftreten müsste."
     },
     {
       "body_en": "What’s a playful bet you’d like to make with me this week?",
       "body_de": "Welche spielerische Wette würdest du diese Woche gern mit mir abschließen?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both crafted a playful bet to keep the week buzzing with friendly stakes.",
+      "summary_de": "Heute habt ihr eine spielerische Wette geschmiedet, die eure Woche mit freundlichem Kribbeln füllt."
     },
     {
       "body_en": "If I were a character in your favorite game, movie, or series, who would I be and why?",
       "body_de": "Wenn ich eine Figur in deinem Lieblingsspiel, -film oder in deiner Lieblingsserie wäre – wer wäre ich und warum?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both cast each other in favorite stories to honor the roles you already play.",
+      "summary_de": "Heute habt ihr euch gegenseitig in Lieblingsgeschichten besetzt, um die Rollen zu feiern, die ihr ohnehin füreinander spielt."
     },
     {
       "body_en": "What’s a harmless prank you’d pull on me if we were in the same room right now?",
       "body_de": "Welchen harmlosen Streich würdest du mir spielen, wenn wir jetzt im selben Raum wären?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both plotted a harmless prank that keeps curiosity and laughter thriving.",
+      "summary_de": "Heute habt ihr einen harmlosen Streich geplant, der Neugier und Lachen lebendig hält."
     },
     {
       "body_en": "Which of my facial expressions do you find the funniest or cutest?",
       "body_de": "Welche meiner Gesichtsausdrücke findest du am lustigsten oder am süßesten?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both adored the facial expression that always melts you in the cutest way.",
+      "summary_de": "Heute habt ihr den Gesichtsausdruck gefeiert, der euch jedes Mal auf die süßeste Art dahinschmelzen lässt."
     },
     {
       "body_en": "If we opened a tiny, silly business together just for fun, what would we sell?",
       "body_de": "Wenn wir nur zum Spaß ein kleines, verrücktes Business zusammen eröffnen würden – was würden wir verkaufen?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both brainstormed a tiny, silly business that exists purely for shared joy.",
+      "summary_de": "Heute habt ihr ein kleines, verrücktes Business erdacht, das einzig für euren gemeinsamen Spaß existiert."
     },
     {
       "body_en": "What’s a childhood game you’d love to play with me now as adults?",
       "body_de": "Welches Kindheitsspiel würdest du heute gern noch einmal mit mir als Erwachsene*r spielen?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both revisited a childhood game to invite carefree nostalgia into the present.",
+      "summary_de": "Heute habt ihr ein Kindheitsspiel wiederbelebt, um unbeschwerte Nostalgie ins Jetzt zu holen."
     },
     {
       "body_en": "If our love story had a title that sounds like a cheesy Netflix show, what would it be?",
       "body_de": "Wenn unsere Liebesgeschichte einen Titel hätte, der wie eine kitschige Netflix‑Serie klingt – wie würde sie heißen?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both titled your love story like a cheesy series to honor its dramatic charm.",
+      "summary_de": "Heute habt ihr eure Liebesgeschichte wie eine kitschige Serie betitelt, um ihren dramatischen Charme zu feiern."
     },
     {
       "body_en": "What’s one inside joke you’d love us to create on purpose?",
       "body_de": "Welchen Insider‑Witz würdest du gern ganz bewusst mit mir erschaffen?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both decided on a brand-new inside joke to keep your bond uniquely yours.",
+      "summary_de": "Heute habt ihr einen brandneuen Insider-Witz beschlossen, der eure Verbindung unverwechselbar macht."
     },
     {
       "body_en": "If we could pause adult life for one carefree day together, what would our ‘no responsibilities’ day look like?",
       "body_de": "Wenn wir das Erwachsenenleben für einen sorglosen Tag pausieren könnten – wie würde unser „keine Verpflichtungen“‑Tag aussehen?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both pressed pause on responsibilities in your minds to plan a carefree day.",
+      "summary_de": "Heute habt ihr in Gedanken die Pause-Taste gedrückt, um einen sorglosen Tag zu entwerfen."
     },
     {
       "body_en": "Which song would you challenge me to a lip‑sync battle with?",
       "body_de": "Zu welchem Song würdest du mich zu einem Lip‑Sync‑Battle herausfordern?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both queued up a lip-sync battle to let friendly competition feel flirty.",
+      "summary_de": "Heute habt ihr ein Lip-Sync-Battle geplant, damit freundlicher Wettstreit herrlich flirtig bleibt."
     },
     {
       "body_en": "If we had a couple’s catchphrase, what would it be and when would we say it?",
       "body_de": "Wenn wir einen gemeinsamen Catchphrase hätten – wie würde er lauten und wann würden wir ihn benutzen?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both coined a couples catchphrase to call upon whenever you need a grin.",
+      "summary_de": "Heute habt ihr einen gemeinsamen Catchphrase erfunden, den ihr immer dann ruft, wenn ihr ein Grinsen braucht."
     },
     {
       "body_en": "What’s something cute you imagine us doing when we’re old and a bit ridiculous together?",
       "body_de": "Was stellst du dir vor, wie wir als alte, leicht verrückte Menschen süß miteinander umgehen?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both imagined future adorableness to trust you'll stay playful even when old.",
+      "summary_de": "Heute habt ihr euch zukünftige Niedlichkeit ausgemalt, um darauf zu vertrauen, dass ihr auch im Alter verspielt bleibt."
     },
     {
       "body_en": "If you could send me a surprise snack right now, what would you choose and why?",
       "body_de": "Wenn du mir jetzt spontan einen Snack schicken könntest – was würdest du wählen und warum?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both curated the perfect surprise snack to show thoughtfulness in a tasty way.",
+      "summary_de": "Heute habt ihr den perfekten Überraschungssnack kuratiert, um Fürsorge auf leckere Art zu zeigen."
     },
     {
       "body_en": "What’s a funny misunderstanding we’ve had that you can laugh about now?",
       "body_de": "Welches lustige Missverständnis zwischen uns kannst du inzwischen richtig drüber lachen?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both laughed at a past misunderstanding to prove how resilient your humor is.",
+      "summary_de": "Heute habt ihr über ein früheres Missverständnis gelacht, um zu beweisen, wie widerstandsfähig euer Humor ist."
     },
     {
       "body_en": "If we had a shared ‘couple emoji’ keyboard, which three icons would be pinned at the top?",
       "body_de": "Wenn wir eine gemeinsame „Couple‑Emoji“‑Tastatur hätten – welche drei Icons wären ganz oben angepinnt?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both pinned an emoji trio that sums up your shared digital vibe.",
+      "summary_de": "Heute habt ihr ein Emoji-Trio angepinnt, das eure gemeinsame digitale Stimmung zusammenfasst."
     },
     {
       "body_en": "What’s a small way I flirt with you that you secretly love?",
       "body_de": "Auf welche kleine Art flirte ich mit dir, die du heimlich total liebst?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both noticed the subtle flirting move that reliably makes hearts flutter.",
+      "summary_de": "Heute habt ihr die subtile Flirtgeste wahrgenommen, die eure Herzen zuverlässig flattern lässt."
     },
     {
       "body_en": "If we could turn one of our text messages into a poster, which one would you pick?",
       "body_de": "Wenn wir eine unserer Nachrichten in ein Poster verwandeln könnten – welche würdest du aussuchen?",
       "depth": 0,
+      "summary_en": "Today, you both chose the text that deserves poster status because it captures your essence.",
+      "summary_de": "Heute habt ihr die Nachricht ausgewählt, die Posterstatus verdient, weil sie eure Essenz einfängt.",
       "extra_relevance_for_distances": ["LONG_DISTANCE"]
     },
     {
       "body_en": "What’s a silly ‘award’ you’d give me today?",
       "body_de": "Welchen albernen Preis würdest du mir heute verleihen?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both created a silly award to celebrate each other's lovable quirks.",
+      "summary_de": "Heute habt ihr einen albernen Preis erfunden, um die liebenswerten Macken des anderen zu feiern."
     },
     {
       "body_en": "If our relationship had a mascot, what would it be and what would its personality be like?",
       "body_de": "Wenn unsere Beziehung ein Maskottchen hätte – was wäre es und welchen Charakter hätte es?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both invented a mascot whose personality mirrors your playful spirit.",
+      "summary_de": "Heute habt ihr ein Maskottchen erfunden, dessen Persönlichkeit euren verspielten Geist spiegelt."
     },
     {
       "body_en": "What’s a playful question you wish I’d ask you more often?",
       "body_de": "Welche verspielte Frage wünschst du dir, dass ich dir öfter stelle?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both voiced the playful question you crave hearing more often.",
+      "summary_de": "Heute habt ihr die verspielte Frage ausgesprochen, die ihr euch öfter wünschen würdet."
     },
     {
       "body_en": "If we recorded a short ‘couple podcast’ episode just for us, what would today’s episode be about?",
       "body_de": "Wenn wir eine kurze „Couple‑Podcast“‑Folge nur für uns aufnehmen würden – worum würde es heute gehen?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both outlined a private podcast episode to capture the mood of this moment.",
+      "summary_de": "Heute habt ihr eine private Podcast-Folge skizziert, die genau diese Momentstimmung einfängt."
     },
     {
       "body_en": "What’s a weird little tradition you’d love us to have every time we reunite in person?",
       "body_de": "Welche kleine, schräge Tradition würdest du gern haben, jedes Mal wenn wir uns in echt wiedersehen?",
       "depth": 1,
+      "summary_en": "Today, you both planned a quirky reunion ritual that turns distance into anticipation.",
+      "summary_de": "Heute habt ihr ein skurriles Wiedersehensritual geplant, das Distanz in Vorfreude verwandelt.",
       "extra_relevance_for_distances": ["LONG_DISTANCE"]
     },
     {
       "body_en": "If you could choose a filter that appears over us whenever we’re together, what would it look like?",
       "body_de": "Wenn du einen Filter wählen könntest, der immer erscheint, wenn wir zusammen sind – wie würde er aussehen?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both designed a magical filter that colors every shared scene with fun.",
+      "summary_de": "Heute habt ihr einen magischen Filter entworfen, der jede gemeinsame Szene mit Spaß einfärbt."
     },
     {
       "body_en": "What’s a tiny, fun challenge you want us to complete before the end of the month?",
       "body_de": "Welche kleine, spaßige Challenge möchtest du, dass wir bis Monatsende gemeinsam schaffen?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both set a tiny challenge to keep motivation light and playful.",
+      "summary_de": "Heute habt ihr euch eine kleine Challenge gesetzt, die Motivation leicht und verspielt hält."
     },
     {
       "body_en": "If I had a ‘battery bar’ showing my need for affection, what color would it be today?",
       "body_de": "Wenn ich eine „Akkustands‑Anzeige“ für mein Bedürfnis nach Nähe hätte – welche Farbe hätte sie heute?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both checked the affection battery to understand each other's need for warmth.",
+      "summary_de": "Heute habt ihr den Nähe-Akku geprüft, um das Bedürfnis nach Zuwendung voneinander zu verstehen."
     },
     {
       "body_en": "What’s the most chaotic date idea that actually sounds fun to you?",
       "body_de": "Was ist die chaotischste Date‑Idee, die sich für dich trotzdem richtig spaßig anhört?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both greenlit a chaotic date idea because adventure feels exhilarating together.",
+      "summary_de": "Heute habt ihr eine chaotische Date-Idee abgesegnet, weil Abenteuer zusammen aufregend ist."
     },
     {
       "body_en": "If we each had a superpower just for our relationship, what would yours be and what would mine be?",
       "body_de": "Wenn wir beide eine Superkraft hätten, die nur für unsere Beziehung gilt – welche wäre deine und welche wäre meine?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both assigned relationship superpowers that amplify what you already cherish.",
+      "summary_de": "Heute habt ihr euch Beziehungs-Superkräfte zugewiesen, die das verstärken, was ihr bereits liebt."
     },
     {
       "body_en": "Which of our habits would make people say, ‘They’re so cute, it’s annoying’?",
       "body_de": "Welche unserer Angewohnheiten würde andere sagen lassen: „Die sind so süß, es ist schon nervig“?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both laughed at the habit that makes outsiders roll their eyes at your cuteness.",
+      "summary_de": "Heute habt ihr über die Angewohnheit gelacht, bei der Außenstehende ob eurer Süßheit die Augen verdrehen."
     },
     {
       "body_en": "If you could rename our chat with a funny new title, what would you call it right now?",
       "body_de": "Wenn du unseren Chat gerade neu und lustig benennen könntest – wie würde er heißen?",
-      "depth": 0
+      "depth": 0,
+      "summary_en": "Today, you both renamed your chat to reflect the joke-filled tone you're living in now.",
+      "summary_de": "Heute habt ihr euren Chat umbenannt, damit er den witzigen Ton einfängt, in dem ihr gerade lebt."
     },
     {
       "body_en": "What’s a small, playful surprise you’d love me to plan for you?",
       "body_de": "Über welche kleine, verspielte Überraschung von mir würdest du dich richtig freuen?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both envisioned a playful surprise to make everyday care feel special.",
+      "summary_de": "Heute habt ihr eine verspielte Überraschung vor Augen gehabt, die Alltagszuwendung besonders macht."
     },
     {
       "body_en": "If you had to compare our texting style to a weather forecast, what would it be today?",
       "body_de": "Wenn du unseren Schreibstil mit einer Wettervorhersage vergleichen müsstest – wie wäre das Wetter heute?",
       "depth": 0,
+      "summary_en": "Today, you both forecasted your texting weather to notice how your moods sync.",
+      "summary_de": "Heute habt ihr eure Texting-Wetterlage vorhergesagt, um zu sehen, wie sich eure Stimmungen angleichen.",
       "extra_relevance_for_distances": ["LONG_DISTANCE"]
     },
     {
       "body_en": "What’s something totally ordinary that becomes more fun when you imagine us doing it together?",
       "body_de": "Welche total gewöhnliche Sache wird sofort lustiger, wenn du dir vorstellst, dass wir sie zusammen machen?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both transformed something ordinary into fun just by picturing doing it together.",
+      "summary_de": "Heute habt ihr etwas völlig Gewöhnliches in Spaß verwandelt, indem ihr euch vorgestellt habt, es gemeinsam zu tun."
     },
     {
       "body_en": "If someone watched a time‑lapse of our notifications together, what pattern would they notice?",
       "body_de": "Wenn jemand ein Zeitraffer‑Video von unseren Benachrichtigungen sehen würde – welches Muster würde auffallen?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both observed the time-lapse of your notifications to appreciate your rhythms.",
+      "summary_de": "Heute habt ihr das Zeitraffergefühl eurer Benachrichtigungen beobachtet, um eure Rhythmen wertzuschätzen."
     },
     {
       "body_en": "What’s one way we could add 1% more playfulness to our everyday messages?",
       "body_de": "Wie könnten wir unseren Alltagsnachrichten 1 % mehr Verspieltheit hinzufügen?",
-      "depth": 1
+      "depth": 1,
+      "summary_en": "Today, you both brainstormed a 1% playfulness boost to keep everyday messages sparkling.",
+      "summary_de": "Heute habt ihr einen 1%-Verspieltheits-Boost ausgetüftelt, der eure Alltagsnachrichten zum Glitzern bringt."
     }
   ]
 }

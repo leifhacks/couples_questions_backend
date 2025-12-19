@@ -12,6 +12,7 @@ class Question < UuidRecord
     { 
       uuid: uuid, 
       body: body(lang), 
+      summary: summary(lang),
       depth_level: depth_level, 
       category_uuid: category.uuid
     }
@@ -19,5 +20,9 @@ class Question < UuidRecord
 
   def body(lang)
     lang == 'de' ? body_de : body_en
+  end
+
+  def summary(lang)
+    lang == 'de' ? summary_de : summary_en
   end
 end

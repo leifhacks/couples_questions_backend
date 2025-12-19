@@ -69,6 +69,7 @@ module Api
       def assignment_payload(assignment, include_answers:)
         lang = language_code_for(current_user)
         payload = assignment.payload(lang)
+        enrich_assignment_payload!(payload, assignment, lang)
         return payload unless include_answers
 
         my_answer = assignment.answers.find { |a| a.user_id == current_user.id }
@@ -86,6 +87,49 @@ module Api
       def parse_date_param(value)
         return nil if value.blank?
         Date.parse(value) rescue nil
+      end
+
+      def enrich_assignment_payload!(payload, assignment, lang)
+        stats = relationship_stats_for(relationship: assignment.relationship, upto_date: assignment.question_date)
+        payload[:answers_streak_days] = stats[:answers_streak_days]
+        payload[:total_answered_questions] = stats[:total_answered_questions]
+      end
+
+      def relationship_stats_for(relationship:, upto_date:)
+        participant_ids = relationship.users.pluck(:id)
+        return { answers_streak_days: 0, total_answered_questions: 0 } if participant_ids.blank?
+
+        assignments = relationship.question_assignments
+                                  .where('question_date <= ?', upto_date)
+                                  .includes(:answers)
+
+        answered_by_date = {}
+        assignments.each do |qa|
+          next unless answered_by_all_participants?(qa, participant_ids)
+          answered_by_date[qa.question_date] = qa
+        end
+
+        {
+          answers_streak_days: consecutive_answer_days(answered_by_date, upto_date),
+          total_answered_questions: answered_by_date.size,
+        }
+      end
+
+      def answered_by_all_participants?(assignment, participant_ids)
+        answered_ids = assignment.answers.map(&:user_id).uniq
+        (participant_ids - answered_ids).empty?
+      end
+
+      def consecutive_answer_days(answered_by_date, start_date)
+        streak = 0
+        date = start_date
+        loop do
+          assignment = answered_by_date[date]
+          break if assignment.nil?
+          streak += 1
+          date -= 1.day
+        end
+        streak
       end
     end
   end
