@@ -13,11 +13,13 @@ Dir.glob(SEED_PATH.join('*.json')).each do |file_path|
   name_de = data['name_de']
   desc_en = data['description_en']
   desc_de = data['description_de']
+  image_path = data['image_path']
 
   category = Category.find_or_initialize_by(name_en: name_en)
   category.name_de = name_de
   category.description_en = desc_en
   category.description_de = desc_de
+  category.image_path = image_path
   category.save!
 
   puts "→ Imported category: #{category.name_en}"
@@ -26,10 +28,20 @@ Dir.glob(SEED_PATH.join('*.json')).each do |file_path|
     body_en = q['body_en']
     body_de = q['body_de']
     depth = q['depth']
+    summary_en = q['summary_en']
+    summary_de = q['summary_de']
+    relationship_types = q['relationship_types']
+    relationship_distances = q['relationship_distances']
+    extra_relevance_for_distances = q['extra_relevance_for_distances']
 
     question = Question.find_or_initialize_by(body_en: body_en, category_id: category.id)
     question.body_de = body_de
     question.depth_level = depth
+    question.summary_en = summary_en
+    question.summary_de = summary_de
+    question.relationship_types = relationship_types
+    question.relationship_distances = relationship_distances
+    question.extra_relevance_for_distances = extra_relevance_for_distances
     question.is_active = true
     question.save!
   end
