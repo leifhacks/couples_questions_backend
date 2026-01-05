@@ -12,6 +12,7 @@ class ClientDevice < UuidRecord
   before_save :cache_previous_user_timezone_offset
   before_destroy :cache_previous_user_timezone_offset
   after_commit :recalculate_user_push_notifications_if_timezone_changed, on: %i[create update destroy]
+  after_commit :recalculate_relationship_timezones_if_timezone_changed, on: %i[create update destroy]
 
   def self.cleanup
     response = '{"error"=>{"code"=>404, "message"=>"Requested entity was not found.", "status"=>"NOT_FOUND", "details"=>[{"@type"=>"type.googleapis.com/google.firebase.fcm.v1.FcmError", "errorCode"=>"UNREGISTERED"}]}}'
@@ -56,5 +57,21 @@ class ClientDevice < UuidRecord
     return if user.nil? || user.destroyed?
 
     user.adjust_push_notifications_for_timezone_change!(from_offset_seconds: previous_offset)
+  end
+
+  def recalculate_relationship_timezones_if_timezone_changed
+    return if user.nil? || user.destroyed?
+    return unless timezone_attributes_changed?
+
+    user.relationships.each(&:recalculate_timezone!)
+  end
+
+  def timezone_attributes_changed?
+    return true if destroyed?
+
+    changes = previous_changes
+    %w[timezone_name timezone_offset_seconds].any? do |attribute|
+      changes.key?(attribute) || changes.key?(attribute.to_sym)
+    end
   end
 end

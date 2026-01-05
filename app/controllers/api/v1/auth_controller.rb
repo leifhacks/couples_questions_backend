@@ -30,21 +30,6 @@ module Api
             timezone_offset_seconds: device_params[:timezone_offset_seconds]
           )
 
-          # Store 20:00 in the user's local time as UTC hours/minutes
-          offset_seconds = device_params[:timezone_offset_seconds].to_i
-          local_seconds = 20 * 3600 # 20:00 in seconds
-          utc_seconds = (local_seconds - offset_seconds) % (24 * 3600)
-          utc_hours = utc_seconds / 3600
-          utc_minutes = (utc_seconds % 3600) / 60
-
-          PushNotification.notification_types.each_key do |notification_type|
-            user.push_notifications.create!(
-              notification_type: notification_type,
-              hours: utc_hours,
-              minutes: utc_minutes
-            )
-          end
-
           refresh_token = token_service.generate_refresh_token
           UserSession.create!(
             user: user,

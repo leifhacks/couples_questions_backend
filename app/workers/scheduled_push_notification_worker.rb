@@ -58,7 +58,7 @@ class ScheduledPushNotificationWorker
 
     question_date = relationship.current_date_for(user)
     assignment = QuestionAssignment.find_by(relationship: relationship, question_date: question_date)
-    return false if assignment.nil?
+    return true if assignment.nil?
 
     !assignment.answers.where(user_id: user.id).exists?
   end
