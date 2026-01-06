@@ -29,10 +29,10 @@ module Api
       # GET /api/v1/journal?before=YYYY-MM-DD&limit=20
       def journal
         relationship = current_user.current_relationship
-        before_date = parse_date_param(params[:before]) || relationship.current_date_for(current_user) + 1.day
+        current_question_date = relationship.current_date_for(current_user)
+        before_date = parse_date_param(params[:before]) || current_question_date + 1.day
         limit = params[:limit].to_i
         limit = 20 if limit <= 0 || limit > 100
-        current_question_date = relationship.current_date_for(current_user)
 
         assignments = QuestionAssignment
                       .where(relationship: relationship)
