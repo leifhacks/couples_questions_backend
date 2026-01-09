@@ -44,17 +44,13 @@ class QuestionAssignment < UuidRecord
 
     answered_by_date = {}
     assignments.each do |assignment|
-      next unless assignment.answered_by_all_participants?(participant_ids)
+      answered_ids = assignment.answers.map(&:user_id).uniq
+      next unless (participant_ids - answered_ids).empty?
 
       answered_by_date[assignment.question_date] = assignment
     end
 
     answered_by_date
-  end
-
-  def answered_by_all_participants?(participant_ids)
-    answered_ids = answers.map(&:user_id).uniq
-    (participant_ids - answered_ids).empty?
   end
 
   def consecutive_answer_days(answered_by_date, start_date)
