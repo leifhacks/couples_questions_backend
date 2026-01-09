@@ -27,6 +27,12 @@ class User < IdentifiedRecord
 
   validates :name, format: { with: NAME_REGEX }, allow_nil: true
 
+  def preferred_language_code
+    latest_device = client_devices.order(updated_at: :desc).first
+    language = latest_device&.language_code
+    language.present? ? language : 'en'
+  end
+  
   def latest_timezone_components
     device = client_devices.order(updated_at: :desc).first
     return [nil, nil, nil] if device.nil?

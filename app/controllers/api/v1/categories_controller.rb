@@ -16,14 +16,14 @@ module Api
 
       # GET /api/v1/categories
       def index
-        lang = language_code_for(current_user)
+        lang = current_user.preferred_language_code
         render json: Category.all.reverse.map { |c| c.payload(lang) }
       end
 
       # GET /api/v1/categories/:uuid/questions
       def category_questions
         category = Category.find_by!(uuid: params[:uuid])
-        lang = language_code_for(current_user)
+        lang = current_user.preferred_language_code
 
         limit = params[:limit].to_i
         offset = params[:offset].to_i
@@ -38,9 +38,6 @@ module Api
 
       private
 
-      def language_code_for(user)
-        user.client_devices.order(updated_at: :desc).first&.language_code || 'en'
-      end
     end
   end
 end

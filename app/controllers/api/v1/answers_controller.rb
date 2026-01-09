@@ -29,9 +29,10 @@ module Api
         answer.body = answer_body
         answer.save!
 
-        partner_answer = assignment.answers.find { |a| a.user_id != current_user.id }
-
-        render json: { my_answer: answer.payload, partner_answer: partner_answer&.payload }
+        assignment_payload = assignment.payload(viewer: current_user)
+        my_answer = assignment_payload[:my_answer]
+        partner_answer = assignment_payload[:partner_answer]
+        render json: { my_answer: my_answer, partner_answer: partner_answer, assignment: assignment_payload }
       end
 
       def assign_current_initiator_device

@@ -26,7 +26,8 @@ class AnswerBroadcastWorker < BaseBroadcastWorker
     Rails.logger.info("AnswerBroadcastWorker.build_message include_answer_body: #{@include_answer_body}")
     {
       'event' => 'answer_updated',
-      'answer' => answer.payload(include_body: @include_answer_body)
+      'answer' => answer.payload(include_body: @include_answer_body),
+      'assignment' => answer.question_assignment.payload(viewer: user)
     }.as_json
   end
 end
