@@ -10,7 +10,7 @@ class InviteCode < ApplicationRecord
   before_create :generate_code
   after_commit :broadcast_status_change, on: [:create, :update]
 
-  CODE_CHARSET = (("A".."Z").to_a + ("1".."9").to_a).freeze
+  CODE_CHARSET = ((("A".."Z").to_a - ["I"]) + ("1".."9").to_a).freeze
 
   def payload
     {
