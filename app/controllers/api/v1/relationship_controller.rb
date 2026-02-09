@@ -52,7 +52,6 @@ module Api
           relationship.relationship_memberships.includes(:user).find_each do |m|
             m.user.update!(current_relationship_id: nil)
           end
-          relationship.relationship_memberships.destroy_all
         end
 
         current_user_new_relationship = nil
@@ -115,7 +114,10 @@ module Api
       def approve_relationship(relationship, membership)
         return render(json: { error: 'forbidden' }, status: :forbidden) unless membership&.OWNER?
 
-        relationship.update!(status: 'ACTIVE')
+        ActiveRecord::Base.transaction do
+          relationship.update!(status: 'ACTIVE')
+          transfer_previous_relationship_content!(relationship)
+        end
         render json: relationship.extended_payload(current_user)
       end
 
@@ -141,6 +143,29 @@ module Api
         response_relationship = user_to_remove == current_user ? new_relationship : relationship
 
         render json: response_relationship.extended_payload(current_user)
+      end
+
+      def transfer_previous_relationship_content!(relationship)
+        participant_ids = relationship.users.pluck(:id).uniq
+        return unless participant_ids.size == 2
+
+        relationship_ids_with_both = RelationshipMembership
+                                     .where(user_id: participant_ids)
+                                     .group(:relationship_id)
+                                     .having('COUNT(DISTINCT user_id) = 2')
+                                     .select(:relationship_id)
+
+        previous = Relationship
+                   .where(status: 'ENDED', id: relationship_ids_with_both)
+                   .where.not(id: relationship.id)
+                   .order(updated_at: :desc)
+                   .first
+        return if previous.nil?
+
+        existing_dates = QuestionAssignment.where(relationship: relationship).pluck(:question_date)
+        assignments = QuestionAssignment.where(relationship: previous)
+        assignments = assignments.where.not(question_date: existing_dates) if existing_dates.any?
+        assignments.update_all(relationship_id: relationship.id, updated_at: Time.current)
       end
 
       def ensure_active_or_pending_relationship!
