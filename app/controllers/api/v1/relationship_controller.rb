@@ -35,9 +35,8 @@ module Api
         relationship = current_user.current_relationship
         return render(json: { error: 'invalid_status' }, status: :bad_request) if relationship.ACTIVE?
 
-        invite = @bootstrapped_relationship_invite ||
-                 invite_code_service.issue!(relationship: relationship, created_by_user: current_user)
-        render json: { invite_code: invite.payload }
+        invite_code_service.issue!(relationship: relationship, created_by_user: current_user) if @bootstrapped_relationship_invite.nil?
+        render json: relationship.extended_payload(current_user)
       end
 
       # POST /api/v1/relationship/unpair

@@ -32,7 +32,7 @@ user =  User.find(382)
 100.times do
     date -= 1
     question = base_scope.order(Arel.sql('RAND()')).first
-    next if QuestionAssignment.where(question_date: date).size != 0
+    next if relationship.question_assignments.where(question_date: date).size != 0
     assignment = QuestionAssignment.create!(relationship: relationship, question: question, question_date: date)
     answer = Answer.create!(body: 'test', question_assignment: assignment, user: user)
 end
