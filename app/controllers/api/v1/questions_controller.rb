@@ -10,12 +10,12 @@ module Api
       end
 
       skip_before_action :validate_with_validator
-      skip_before_action :validate_data, :decode_params, only: [:today_question]
+      skip_before_action :validate_data, :decode_params, only: [:today_question, :latest_questions]
       before_action :authenticate_user!
-      before_action :ensure_active_relationship!, only: [:today_question, :journal]
+      before_action :ensure_active_relationship!, only: [:today_question, :latest_questions, :journal]
       before_action -> { validate_with_validator(Validate::Questions::Journal) }, only: [:journal]
 
-      # GET /api/v1/today_question
+      # GET /api/v1/today_question, LEGACY
       def today_question
         relationship = current_user.current_relationship
         question_date = relationship.current_date_for(current_user)
@@ -24,6 +24,23 @@ module Api
         assignment ||= question_assignment_service.assign_for_date!(relationship: relationship, date: question_date)
 
         render json: assignment.payload(viewer: current_user)
+      end
+
+      # GET /api/v1/latest_questions
+      def latest_questions
+        relationship = current_user.current_relationship
+        question_date = relationship.current_date_for(current_user)
+        yesterday_date = question_date - 1.day
+
+        assignment = QuestionAssignment.find_by(relationship: relationship, question_date: question_date)
+        assignment ||= question_assignment_service.assign_for_date!(relationship: relationship, date: question_date)
+
+        yesterday_assignment = QuestionAssignment.find_by(relationship: relationship, question_date: yesterday_date)
+       
+        render json: {
+          today: assignment.payload(viewer: current_user),
+          yesterday: yesterday_assignment&.payload(viewer: current_user)
+        }
       end
 
       # GET /api/v1/journal?before=YYYY-MM-DD&limit=20

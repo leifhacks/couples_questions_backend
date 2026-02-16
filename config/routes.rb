@@ -16,6 +16,7 @@ Rails.application.routes.draw do
       post 'ios_multi_verification/verify', to: 'ios_multi_verification#verify'
       post 'images/up', to: 'images#up'
       get 'today_question', to: 'questions#today_question'
+      get 'latest_questions', to: 'questions#latest_questions'
       get 'journal', to: 'questions#journal'
       post 'answers', to: 'answers#update'
       get 'categories', to: 'categories#index'
