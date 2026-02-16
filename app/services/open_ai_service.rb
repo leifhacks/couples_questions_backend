@@ -50,12 +50,14 @@ class OpenAiService
     response.dig('data', 0, 'url')
   end
 
-  def transcribe_audio(audio_data_url, model: 'gpt-4o-mini-transcribe')
+  def transcribe_audio(audio_data_url, model: 'gpt-4o-transcribe', prompt: nil)
     file_upload = build_audio_upload(audio_data_url)
     response = @client.audio.transcribe(
       parameters: {
         model: model,
-        file: file_upload
+        file: file_upload,
+        response_format: 'text',
+        prompt: prompt
       }
     )
     response['text']

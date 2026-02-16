@@ -18,7 +18,8 @@ module Api
         return render json: { error: 'no audio_data provided' } unless params.include?(:audio_data)
 
         audio_data = params[:audio_data]
-        transcription = @open_ai_service.transcribe_audio(audio_data)
+        prompt = 'Transcribe short spoken license plate letters and digits. Return uppercase letters and digits separated by spaces.'
+        transcription = @open_ai_service.transcribe_audio(audio_data, prompt: prompt)
       rescue => e
         Rails.logger.info("#{self.class}.#{__method__}: Failed: #{e}")
         render json: { error: 'failed' }
