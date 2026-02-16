@@ -24,6 +24,7 @@ Rails.application.routes.draw do
       get 'push_notifications', to: 'push_notifications#show'
       post 'push_notifications', to: 'push_notifications#update'
       post 'push_notifications/delete', to: 'push_notifications#destroy'
+      post 'transcriptions/get', to: 'transcriptions#get'
     end
   end
 end

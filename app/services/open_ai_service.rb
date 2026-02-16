@@ -47,6 +47,16 @@ class OpenAiService
     response.dig('data', 0, 'url')
   end
 
+  def transcribe_audio(audio_data_url, model: 'gpt-4o-mini-transcribe')
+    response = @client.audio.transcribe(
+      parameters: {
+        model: model,
+        file: audio_data_url
+      }
+    )
+    response['text']
+  end
+
   private
 
   def get_parameters(config, messages)
@@ -57,6 +67,7 @@ class OpenAiService
       temperature: config.temperature
     }
   end
+
 end
 
 #-------------------------------------------------------------------------------
