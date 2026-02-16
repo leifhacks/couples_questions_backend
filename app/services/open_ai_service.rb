@@ -52,7 +52,7 @@ class OpenAiService
 
   def transcribe_audio(audio_data_url, model: 'gpt-4o-transcribe', prompt: nil)
     file_upload = build_audio_upload(audio_data_url)
-    response = @client.audio.transcribe(
+    @client.audio.transcribe(
       parameters: {
         model: model,
         file: file_upload,
@@ -60,8 +60,6 @@ class OpenAiService
         prompt: prompt
       }
     )
-    Rails.logger.info("#{self.class}.#{__method__}: #{response}")
-    response['text']
   end
 
   private
