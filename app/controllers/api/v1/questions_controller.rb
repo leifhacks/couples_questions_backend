@@ -36,7 +36,8 @@ module Api
         assignment ||= question_assignment_service.assign_for_date!(relationship: relationship, date: question_date)
 
         yesterday_assignment = QuestionAssignment.find_by(relationship: relationship, question_date: yesterday_date)
-       
+        yesterday_assignment = nil if yesterday_assignment.present? && !yesterday_assignment.all_relationship_users_answered?
+
         render json: {
           today: assignment.payload(viewer: current_user),
           yesterday: yesterday_assignment&.payload(viewer: current_user)

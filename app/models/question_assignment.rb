@@ -32,6 +32,14 @@ class QuestionAssignment < UuidRecord
     payload
   end
 
+  def all_relationship_users_answered?
+    participant_ids = relationship.users.pluck(:id)
+    return false if participant_ids.blank?
+
+    answered_user_ids = answers.select(:user_id).distinct.pluck(:user_id)
+    (participant_ids - answered_user_ids).empty?
+  end
+
   private
 
   def answered_by_date
