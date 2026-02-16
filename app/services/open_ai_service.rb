@@ -5,6 +5,7 @@
 #-------------------------------------------------------------------------------
 require 'base64'
 require 'tempfile'
+
 class OpenAiService
   def initialize
     OpenAI.configure do |config|
