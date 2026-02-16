@@ -60,6 +60,7 @@ class OpenAiService
         prompt: prompt
       }
     )
+    Rails.logger.info("#{self.class}.#{__method__}: #{response}")
     response['text']
   end
 
