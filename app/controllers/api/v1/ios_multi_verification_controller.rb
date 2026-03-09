@@ -18,6 +18,13 @@ module Api
         verify_list(ENV['IOS_VERIFICATION_KEY'], receipt_data_list)
       end
 
+      def verify_license_plate
+        receipt_data_list = params[:receipt_data]
+        return render json: { status: -2 } if receipt_data_list.nil?
+
+        verify_list(ENV['IOS_LICENSE_PLATE_VERIFICATION_KEY'], receipt_data_list)
+      end
+
       def verify_list(key, receipt_data_list)
         return render json: { status: 0, result: [] } if receipt_data_list.empty?
 

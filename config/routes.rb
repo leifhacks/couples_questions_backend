@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       get 'me', to: 'me#show'
       post 'me', to: 'me#update'
       post 'ios_multi_verification/verify', to: 'ios_multi_verification#verify'
+      post 'ios_multi_verification/verify_license_plate', to: 'ios_multi_verification#verify_license_plate'
       post 'images/up', to: 'images#up'
       get 'today_question', to: 'questions#today_question'
       get 'latest_questions', to: 'questions#latest_questions'
